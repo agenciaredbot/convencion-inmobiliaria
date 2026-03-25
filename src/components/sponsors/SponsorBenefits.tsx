@@ -48,7 +48,7 @@ export default function SponsorBenefits() {
           className="absolute inset-0 w-full h-full object-cover scale-110"
           style={{ transform: "translateZ(0) scale(1.1)" }}
         >
-          <source src="/images/convencion-bg.mp4" type="video/mp4" />
+          <source src="/images/video-pg.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="absolute inset-0 bg-navy-950/88" />
