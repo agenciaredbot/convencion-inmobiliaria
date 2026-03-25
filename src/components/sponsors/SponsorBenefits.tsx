@@ -38,21 +38,7 @@ const benefits = [
 export default function SponsorBenefits() {
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
-      {/* Parallax video background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover scale-110"
-          style={{ transform: "translateZ(0) scale(1.1)" }}
-        >
-          <source src="/images/video-pg.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="absolute inset-0 bg-navy-950/88" />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-transparent to-navy-950/80" />
+      <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--color-gold-500)_0%,_transparent_50%)] opacity-[0.03]" />
       <div className="absolute inset-0 noise" />
 
