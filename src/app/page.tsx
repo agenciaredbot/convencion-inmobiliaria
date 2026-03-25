@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Countries from "@/components/Countries";
 import ForWho from "@/components/ForWho";
 import Agenda from "@/components/Agenda";
+import Pricing from "@/components/Pricing";
 import Organizer from "@/components/Organizer";
 import Registration from "@/components/Registration";
 import Sponsors from "@/components/Sponsors";
@@ -21,6 +22,7 @@ export default function Home() {
       <Countries />
       <ForWho />
       <Agenda />
+      <Pricing />
       <Organizer />
       <Registration />
       <Sponsors />

@@ -4,40 +4,39 @@ import { motion } from "framer-motion";
 
 const agendaItems = [
   {
-    part: "Part 1",
-    time: "10:00 - 11:00",
-    title: "Apertura & Bienvenida",
-    desc: "Inauguración oficial de la Convención Inmobiliaria 2026. Palabras de bienvenida y presentación del programa del evento.",
+    time: "8:30 AM",
+    title: "Registro & Networking",
+    desc: "Acreditación de asistentes y primer espacio de networking para conectar con profesionales del sector inmobiliario.",
   },
   {
-    part: "Part 2",
-    time: "11:00 - 12:00",
-    title: "Panel de Inversionistas",
-    desc: "Perspectivas del mercado inmobiliario internacional. Oportunidades de inversión en mercados emergentes y consolidados.",
+    time: "9:00 AM",
+    title: "Apertura — Claudia Rivera",
+    desc: "Palabras de bienvenida e inauguración oficial a cargo de Claudia Rivera, Realtor Internacional y CEO de Convención Inmobiliaria.",
   },
   {
-    part: "Part 3",
-    time: "12:00 - 13:00",
-    title: "Networking & Exhibición",
-    desc: "Espacio dedicado para conectar con sponsors, pre-constructores y profesionales del sector inmobiliario.",
+    time: "9:30 AM",
+    title: "Cómo Invertir en USA, RD y México",
+    desc: "Estrategias y oportunidades de inversión inmobiliaria en los mercados más atractivos de la región.",
   },
   {
-    part: "Part 4",
-    time: "14:00 - 15:00",
-    title: "Conferencia Principal",
-    desc: "Speaker invitado de alto perfil. Tendencias globales del mercado inmobiliario y estrategias de inversión.",
+    time: "10:00 AM",
+    title: "Presentación Proyectos Internacionales",
+    desc: "Exhibición de proyectos inmobiliarios de alto perfil en mercados internacionales consolidados y emergentes.",
   },
   {
-    part: "Part 5",
-    time: "15:00 - 16:00",
-    title: "Mesas de Negocios",
-    desc: "Sesiones uno a uno entre inversionistas y desarrolladores. Cierre de negocios y acuerdos estratégicos.",
+    time: "11:00 AM",
+    title: "Panel Inversionistas & Expertos",
+    desc: "Mesa de discusión con inversionistas y expertos del sector sobre tendencias, retos y oportunidades del mercado global.",
   },
   {
-    part: "Part 6",
-    time: "16:00 - 17:00",
-    title: "Cierre & Cocktail",
-    desc: "Conclusiones del evento, reconocimientos y cocktail de networking para cerrar la jornada.",
+    time: "12:00 — 12:30 PM",
+    title: "Networking VIP",
+    desc: "Espacio exclusivo de networking para cerrar negocios, agendar reuniones y fortalecer alianzas estratégicas.",
+  },
+  {
+    time: "7:00 PM",
+    title: "Cierre + Agenda de Citas Privadas",
+    desc: "Cierre oficial del evento con agenda personalizada de citas privadas entre inversionistas y desarrolladores.",
   },
 ];
 
@@ -68,7 +67,7 @@ export default function Agenda() {
           className="mb-16"
         >
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
-            8 Horas de Contenido
+            Programa del Evento
           </span>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 leading-[0.95]"
@@ -107,13 +106,7 @@ export default function Agenda() {
                 <div className="glass rounded-xl p-6 hover:bg-white/[0.06] transition-all duration-300 gradient-border group-hover:glow-gold">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mb-3">
                     <span
-                      className="text-gold-500 text-xl sm:text-2xl font-bold shrink-0"
-                      style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                    >
-                      {item.part}
-                    </span>
-                    <span
-                      className="text-white/80 text-lg sm:text-xl font-bold shrink-0"
+                      className="text-gold-500 text-xl sm:text-2xl font-bold shrink-0 min-w-[140px]"
                       style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                     >
                       {item.time}

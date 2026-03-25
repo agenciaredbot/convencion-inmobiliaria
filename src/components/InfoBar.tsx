@@ -20,7 +20,7 @@ const infoItems = [
       </svg>
     ),
     question: "¿Dónde?",
-    answer: "Barranquilla & Medellín",
+    answer: "Hotel Estelar — Barranquilla & Medellín",
   },
   {
     icon: (

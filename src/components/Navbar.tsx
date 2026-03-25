@@ -33,18 +33,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="relative">
-            {/* Placeholder for logo SVG - replace with actual logo */}
-            <div className="flex flex-col leading-none">
-              <span className="font-[var(--font-heading)] text-white text-lg tracking-wider leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                CONVENCIÓN
-              </span>
-              <span className="font-[var(--font-heading)] text-gold-500 text-2xl tracking-wider leading-none -mt-0.5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                INMOBILIARIA
-              </span>
-            </div>
-          </div>
+        <a href="#" className="flex items-center group">
+          <img
+            src="/images/logo-oficial.png"
+            alt="Convención Inmobiliaria 2026"
+            className="h-12 sm:h-14 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Links */}

@@ -7,14 +7,11 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex flex-col leading-none mb-2">
-              <span className="text-white text-sm tracking-wider" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                CONVENCIÓN
-              </span>
-              <span className="text-gold-500 text-xl tracking-wider -mt-0.5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                INMOBILIARIA
-              </span>
-            </div>
+            <img
+              src="/images/logo-oficial.png"
+              alt="Convención Inmobiliaria 2026"
+              className="h-10 w-auto object-contain mb-2"
+            />
             <p className="text-white/30 text-xs">
               Invierte · Acciona · Crece
             </p>

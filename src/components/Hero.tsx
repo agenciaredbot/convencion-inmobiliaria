@@ -134,7 +134,7 @@ export default function Hero() {
             </svg>
             <div className="text-left">
               <p className="text-xs text-white/40 uppercase tracking-wider">Abril 22</p>
-              <p className="text-sm font-semibold text-white">Barranquilla</p>
+              <p className="text-sm font-semibold text-white">Barranquilla — Hotel Estelar</p>
             </div>
           </div>
           <div className="glass rounded-lg px-5 py-3 flex items-center gap-3">
@@ -143,7 +143,7 @@ export default function Hero() {
             </svg>
             <div className="text-left">
               <p className="text-xs text-white/40 uppercase tracking-wider">Abril 24</p>
-              <p className="text-sm font-semibold text-white">Medellín</p>
+              <p className="text-sm font-semibold text-white">Medellín — Hotel Estelar</p>
             </div>
           </div>
         </motion.div>
@@ -171,9 +171,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
           <a
-            href="https://wa.me/17542804030"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/sponsors"
             className="px-8 py-4 glass font-bold text-sm uppercase tracking-wider rounded-xl text-white hover:bg-white/10 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] gradient-border"
           >
             Quiero Ser Sponsor

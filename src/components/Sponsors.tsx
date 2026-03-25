@@ -47,9 +47,7 @@ export default function Sponsors() {
           className="mt-10"
         >
           <a
-            href="https://wa.me/17542804030"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/sponsors"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.02]"
           >
             Quiero Ser Sponsor
