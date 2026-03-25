@@ -1,8 +1,39 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5Y5LIKu60jcAaCsotwuFg7kgpXQKmD_36XSBqQd8tfDdSSYb46LVLLotC-buE9P4B7A/exec";
+
 export default function Registration() {
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = {
+      form_type: "asistente",
+      source: "landing-asistentes",
+      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
+      participacion: (form.elements.namedItem("participacion") as HTMLSelectElement).value,
+    };
+    try {
+      await fetch(SHEETS_URL, {
+        method: "POST",
+        body: JSON.stringify(data),
+        mode: "no-cors",
+      });
+      setSent(true);
+      form.reset();
+    } catch {
+      alert("Error al enviar. Intenta de nuevo.");
+    }
+    setSending(false);
+  }
   return (
     <section id="registro" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background video */}
@@ -76,10 +107,23 @@ export default function Registration() {
               >
                 REGISTRO
               </h3>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              {sent ? (
+                <div className="text-center py-10">
+                  <div className="text-5xl mb-4">✅</div>
+                  <h4 className="text-white text-xl font-bold mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                    ¡REGISTRO EXITOSO!
+                  </h4>
+                  <p className="text-white/50 text-sm">Nuestro equipo se pondrá en contacto contigo pronto.</p>
+                  <button onClick={() => setSent(false)} className="mt-6 text-gold-500 text-sm underline hover:text-gold-400">
+                    Registrar otra persona
+                  </button>
+                </div>
+              ) : (
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div>
                   <input
                     type="text"
+                    name="nombre"
                     placeholder="Nombre completo"
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
@@ -87,6 +131,7 @@ export default function Registration() {
                 <div>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Correo electrónico"
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
@@ -94,28 +139,30 @@ export default function Registration() {
                 <div>
                   <input
                     type="tel"
+                    name="telefono"
                     placeholder="Teléfono (con código de país)"
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
-                  <select className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
+                  <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
                     <option value="">¿Cómo deseas participar?</option>
-                    <option value="asistente">Como Asistente</option>
-                    <option value="sponsor">Como Sponsor</option>
-                    <option value="speaker">Como Speaker</option>
+                    <option value="asistente-free">Asistente — Acceso Free</option>
+                    <option value="asistente-vip">Asistente — VIP Lunch ($27 USD)</option>
                   </select>
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/30 hover:scale-[1.01] active:scale-[0.99]"
+                  disabled={sending}
+                  className="w-full py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/30 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Quiero Asistir
+                  {sending ? "Enviando..." : "Quiero Asistir"}
                 </button>
                 <p className="text-white/20 text-xs text-center">
                   Al registrarte aceptas recibir información sobre el evento.
                 </p>
               </form>
+              )}
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5Y5LIKu60jcAaCsotwuFg7kgpXQKmD_36XSBqQd8tfDdSSYb46LVLLotC-buE9P4B7A/exec";
 
 const highlights = [
   "Espacio de exhibición en el evento",
@@ -12,6 +15,36 @@ const highlights = [
 ];
 
 export default function SponsorRegistration() {
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = {
+      form_type: "sponsor",
+      source: "landing-sponsors",
+      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
+      empresa: (form.elements.namedItem("empresa") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
+      paquete: (form.elements.namedItem("paquete") as HTMLSelectElement).value,
+      ciudad: (form.elements.namedItem("ciudad") as HTMLSelectElement).value,
+    };
+    try {
+      await fetch(SHEETS_URL, {
+        method: "POST",
+        body: JSON.stringify(data),
+        mode: "no-cors",
+      });
+      setSent(true);
+      form.reset();
+    } catch {
+      alert("Error al enviar. Intenta de nuevo.");
+    }
+    setSending(false);
+  }
   return (
     <section id="registro-sponsor" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background video */}
@@ -94,12 +127,23 @@ export default function SponsorRegistration() {
                 Espacios limitados
               </p>
 
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <input type="hidden" name="form_type" value="sponsor" />
-
+              {sent ? (
+                <div className="text-center py-10">
+                  <div className="text-5xl mb-4">✅</div>
+                  <h4 className="text-white text-xl font-bold mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                    ¡SOLICITUD RECIBIDA!
+                  </h4>
+                  <p className="text-white/50 text-sm">Nuestro equipo te contactará con los detalles del paquete.</p>
+                  <button onClick={() => setSent(false)} className="mt-6 text-gold-500 text-sm underline hover:text-gold-400">
+                    Enviar otra solicitud
+                  </button>
+                </div>
+              ) : (
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <div>
                   <input
                     type="text"
+                    name="nombre"
                     placeholder="Nombre completo"
                     className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
@@ -107,6 +151,7 @@ export default function SponsorRegistration() {
                 <div>
                   <input
                     type="text"
+                    name="empresa"
                     placeholder="Empresa / Marca"
                     className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
@@ -114,6 +159,7 @@ export default function SponsorRegistration() {
                 <div>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Correo electrónico"
                     className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
@@ -121,12 +167,13 @@ export default function SponsorRegistration() {
                 <div>
                   <input
                     type="tel"
+                    name="telefono"
                     placeholder="Teléfono (con código de país)"
                     className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
                 </div>
                 <div>
-                  <select className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/50 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
+                  <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/50 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿Qué paquete te interesa?</option>
                     <option value="silver" className="bg-navy-900">Silver</option>
                     <option value="gold" className="bg-navy-900">Gold</option>
@@ -135,7 +182,7 @@ export default function SponsorRegistration() {
                   </select>
                 </div>
                 <div>
-                  <select className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/50 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
+                  <select name="ciudad" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/50 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿En qué ciudad deseas participar?</option>
                     <option value="barranquilla" className="bg-navy-900">Barranquilla — Abril 22</option>
                     <option value="medellin" className="bg-navy-900">Medellín — Abril 24</option>
@@ -145,15 +192,17 @@ export default function SponsorRegistration() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
+                  disabled={sending}
+                  className="w-full py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Solicitar Información
+                  {sending ? "Enviando..." : "Solicitar Información"}
                 </button>
 
                 <p className="text-white/20 text-xs text-center">
                   Al enviar aceptas recibir información sobre oportunidades de sponsorship.
                 </p>
               </form>
+              )}
             </div>
           </motion.div>
         </div>
