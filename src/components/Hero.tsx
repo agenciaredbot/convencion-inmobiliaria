@@ -103,18 +103,14 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Main headline */}
-        <motion.h1
-          variants={itemVariants}
-          className="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.9] mb-6"
-          style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-        >
-          <span className="text-white">CONVENCIÓN</span>
-          <br />
-          <span className="text-gold-500 glow-gold-text">INMOBILIARIA</span>
-          <br />
-          <span className="text-white/60 text-3xl sm:text-5xl lg:text-6xl">2026</span>
-        </motion.h1>
+        {/* Main logo */}
+        <motion.div variants={itemVariants} className="mb-6">
+          <img
+            src="/images/logo-oficial.png"
+            alt="Convención Inmobiliaria 2026"
+            className="h-32 sm:h-44 lg:h-56 mx-auto object-contain drop-shadow-2xl"
+          />
+        </motion.div>
 
         {/* Subtitle */}
         <motion.p
