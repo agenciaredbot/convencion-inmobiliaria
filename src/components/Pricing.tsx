@@ -27,7 +27,7 @@ export default function Pricing() {
             TIPO DE <span className="text-gold-500">ACCESO</span>
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
-          <p className="text-white/50 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/80 max-w-2xl mx-auto leading-relaxed">
             Dos formas de vivir la Convención Inmobiliaria 2026.
             Elige la que mejor se adapte a tus objetivos.
           </p>
@@ -64,7 +64,7 @@ export default function Pricing() {
                 >
                   $0
                 </span>
-                <span className="text-white/30 text-sm">USD</span>
+                <span className="text-white/60 text-sm">USD</span>
               </div>
             </div>
 
@@ -153,7 +153,7 @@ export default function Pricing() {
                 >
                   $27
                 </span>
-                <span className="text-white/40 text-sm">USD</span>
+                <span className="text-white/70 text-sm">USD</span>
               </div>
             </div>
 

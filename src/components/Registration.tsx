@@ -113,7 +113,7 @@ export default function Registration() {
                   <h4 className="text-white text-xl font-bold mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                     ¡REGISTRO EXITOSO!
                   </h4>
-                  <p className="text-white/50 text-sm">Nuestro equipo se pondrá en contacto contigo pronto.</p>
+                  <p className="text-white/80 text-sm">Nuestro equipo se pondrá en contacto contigo pronto.</p>
                   <button onClick={() => setSent(false)} className="mt-6 text-gold-500 text-sm underline hover:text-gold-400">
                     Registrar otra persona
                   </button>
@@ -145,7 +145,7 @@ export default function Registration() {
                   />
                 </div>
                 <div>
-                  <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
+                  <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white/60 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
                     <option value="">¿Cómo deseas participar?</option>
                     <option value="asistente-free">Asistente — Acceso Free</option>
                     <option value="asistente-vip">Asistente — VIP Lunch ($27 USD)</option>

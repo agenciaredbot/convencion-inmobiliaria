@@ -61,7 +61,7 @@ export default function InfoBar() {
                 <div className="text-gold-500 mb-3 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <p className="text-xs text-white/40 uppercase tracking-widest mb-1 font-medium">
+                <p className="text-xs text-white/70 uppercase tracking-widest mb-1 font-medium">
                   {item.question}
                 </p>
                 <p className="text-sm sm:text-base font-semibold text-white">
