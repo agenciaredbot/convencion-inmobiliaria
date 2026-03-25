@@ -47,7 +47,7 @@ export default function Countries() {
                 {c.flag}
               </span>
               <h3 className="text-lg font-bold text-white mb-1">{c.name}</h3>
-              <p className="text-white/70 text-sm">{c.city}</p>
+              <p className="text-white/95 text-sm">{c.city}</p>
             </motion.div>
           ))}
         </div>

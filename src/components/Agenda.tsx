@@ -76,7 +76,7 @@ export default function Agenda() {
             AGENDA
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />
-          <p className="text-white/80 max-w-2xl leading-relaxed">
+          <p className="text-white/95 max-w-2xl leading-relaxed">
             Un día completo diseñado para maximizar tu experiencia:
             conferencias de alto nivel, networking estratégico y oportunidades
             de negocio reales.
@@ -116,7 +116,7 @@ export default function Agenda() {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <p className="text-white/95 text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

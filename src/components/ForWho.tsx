@@ -76,7 +76,7 @@ export default function ForWho() {
           >
             LA <span className="text-gold-500">CONVENCIÓN INMOBILIARIA</span>
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <p className="text-white/95 max-w-2xl mx-auto">
             Si eres una pre-constructora con proyectos inmobiliarios en mercados internacionales
             y deseas acceder a una audiencia selecta de inversionistas, este evento es para ti.
           </p>
@@ -95,7 +95,7 @@ export default function ForWho() {
               className="glass rounded-xl p-5 text-center cursor-default hover:bg-white/[0.06] transition-all duration-300 gradient-border"
             >
               <span className="text-2xl mb-2 block">{item.icon}</span>
-              <p className="text-sm font-medium text-white/80">{item.label}</p>
+              <p className="text-sm font-medium text-white/95">{item.label}</p>
             </motion.div>
           ))}
         </div>
@@ -131,7 +131,7 @@ export default function ForWho() {
                 {b.icon}
               </div>
               <h4 className="text-xl font-bold text-white mb-3">{b.title}</h4>
-              <p className="text-white/80 text-sm leading-relaxed">{b.desc}</p>
+              <p className="text-white/95 text-sm leading-relaxed">{b.desc}</p>
             </motion.div>
           ))}
         </div>

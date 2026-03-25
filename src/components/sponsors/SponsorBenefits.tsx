@@ -59,7 +59,7 @@ export default function SponsorBenefits() {
             BENEFICIOS <span className="text-gold-500">EXCLUSIVOS</span>
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
-          <p className="text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed">
             Ser sponsor de la Convención Inmobiliaria te posiciona como líder
             ante una audiencia de alto valor. Estos son los beneficios que
             obtendrás al reservar tu espacio.
@@ -80,7 +80,7 @@ export default function SponsorBenefits() {
                 {item.icon}
               </div>
               <h3 className="text-white font-bold text-lg mb-3">{item.title}</h3>
-              <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-white/95 text-sm leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>

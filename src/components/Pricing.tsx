@@ -27,7 +27,7 @@ export default function Pricing() {
             TIPO DE <span className="text-gold-500">ACCESO</span>
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
-          <p className="text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed">
             Dos formas de vivir la Convención Inmobiliaria 2026.
             Elige la que mejor se adapte a tus objetivos.
           </p>
@@ -64,7 +64,7 @@ export default function Pricing() {
                 >
                   $0
                 </span>
-                <span className="text-white/60 text-sm">USD</span>
+                <span className="text-white/95 text-sm">USD</span>
               </div>
             </div>
 
@@ -73,41 +73,41 @@ export default function Pricing() {
             <div className="space-y-4 mb-10">
               <div className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <svg className="w-3 h-3 text-white/95" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/60 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   Acceso completo al evento
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <svg className="w-3 h-3 text-white/95" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/60 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   Acceso a todas las conferencias y paneles
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <svg className="w-3 h-3 text-white/95" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/60 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   Presentación de proyectos internacionales
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <svg className="w-3 h-3 text-white/95" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/60 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   Networking general con asistentes
                 </span>
               </div>
@@ -153,7 +153,7 @@ export default function Pricing() {
                 >
                   $27
                 </span>
-                <span className="text-white/70 text-sm">USD</span>
+                <span className="text-white/95 text-sm">USD</span>
               </div>
             </div>
 
@@ -161,7 +161,7 @@ export default function Pricing() {
 
             {/* VIP Description */}
             <div className="glass rounded-xl p-4 mb-6 border border-gold-500/10">
-              <p className="text-white/70 text-sm leading-relaxed">
+              <p className="text-white/95 text-sm leading-relaxed">
                 Lunch privado para conectar directamente con los protagonistas del evento.
                 <span className="text-gold-400 font-semibold"> ¡Es la mesa donde nacen las alianzas reales!</span> 🥂
               </p>
@@ -174,7 +174,7 @@ export default function Pricing() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/70 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   <strong className="text-white">Todo lo del acceso FREE</strong> incluido
                 </span>
               </div>
@@ -184,7 +184,7 @@ export default function Pricing() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/70 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   🤝 Lunch privado con <strong className="text-white">Inversionistas y Empresarios</strong>
                 </span>
               </div>
@@ -194,7 +194,7 @@ export default function Pricing() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/70 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   🚀 Conexión directa con <strong className="text-white">Líderes de proyectos y Desarrolladores</strong>
                 </span>
               </div>
@@ -204,7 +204,7 @@ export default function Pricing() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/70 text-sm leading-relaxed">
+                <span className="text-white/95 text-sm leading-relaxed">
                   🎁 Acceso a <strong className="text-white">ofertas especiales de Sponsors</strong>
                 </span>
               </div>

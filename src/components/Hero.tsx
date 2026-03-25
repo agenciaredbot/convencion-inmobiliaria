@@ -34,7 +34,7 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
           {String(value).padStart(2, "0")}
         </span>
       </div>
-      <span className="text-xs sm:text-sm text-white/80 mt-2 uppercase tracking-widest font-medium">
+      <span className="text-xs sm:text-sm text-white/95 mt-2 uppercase tracking-widest font-medium">
         {label}
       </span>
     </div>
@@ -115,7 +115,7 @@ export default function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-4 leading-relaxed"
+          className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto mb-4 leading-relaxed"
         >
           Conecta con los más grandes inversionistas internacionales.
           <br className="hidden sm:block" />
@@ -129,7 +129,7 @@ export default function Hero() {
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
-              <p className="text-xs text-white/70 uppercase tracking-wider">Abril 22</p>
+              <p className="text-xs text-white/95 uppercase tracking-wider">Abril 22</p>
               <p className="text-sm font-semibold text-white">Barranquilla — Hotel Estelar</p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function Hero() {
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
-              <p className="text-xs text-white/70 uppercase tracking-wider">Abril 24</p>
+              <p className="text-xs text-white/95 uppercase tracking-wider">Abril 24</p>
               <p className="text-sm font-semibold text-white">Medellín — Hotel Estelar</p>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function Hero() {
 
         {/* Countdown */}
         <motion.div variants={itemVariants} className="mb-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-5 font-medium">
+          <p className="text-xs uppercase tracking-[0.3em] text-white/95 mb-5 font-medium">
             El evento comienza en
           </p>
           <div className="flex justify-center gap-4 sm:gap-6">

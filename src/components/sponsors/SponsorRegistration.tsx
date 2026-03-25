@@ -82,7 +82,7 @@ export default function SponsorRegistration() {
             </h2>
             <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />
 
-            <p className="text-white/80 leading-relaxed mb-8">
+            <p className="text-white/95 leading-relaxed mb-8">
               Completa el formulario y nuestro equipo se pondrá en contacto contigo
               para presentarte los paquetes disponibles y crear una propuesta
               personalizada para tu marca.
@@ -103,7 +103,7 @@ export default function SponsorRegistration() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-white/60 text-sm">{item}</span>
+                  <span className="text-white/95 text-sm">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -123,7 +123,7 @@ export default function SponsorRegistration() {
               >
                 SOLICITUD DE SPONSOR
               </h3>
-              <p className="text-center text-white/60 text-xs mb-8 uppercase tracking-wider">
+              <p className="text-center text-white/95 text-xs mb-8 uppercase tracking-wider">
                 Espacios limitados
               </p>
 
@@ -133,7 +133,7 @@ export default function SponsorRegistration() {
                   <h4 className="text-white text-xl font-bold mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                     ¡SOLICITUD RECIBIDA!
                   </h4>
-                  <p className="text-white/80 text-sm">Nuestro equipo te contactará con los detalles del paquete.</p>
+                  <p className="text-white/95 text-sm">Nuestro equipo te contactará con los detalles del paquete.</p>
                   <button onClick={() => setSent(false)} className="mt-6 text-gold-500 text-sm underline hover:text-gold-400">
                     Enviar otra solicitud
                   </button>
@@ -145,7 +145,7 @@ export default function SponsorRegistration() {
                     type="text"
                     name="nombre"
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/60 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -153,7 +153,7 @@ export default function SponsorRegistration() {
                     type="text"
                     name="empresa"
                     placeholder="Empresa / Marca"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/60 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -161,7 +161,7 @@ export default function SponsorRegistration() {
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/60 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -169,11 +169,11 @@ export default function SponsorRegistration() {
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono (con código de país)"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/60 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
                 </div>
                 <div>
-                  <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/80 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
+                  <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿Qué paquete te interesa?</option>
                     <option value="silver" className="bg-navy-900">Silver</option>
                     <option value="gold" className="bg-navy-900">Gold</option>
@@ -182,7 +182,7 @@ export default function SponsorRegistration() {
                   </select>
                 </div>
                 <div>
-                  <select name="ciudad" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/80 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
+                  <select name="ciudad" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿En qué ciudad deseas participar?</option>
                     <option value="barranquilla" className="bg-navy-900">Barranquilla — Abril 22</option>
                     <option value="medellin" className="bg-navy-900">Medellín — Abril 24</option>

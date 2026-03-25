@@ -47,7 +47,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="relative px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors duration-300 group"
+              className="relative px-4 py-2 text-sm font-medium text-white/95 hover:text-white transition-colors duration-300 group"
             >
               {link.label}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold-500 group-hover:w-3/4 transition-all duration-300" />
@@ -97,7 +97,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-white/80 hover:text-gold-500 text-lg font-medium transition-colors"
+                  className="text-white/95 hover:text-gold-500 text-lg font-medium transition-colors"
                 >
                   {link.label}
                 </a>

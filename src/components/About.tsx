@@ -72,7 +72,7 @@ export default function About() {
             </h2>
             <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />
 
-            <p className="text-white/60 leading-relaxed mb-8">
+            <p className="text-white/95 leading-relaxed mb-8">
               La Convención Inmobiliaria es tu oportunidad para conectar con los
               más grandes inversionistas internacionales y con grandes empresas
               para presentar y vender tu proyecto en mercados sólidos como Miami,
@@ -90,7 +90,7 @@ export default function About() {
                   className="flex items-start gap-3"
                 >
                   <div className="mt-1 w-2 h-2 rounded-full bg-gold-500 shrink-0" />
-                  <p className="text-white/70 text-sm leading-relaxed">{item}</p>
+                  <p className="text-white/95 text-sm leading-relaxed">{item}</p>
                 </motion.div>
               ))}
             </div>

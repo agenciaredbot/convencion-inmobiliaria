@@ -80,7 +80,7 @@ export default function SponsorPackages() {
             PAQUETES DE <span className="text-gold-500">SPONSOR</span>
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
-          <p className="text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed">
             Elige el nivel de exposición que mejor se adapte a tu marca.
             Cada paquete está diseñado para maximizar tu retorno de inversión.
           </p>
@@ -113,7 +113,7 @@ export default function SponsorPackages() {
                 >
                   {pkg.tier}
                 </h3>
-                <p className="text-white/60 text-sm">{pkg.price}</p>
+                <p className="text-white/95 text-sm">{pkg.price}</p>
               </div>
 
               <div className="space-y-3 mb-8">
@@ -128,7 +128,7 @@ export default function SponsorPackages() {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-white/60 text-sm">{benefit}</span>
+                    <span className="text-white/95 text-sm">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -151,7 +151,7 @@ export default function SponsorPackages() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-white/60 text-sm mt-10"
+          className="text-center text-white/95 text-sm mt-10"
         >
           * Los precios y beneficios son personalizables. Contáctanos para crear un paquete a tu medida.
         </motion.p>
