@@ -15,8 +15,8 @@ const audiences = [
 
 const benefits = [
   {
-    title: "Maximiza tu Exposición",
-    desc: "Resalta tu proyecto inmobiliario ante un público exclusivo de inversionistas internacionales interesados en mercados como Miami, Cancún y República Dominicana.",
+    title: "Maximiza tu Exposición y agentes de bienes raíces",
+    desc: "Resalta tu proyecto inmobiliario ante un público exclusivo de inversionistas internacionales y agentes de bienes raíces interesados en mercados como Miami, Cancún y República Dominicana.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -76,8 +76,8 @@ export default function ForWho() {
           >
             LA <span className="text-gold-500">CONVENCIÓN INMOBILIARIA</span>
           </h2>
-          <p className="text-white/95 max-w-2xl mx-auto">
-            Si eres una pre-constructora con proyectos inmobiliarios en mercados internacionales
+          <p className="text-white/95 max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl font-bold leading-snug">
+            Si eres una pre-constructora, inversionista o agente inmobiliario con proyectos de finca raíz en mercados internacionales
             y deseas acceder a una audiencia selecta de inversionistas, este evento es para ti.
           </p>
         </motion.div>

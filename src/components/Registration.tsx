@@ -125,7 +125,7 @@ export default function Registration() {
                     type="text"
                     name="nombre"
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ export default function Registration() {
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -141,7 +141,7 @@ export default function Registration() {
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono (con código de país)"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -149,6 +149,8 @@ export default function Registration() {
                     <option value="">¿Cómo deseas participar?</option>
                     <option value="asistente-free">Asistente — Acceso Free</option>
                     <option value="asistente-vip">Asistente — VIP Lunch ($27 USD)</option>
+                    <option value="asistente-platinum">Asistente — Platinum ($50 USD)</option>
+                    <option value="asistente-advance-ai">Asistente — Advance A.I ($100 USD)</option>
                   </select>
                 </div>
                 <button
@@ -158,7 +160,7 @@ export default function Registration() {
                 >
                   {sending ? "Enviando..." : "Quiero Asistir"}
                 </button>
-                <p className="text-white/50 text-xs text-center">
+                <p className="text-white/90 text-xs text-center">
                   Al registrarte aceptas recibir información sobre el evento.
                 </p>
               </form>

@@ -7,6 +7,8 @@ const countries = [
   { name: "República Dominicana", flag: "🇩🇴", city: "Punta Cana" },
   { name: "México", flag: "🇲🇽", city: "Cancún" },
   { name: "Colombia", flag: "🇨🇴", city: "Barranquilla · Medellín" },
+  { name: "Dubái", flag: "🇦🇪", city: "Dubái" },
+  { name: "Panamá", flag: "🇵🇦", city: "Ciudad de Panamá" },
 ];
 
 export default function Countries() {
@@ -32,7 +34,7 @@ export default function Countries() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
           {countries.map((c, i) => (
             <motion.div
               key={i}

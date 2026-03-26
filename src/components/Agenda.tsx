@@ -4,37 +4,45 @@ import { motion } from "framer-motion";
 
 const agendaItems = [
   {
-    time: "8:30 AM",
+    morning: "9:30 AM",
+    afternoon: "3:00 PM",
     title: "Registro & Networking",
     desc: "Acreditación de asistentes y primer espacio de networking para conectar con profesionales del sector inmobiliario.",
   },
   {
-    time: "9:00 AM",
+    morning: "10:00 AM",
+    afternoon: "3:30 PM",
     title: "Apertura — Claudia Rivera",
     desc: "Palabras de bienvenida e inauguración oficial a cargo de Claudia Rivera, Realtor Internacional y CEO de Convención Inmobiliaria.",
   },
   {
-    time: "9:30 AM",
+    morning: "10:30 AM",
+    afternoon: "4:00 PM",
     title: "Cómo Invertir en USA, RD y México",
     desc: "Estrategias y oportunidades de inversión inmobiliaria en los mercados más atractivos de la región.",
   },
   {
-    time: "10:00 AM",
+    morning: "11:00 AM",
+    afternoon: "4:30 PM",
     title: "Presentación Proyectos Internacionales",
     desc: "Exhibición de proyectos inmobiliarios de alto perfil en mercados internacionales consolidados y emergentes.",
   },
   {
-    time: "11:00 AM",
+    morning: "12:00 PM",
+    afternoon: "5:30 PM",
     title: "Panel Inversionistas & Expertos",
     desc: "Mesa de discusión con inversionistas y expertos del sector sobre tendencias, retos y oportunidades del mercado global.",
   },
   {
-    time: "12:00 — 12:30 PM",
+    morning: "12:30 — 1:00 PM",
+    afternoon: "6:00 — 6:30 PM",
     title: "Networking VIP",
+    titleMorning: "Networking VIP + LUNCH",
     desc: "Espacio exclusivo de networking para cerrar negocios, agendar reuniones y fortalecer alianzas estratégicas.",
   },
   {
-    time: "7:00 PM",
+    morning: "1:00 PM",
+    afternoon: "7:00 PM",
     title: "Cierre + Agenda de Citas Privadas",
     desc: "Cierre oficial del evento con agenda personalizada de citas privadas entre inversionistas y desarrolladores.",
   },
@@ -76,11 +84,25 @@ export default function Agenda() {
             AGENDA
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />
-          <p className="text-white/95 max-w-2xl leading-relaxed">
-            Un día completo diseñado para maximizar tu experiencia:
+          <p className="text-white/95 max-w-2xl leading-relaxed italic">
+            Dos jornadas diseñadas para maximizar tu experiencia:
             conferencias de alto nivel, networking estratégico y oportunidades
             de negocio reales.
           </p>
+
+          {/* Session labels */}
+          <div className="flex flex-wrap gap-4 mt-6">
+            <div className="flex items-center gap-2 glass rounded-lg px-4 py-2">
+              <span className="text-lg">🌅</span>
+              <span className="text-white/95 text-sm font-semibold">Jornada Mañana</span>
+              <span className="text-gold-500 text-xs">(9:30 AM — 1:00 PM)</span>
+            </div>
+            <div className="flex items-center gap-2 glass rounded-lg px-4 py-2">
+              <span className="text-lg">🌆</span>
+              <span className="text-white/95 text-sm font-semibold">Jornada Tarde</span>
+              <span className="text-gold-500 text-xs">(3:00 PM — 7:00 PM)</span>
+            </div>
+          </div>
         </motion.div>
 
         {/* Timeline */}
@@ -104,19 +126,45 @@ export default function Agenda() {
                 </div>
 
                 <div className="glass rounded-xl p-6 hover:bg-white/[0.06] transition-all duration-300 gradient-border group-hover:glow-gold">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 mb-3">
-                    <span
-                      className="text-gold-500 text-xl sm:text-2xl font-bold shrink-0 min-w-[140px]"
-                      style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                    >
-                      {item.time}
-                    </span>
-                    <span className="hidden sm:block w-px h-5 bg-white/20" />
-                    <h3 className="text-white font-semibold text-sm sm:text-base">
-                      {item.title}
-                    </h3>
+                  {/* Two session times */}
+                  <div className="flex flex-wrap gap-3 mb-3">
+                    <div className="flex items-center gap-1.5 glass rounded-lg px-3 py-1.5">
+                      <span className="text-sm">🌅</span>
+                      <span
+                        className="text-gold-500 text-base sm:text-lg font-bold"
+                        style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                      >
+                        {item.morning}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5 glass rounded-lg px-3 py-1.5">
+                      <span className="text-sm">🌆</span>
+                      <span
+                        className="text-white/70 text-base sm:text-lg font-bold"
+                        style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                      >
+                        {item.afternoon}
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-white/95 text-sm leading-relaxed">
+
+                  {/* Title with morning variant if exists */}
+                  <h3 className="text-white font-semibold text-sm sm:text-base mb-2 italic">
+                    {item.titleMorning ? (
+                      <>
+                        <span className="block">
+                          🌅 {item.titleMorning}
+                        </span>
+                        <span className="block text-white/70">
+                          🌆 {item.title}
+                        </span>
+                      </>
+                    ) : (
+                      <span>{item.title}</span>
+                    )}
+                  </h3>
+
+                  <p className="text-white/95 text-sm leading-relaxed italic">
                     {item.desc}
                   </p>
                 </div>

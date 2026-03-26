@@ -52,26 +52,29 @@ export default function Organizer() {
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               Organizadora
             </span>
-            <h2
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-2 leading-[0.95]"
-              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-            >
-              CLAUDIA <span className="text-gold-500">RIVERA</span>
-            </h2>
-            <p className="text-white/95 text-sm mb-4" style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}>
+            <div className="flex items-center gap-4 mt-3 mb-2">
+              <h2
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[0.95]"
+                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+              >
+                CLAUDIA <span className="text-gold-500">RIVERA</span>
+              </h2>
+              <img
+                src="/images/logo-claudia.png"
+                alt="Claudia Rivera Real Estate"
+                className="h-15 w-auto opacity-60"
+              />
+            </div>
+            <p className="text-white/95 text-sm mb-5" style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}>
               De Convención Inmobiliaria 2026
             </p>
-            {/* Claudia's personal logo as signature */}
-            <img
-              src="/images/logo-claudia.png"
-              alt="Claudia Rivera Real Estate"
-              className="h-12 w-auto opacity-50 mb-5"
-            />
             <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />
 
-            <p className="text-white/95 leading-relaxed mb-6">
+            <p className="text-white/95 leading-relaxed mb-3">
               Claudia Rivera es una experta en negocios inmobiliarios, asesora
               internacional de bienes raíces y líder reconocida en el sector.
+            </p>
+            <p className="text-white/95 leading-relaxed mb-6">
               Como CEO de Convención Inmobiliaria, asegura un enfoque único,
               profesional y de alto impacto para todos los participantes.
             </p>

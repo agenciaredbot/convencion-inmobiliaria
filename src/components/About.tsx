@@ -6,7 +6,7 @@ const highlights = [
   "Evento más reconocido en Estados Unidos por su trayectoria",
   "La mayoría de asistentes salen con negocios cerrados",
   "Figuras como Jurguen Klaric y Vicente Passariello han confiado en nosotros",
-  "Expansión internacional: Estados Unidos, Colombia, México y Dubái",
+  "Expansión internacional: Estados Unidos, Colombia, México, Dubái, República Dominicana y Panamá",
 ];
 
 export default function About() {
@@ -75,8 +75,7 @@ export default function About() {
             <p className="text-white/95 leading-relaxed mb-8">
               La Convención Inmobiliaria es tu oportunidad para conectar con los
               más grandes inversionistas internacionales y con grandes empresas
-              para presentar y vender tu proyecto en mercados sólidos como Miami,
-              Cancún y República Dominicana.
+              para presentar y vender tu proyecto en mercados sólidos como USA, RD, MX, DU, COL.
             </p>
 
             <div className="space-y-4 mb-8">

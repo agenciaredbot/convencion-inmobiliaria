@@ -168,7 +168,7 @@ export default function Hero() {
           </a>
           <a
             href="/sponsors"
-            className="px-8 py-4 glass font-bold text-sm uppercase tracking-wider rounded-xl text-white hover:bg-white/10 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] gradient-border"
+            className="px-8 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] animate-sponsor-pulse"
           >
             Quiero Ser Sponsor
           </a>

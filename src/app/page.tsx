@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import InfoBar from "@/components/InfoBar";
 import About from "@/components/About";
+import EventCarousel from "@/components/EventCarousel";
 import Countries from "@/components/Countries";
 import ForWho from "@/components/ForWho";
 import Agenda from "@/components/Agenda";
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <InfoBar />
       <About />
+      <EventCarousel />
       <Countries />
       <ForWho />
       <Agenda />
