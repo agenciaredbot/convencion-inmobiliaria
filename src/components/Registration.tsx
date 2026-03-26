@@ -125,7 +125,7 @@ export default function Registration() {
                     type="text"
                     name="nombre"
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ export default function Registration() {
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -141,7 +141,7 @@ export default function Registration() {
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono (con código de país)"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -158,7 +158,7 @@ export default function Registration() {
                 >
                   {sending ? "Enviando..." : "Quiero Asistir"}
                 </button>
-                <p className="text-white/20 text-xs text-center">
+                <p className="text-white/50 text-xs text-center">
                   Al registrarte aceptas recibir información sobre el evento.
                 </p>
               </form>
