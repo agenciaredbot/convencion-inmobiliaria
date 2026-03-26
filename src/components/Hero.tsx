@@ -125,21 +125,27 @@ export default function Hero() {
         {/* Date & Location badges */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-3 mb-12">
           <div className="glass rounded-lg px-5 py-3 flex items-center gap-3">
-            <svg className="w-5 h-5 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
               <p className="text-xs text-white/95 uppercase tracking-wider">Abril 22</p>
-              <p className="text-sm font-semibold text-white">Barranquilla — Hotel Estelar</p>
+              <p className="text-sm font-semibold text-white flex items-center gap-2">
+                <span className="text-2xl leading-none">🇨🇴</span>
+                Barranquilla — Hotel Estelar
+              </p>
             </div>
           </div>
           <div className="glass rounded-lg px-5 py-3 flex items-center gap-3">
-            <svg className="w-5 h-5 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
               <p className="text-xs text-white/95 uppercase tracking-wider">Abril 24</p>
-              <p className="text-sm font-semibold text-white">Medellín — Hotel Estelar</p>
+              <p className="text-sm font-semibold text-white flex items-center gap-2">
+                <span className="text-2xl leading-none">🇨🇴</span>
+                Medellín — Hotel Estelar
+              </p>
             </div>
           </div>
         </motion.div>
