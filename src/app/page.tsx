@@ -12,6 +12,7 @@ import Registration from "@/components/Registration";
 import Sponsors from "@/components/Sponsors";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SponsorFloat from "@/components/SponsorFloat";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <Sponsors />
       <Footer />
       <WhatsAppFloat />
+      <SponsorFloat />
     </>
   );
 }
