@@ -4,6 +4,7 @@ import SponsorBenefits from "@/components/sponsors/SponsorBenefits";
 import SponsorPackages from "@/components/sponsors/SponsorPackages";
 import SponsorRegistration from "@/components/sponsors/SponsorRegistration";
 import Sponsors from "@/components/Sponsors";
+import EventCarousel from "@/components/EventCarousel";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
@@ -21,6 +22,7 @@ export default function SponsorsPage() {
       <SponsorBenefits />
       <SponsorPackages />
       <SponsorRegistration />
+      <EventCarousel />
       <Sponsors />
       <Footer />
       <WhatsAppFloat />

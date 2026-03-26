@@ -8,10 +8,15 @@ const slides = [
   { id: 2, src: "/images/carousel/evento-2.jpg", alt: "Convención Inmobiliaria — Evento 2" },
   { id: 3, src: "/images/carousel/evento-3.jpg", alt: "Convención Inmobiliaria — Evento 3" },
   { id: 4, src: "/images/carousel/evento-4.jpg", alt: "Convención Inmobiliaria — Evento 4" },
-  { id: 5, src: "/images/carousel/evento-5.jpg", alt: "Convención Inmobiliaria — Evento 5" },
-  { id: 6, src: "/images/carousel/evento-6.jpg", alt: "Convención Inmobiliaria — Evento 6" },
-  { id: 7, src: "/images/carousel/evento-7.jpg", alt: "Convención Inmobiliaria — Evento 7" },
-  { id: 8, src: "/images/carousel/evento-8.jpg", alt: "Convención Inmobiliaria — Evento 8" },
+  { id: 5, src: "/images/carousel/evento-5.jpeg", alt: "Convención Inmobiliaria — Evento 5" },
+  { id: 6, src: "/images/carousel/evento-5b.jpg", alt: "Convención Inmobiliaria — Evento 5b" },
+  { id: 7, src: "/images/carousel/evento-6.jpeg", alt: "Convención Inmobiliaria — Evento 6" },
+  { id: 8, src: "/images/carousel/evento-7.jpeg", alt: "Convención Inmobiliaria — Evento 7" },
+  { id: 9, src: "/images/carousel/evento-8.jpeg", alt: "Convención Inmobiliaria — Evento 8" },
+  { id: 10, src: "/images/carousel/evento-9.jpeg", alt: "Convención Inmobiliaria — Evento 9" },
+  { id: 11, src: "/images/carousel/evento-10.jpeg", alt: "Convención Inmobiliaria — Evento 10" },
+  { id: 12, src: "/images/carousel/evento-11.jpeg", alt: "Convención Inmobiliaria — Evento 11" },
+  { id: 13, src: "/images/carousel/evento-12.jpeg", alt: "Convención Inmobiliaria — Evento 12" },
 ];
 
 export default function EventCarousel() {
@@ -116,8 +121,8 @@ export default function EventCarousel() {
             </div>
           </div>
 
-          {/* Thumbnail strip */}
-          <div className="flex gap-2 mt-4 justify-center overflow-x-auto pb-2">
+          {/* Dot indicators (mobile-friendly) */}
+          <div className="flex gap-1.5 mt-4 justify-center flex-wrap">
             {slides.map((slide, i) => (
               <button
                 key={slide.id}
@@ -125,18 +130,13 @@ export default function EventCarousel() {
                   setDirection(i > current ? 1 : -1);
                   setCurrent(i);
                 }}
-                className={`shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                className={`shrink-0 rounded-full transition-all duration-300 ${
                   i === current
-                    ? "border-gold-500 shadow-lg shadow-gold-500/20 scale-105"
-                    : "border-white/10 opacity-50 hover:opacity-80 hover:border-white/30"
+                    ? "w-8 h-2.5 bg-gold-500 shadow-lg shadow-gold-500/30"
+                    : "w-2.5 h-2.5 bg-white/25 hover:bg-white/50"
                 }`}
-              >
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  className="w-full h-full object-cover"
-                />
-              </button>
+                aria-label={`Ir a imagen ${i + 1}`}
+              />
             ))}
           </div>
         </div>
