@@ -61,14 +61,21 @@ export async function POST(req: NextRequest) {
     const assistantMessage =
       response.content[0].type === "text" ? response.content[0].text : "";
 
-    // Save to Google Sheets in background (don't block response)
-    const lastUserMsg = messages.filter((m: { role: string }) => m.role === "user").pop();
-    if (lastUserMsg) {
-      saveToSheets({
-        userMessage: lastUserMsg.content,
-        assistantMessage,
-        pageSource: pageSource || "principal",
-      }).catch(() => {});
+    // Only save to Sheets when we detect contact info (name + phone/email)
+    const allUserMessages = messages
+      .filter((m: { role: string }) => m.role === "user")
+      .map((m: { content: string }) => m.content)
+      .join(" ");
+
+    const hasPhone = /\d{7,}/.test(allUserMessages);
+    const hasEmail = /@/.test(allUserMessages);
+    const hasContactInfo = hasPhone || hasEmail;
+    const messageCount = messages.length;
+
+    // Save only when contact info detected OR every 10 messages as summary
+    if (hasContactInfo || messageCount === 10) {
+      const summary = buildLeadSummary(messages, pageSource || "principal");
+      saveToSheets(summary).catch(() => {});
     }
 
     return NextResponse.json({ message: assistantMessage });
@@ -81,24 +88,64 @@ export async function POST(req: NextRequest) {
   }
 }
 
-async function saveToSheets(data: {
-  userMessage: string;
-  assistantMessage: string;
-  pageSource: string;
-}) {
+interface LeadData {
+  form_type: string;
+  source: string;
+  nombre: string;
+  email: string;
+  telefono: string;
+  participacion: string;
+}
+
+function buildLeadSummary(messages: { role: string; content: string }[], pageSource: string): LeadData {
+  const userMessages = messages
+    .filter((m) => m.role === "user")
+    .map((m) => m.content);
+  const allText = userMessages.join(" ");
+
+  // Extract name (first user message usually has it)
+  const nombre = userMessages[0]?.substring(0, 80) || "Sin nombre";
+
+  // Extract phone
+  const phoneMatch = allText.match(/[\d+\-().\s]{7,20}/);
+  const telefono = phoneMatch ? phoneMatch[0].trim() : "";
+
+  // Extract email
+  const emailMatch = allText.match(/[\w.-]+@[\w.-]+\.\w+/);
+  const email = emailMatch ? emailMatch[0] : "";
+
+  // Determine interest type
+  let tipo = "asistente-free";
+  const lowerText = allText.toLowerCase();
+  if (lowerText.includes("sponsor")) tipo = "sponsor";
+  else if (lowerText.includes("vip") || lowerText.includes("lunch")) tipo = "asistente-vip";
+  else if (lowerText.includes("platinum") || lowerText.includes("50")) tipo = "asistente-vip";
+  else if (lowerText.includes("advance") || lowerText.includes("100") || lowerText.includes("a.i")) tipo = "asistente-vip";
+
+  // Build short summary (max 250 chars)
+  const resumen = userMessages
+    .slice(0, 5)
+    .map((m) => m.substring(0, 60))
+    .join(" → ")
+    .substring(0, 250);
+
+  return {
+    form_type: tipo === "sponsor" ? "sponsor" : tipo,
+    source: `chat-sofia-${pageSource}`,
+    nombre,
+    email,
+    telefono,
+    participacion: `[Chat Sofía] ${resumen}`,
+  };
+}
+
+async function saveToSheets(data: LeadData) {
   try {
     await fetch(SHEETS_URL, {
       method: "POST",
-      body: JSON.stringify({
-        form_type: "chat_sofia",
-        source: `chat-sofia-${data.pageSource}`,
-        nombre: "Chat Sofía",
-        email: "",
-        telefono: "",
-        participacion: `USER: ${data.userMessage.substring(0, 200)} | SOFIA: ${data.assistantMessage.substring(0, 200)}`,
-      }),
+      body: JSON.stringify(data),
     });
   } catch {
-    // Silent fail for logging
+    // Silent fail
   }
 }
