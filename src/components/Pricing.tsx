@@ -227,18 +227,40 @@ export default function Pricing() {
 
             <div className="w-full h-px bg-white/10 mb-6" />
 
+            <div className="glass rounded-xl p-3 mb-5 border border-white/10">
+              <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
+                La experiencia completa con contenido exclusivo 💎
+              </p>
+            </div>
+
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
-                {checkIconWhite}
-                <span className="text-white/95 text-sm leading-relaxed italic">Beneficios próximamente</span>
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  ⭐ <strong className="text-white">Todo lo del VIP</strong> incluido
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  📖 <strong className="text-white">Magazine Digital</strong> con detalles y contactos de los proyectos
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  📋 Directorio exclusivo de participantes
+                </span>
               </div>
             </div>
 
             <a
-              href="#registro"
+              href="https://wa.me/17542804030?text=Hola%2C%20quiero%20info%20sobre%20el%20acceso%20Platinum"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
             >
-              Solicitar Info
+              Quiero Platinum 💎
             </a>
           </motion.div>
 
@@ -276,18 +298,46 @@ export default function Pricing() {
 
             <div className="w-full h-px bg-white/10 mb-6" />
 
+            <div className="glass rounded-xl p-3 mb-5 border border-white/10">
+              <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
+                El paquete más completo + tecnología de vanguardia 🚀
+              </p>
+            </div>
+
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
-                {checkIconWhite}
-                <span className="text-white/95 text-sm leading-relaxed italic">Beneficios próximamente</span>
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  💎 <strong className="text-white">Todo lo del Platinum</strong> incluido
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  💳 <strong className="text-white">ECard Digital</strong> personalizada
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  🤖 <strong className="text-white">Workshop de Inteligencia Artificial</strong>
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  🧠 Estrategias A.I. para el sector inmobiliario
+                </span>
               </div>
             </div>
 
             <a
-              href="#registro"
+              href="https://wa.me/17542804030?text=Hola%2C%20quiero%20info%20sobre%20el%20acceso%20Advance%20A.I."
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
             >
-              Solicitar Info
+              Quiero Advance A.I. 🚀
             </a>
           </motion.div>
         </div>
