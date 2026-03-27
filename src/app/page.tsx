@@ -11,7 +11,7 @@ import Organizer from "@/components/Organizer";
 import Registration from "@/components/Registration";
 import Sponsors from "@/components/Sponsors";
 import Footer from "@/components/Footer";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
+import SofiaChat from "@/components/SofiaChat";
 import SponsorFloat from "@/components/SponsorFloat";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
       <Registration />
       <Sponsors />
       <Footer />
-      <WhatsAppFloat />
+      <SofiaChat pageSource="asistentes" />
       <SponsorFloat />
     </>
   );
