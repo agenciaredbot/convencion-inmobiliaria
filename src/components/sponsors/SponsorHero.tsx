@@ -94,7 +94,7 @@ export default function SponsorHero() {
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
-              <p className="text-xs text-white/95 uppercase tracking-wider">Abril 22</p>
+              <p className="text-xs text-white/95 uppercase tracking-wider">Miércoles 22 de Abril</p>
               <p className="text-sm font-semibold text-white flex items-center gap-2">
                 <span className="text-2xl leading-none">🇨🇴</span>
                 Barranquilla — Hotel Estelar
@@ -106,7 +106,7 @@ export default function SponsorHero() {
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
-              <p className="text-xs text-white/95 uppercase tracking-wider">Abril 24</p>
+              <p className="text-xs text-white/95 uppercase tracking-wider">Viernes 24 de Abril</p>
               <p className="text-sm font-semibold text-white flex items-center gap-2">
                 <span className="text-2xl leading-none">🇨🇴</span>
                 Medellín — Hotel Estelar

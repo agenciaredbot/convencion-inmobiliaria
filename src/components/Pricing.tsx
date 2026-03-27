@@ -299,7 +299,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-center text-gold-500 text-sm mt-10 italic"
         >
-          Ambos accesos incluyen entrada a las dos sedes: Barranquilla (Abril 22) y Medellín (Abril 24)
+          Ambos accesos incluyen entrada a las dos sedes: Barranquilla (Miércoles 22 de Abril) y Medellín (Viernes 24 de Abril)
         </motion.p>
       </div>
     </section>
