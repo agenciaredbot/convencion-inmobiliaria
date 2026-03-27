@@ -329,6 +329,12 @@ export default function Pricing() {
                   🧠 Estrategias A.I. para el sector inmobiliario
                 </span>
               </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  📦 <strong className="text-white">Kit de Marketing</strong>
+                </span>
+              </div>
             </div>
 
             <a
