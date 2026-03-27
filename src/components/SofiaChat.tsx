@@ -99,10 +99,10 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
             <motion.div
               animate={{ y: [0, -4, 0] }}
               transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-              className="bg-white text-navy-950 text-xs font-bold px-4 py-2 rounded-xl shadow-lg relative"
+              className="bg-white text-navy-950 text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg relative"
             >
               💬 ¡Pregúntame lo que necesites!
-              <div className="absolute -bottom-1.5 right-8 w-3 h-3 bg-white rotate-45" />
+              <div className="absolute -bottom-1.5 right-10 w-3 h-3 bg-white rotate-45" />
             </motion.div>
 
             {/* Agent image button */}
@@ -110,7 +110,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setOpen(true)}
-              className="relative w-20 h-20 rounded-full overflow-hidden shadow-2xl shadow-gold-500/40 hover:shadow-gold-500/60 transition-shadow duration-300"
+              className="relative w-28 h-28 rounded-full overflow-hidden shadow-2xl shadow-gold-500/40 hover:shadow-gold-500/60 transition-shadow duration-300"
             >
               <img
                 src="/sofia-agente.png"
@@ -120,8 +120,6 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
               {/* Glow ring */}
               <div className="absolute inset-0 rounded-full border-2 border-gold-500/50 animate-pulse" />
               <div className="absolute -inset-1 rounded-full bg-gold-500/20 animate-ping pointer-events-none" />
-              {/* Online badge */}
-              <div className="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-green-500 border-2 border-white" />
             </motion.button>
           </motion.div>
         )}
