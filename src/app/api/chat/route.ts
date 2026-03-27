@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
 const SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbx9REseP7lAFQ5-Y52XP300tGeTHvgXcF2vaYPd15vRMtkDsrS-d6gPbflJN-Rh-8v4UQ/exec";
+  "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
 const SYSTEM_PROMPT = `Eres Sofía, asistente de ventas de la Convención Inmobiliaria 2026. Español siempre.
 

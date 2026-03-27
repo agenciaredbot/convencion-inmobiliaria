@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx9REseP7lAFQ5-Y52XP300tGeTHvgXcF2vaYPd15vRMtkDsrS-d6gPbflJN-Rh-8v4UQ/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
 export default function Registration() {
   const [sending, setSending] = useState(false);
