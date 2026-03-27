@@ -119,7 +119,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed bottom-4 right-4 z-50 w-[370px] max-w-[calc(100vw-2rem)] h-[550px] max-h-[calc(100vh-2rem)] flex flex-col rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10"
+            className="fixed bottom-4 right-4 z-50 w-[440px] max-w-[calc(100vw-2rem)] h-[680px] max-h-[calc(100vh-2rem)] flex flex-col rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-navy-900 to-navy-800 px-5 py-4 flex items-center gap-3 border-b border-white/10">
