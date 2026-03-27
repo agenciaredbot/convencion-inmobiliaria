@@ -14,6 +14,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
+  const [leadSaved, setLeadSaved] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -53,10 +54,11 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: newMessages, pageSource }),
+        body: JSON.stringify({ messages: newMessages, pageSource, leadSaved }),
       });
 
       const data = await res.json();
+      if (data.leadSaved) setLeadSaved(true);
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: data.message },

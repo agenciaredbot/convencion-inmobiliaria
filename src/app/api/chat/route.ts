@@ -52,7 +52,8 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages, pageSource } = await req.json();
+    const body = await req.json();
+    const { messages, pageSource, leadSaved } = body;
 
     const response = await client.messages.create({
       model: "claude-sonnet-4-20250514",
@@ -67,21 +68,23 @@ export async function POST(req: NextRequest) {
     const assistantMessage =
       response.content[0].type === "text" ? response.content[0].text : "";
 
-    // After getting a response, check if we have enough data to extract lead
-    const allUserText = messages
-      .filter((m: { role: string }) => m.role === "user")
-      .map((m: { content: string }) => m.content)
-      .join(" ");
+    // Only save lead ONCE per conversation
+    if (!leadSaved) {
+      const allUserText = messages
+        .filter((m: { role: string }) => m.role === "user")
+        .map((m: { content: string }) => m.content)
+        .join(" ");
 
-    const hasPhone = /[\d+\-()]{7,}/.test(allUserText.replace(/\s/g, ""));
-    const hasEmail = /[\w.-]+@[\w.-]+\.\w+/.test(allUserText);
+      const hasPhone = /\d{7,}/.test(allUserText.replace(/[\s\-().+]/g, ""));
+      const hasEmail = /[\w.-]+@[\w.-]+\.\w+/.test(allUserText);
 
-    if (hasPhone || hasEmail) {
-      // Use Claude to extract structured data cleanly
-      extractAndSaveLead(messages, pageSource || "principal").catch(() => {});
+      if (hasPhone || hasEmail) {
+        extractAndSaveLead(messages, pageSource || "principal").catch(() => {});
+        return NextResponse.json({ message: assistantMessage, leadSaved: true });
+      }
     }
 
-    return NextResponse.json({ message: assistantMessage });
+    return NextResponse.json({ message: assistantMessage, leadSaved: leadSaved || false });
   } catch (error) {
     console.error("Chat error:", error);
     return NextResponse.json(
@@ -102,15 +105,22 @@ async function extractAndSaveLead(messages: { role: string; content: string }[],
     const extraction = await client.messages.create({
       model: "claude-sonnet-4-20250514",
       max_tokens: 250,
-      system: `Extrae datos de contacto de esta conversación. Responde SOLO con JSON válido, sin texto adicional. Formato exacto:
-{"nombre":"","email":"","telefono":"","tipo":"asistente-free","resumen":""}
+      system: `Extrae datos de contacto de la conversación. Responde UNICAMENTE con un JSON válido. Nada más.
 
-Reglas:
-- nombre: Solo el nombre de la persona (ej: "Juan Pérez"). NO incluir emails, teléfonos ni otra info.
-- email: Solo el email (ej: "juan@gmail.com"). Dejar vacío "" si no hay.
-- telefono: Solo números y + (ej: "+573001234567"). Dejar vacío "" si no hay.
-- tipo: "sponsor" si quiere ser sponsor, "asistente-vip" si mencionó VIP/Platinum/Advance, "asistente-free" si no especificó.
-- resumen: Máximo 100 caracteres describiendo el interés de la persona.`,
+{"nombre":"","email":"","telefono":"","tipo":"","resumen":""}
+
+REGLAS ESTRICTAS:
+- nombre: SOLO el nombre propio (ej: "Juan Pérez"). PROHIBIDO incluir emails, teléfonos, o cualquier otro dato aquí.
+- email: SOLO la dirección de email (ej: "juan@gmail.com"). Si no hay email, pon "".
+- telefono: SOLO dígitos y + (ej: "3001234567"). Sin espacios, paréntesis ni guiones. Si no hay, pon "".
+- tipo: Uno de estos valores exactos: "sponsor", "asistente-vip", "asistente-free"
+- resumen: Máximo 80 caracteres. Qué busca la persona.
+
+EJEMPLO CORRECTO:
+{"nombre":"Carlos López","email":"carlos@gmail.com","telefono":"3015557890","tipo":"asistente-free","resumen":"Interesado en asistir al evento en Barranquilla"}
+
+EJEMPLO INCORRECTO (NO hagas esto):
+{"nombre":"Carlos López, carlos@gmail.com y 3015557890","email":"","telefono":"","tipo":"","resumen":""}`,
       messages: [{ role: "user", content: transcript }],
     });
 
