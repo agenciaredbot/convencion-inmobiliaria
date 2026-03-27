@@ -34,7 +34,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
       const greeting: Message = {
         role: "assistant",
         content:
-          "¡Hola! 👋 Soy **Sofía**, tu asistente de la Convención Inmobiliaria 2026.\n\n¿Cómo te llamas? ¿Vienes como asistente o te interesa ser sponsor?",
+          "¡Hola! 👋 Soy **Sofía**, tu asistente de la Convención Inmobiliaria 2026.\n\nPara ayudarte necesito tus datos:\n• **Nombre**\n• **Correo electrónico**\n• **Teléfono**\n\n¡Escríbelos y te cuento todo! 😊",
       };
       setMessages([greeting]);
     }
