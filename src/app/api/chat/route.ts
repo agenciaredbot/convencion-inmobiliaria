@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
 const SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbx5Y5LIKu60jcAaCsotwuFg7kgpXQKmD_36XSBqQd8tfDdSSYb46LVLLotC-buE9P4B7A/exec";
+  "https://script.google.com/macros/s/AKfycbx9REseP7lAFQ5-Y52XP300tGeTHvgXcF2vaYPd15vRMtkDsrS-d6gPbflJN-Rh-8v4UQ/exec";
 
 const SYSTEM_PROMPT = `Eres Sofía, asistente de ventas de la Convención Inmobiliaria 2026. Español siempre.
 
@@ -132,17 +132,15 @@ EJEMPLO INCORRECTO (NO hagas esto):
     // Only save if we have at least a name
     if (!data.nombre || data.nombre === "") return;
 
-    const formType = data.tipo === "sponsor" ? "sponsor" : data.tipo || "asistente-free";
-
     await fetch(SHEETS_URL, {
       method: "POST",
       body: JSON.stringify({
-        form_type: formType,
-        source: `chat-sofia-${pageSource}`,
+        tipo: data.tipo || "asistente-free",
         nombre: data.nombre || "",
         email: data.email || "",
         telefono: data.telefono || "",
-        participacion: data.resumen || "[Chat Sofía]",
+        interes: data.resumen || "",
+        fuente: `chat-sofia-${pageSource}`,
       }),
     });
   } catch {

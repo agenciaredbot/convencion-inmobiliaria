@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5Y5LIKu60jcAaCsotwuFg7kgpXQKmD_36XSBqQd8tfDdSSYb46LVLLotC-buE9P4B7A/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx9REseP7lAFQ5-Y52XP300tGeTHvgXcF2vaYPd15vRMtkDsrS-d6gPbflJN-Rh-8v4UQ/exec";
 
 const highlights = [
   "Espacio de exhibición en el evento",
@@ -22,15 +22,16 @@ export default function SponsorRegistration() {
     e.preventDefault();
     setSending(true);
     const form = e.currentTarget;
+    const paquete = (form.elements.namedItem("paquete") as HTMLSelectElement).value;
+    const ciudad = (form.elements.namedItem("ciudad") as HTMLSelectElement).value;
+    const empresa = (form.elements.namedItem("empresa") as HTMLInputElement).value;
     const data = {
-      form_type: "sponsor",
-      source: "landing-sponsors",
+      tipo: "sponsor",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
-      empresa: (form.elements.namedItem("empresa") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      paquete: (form.elements.namedItem("paquete") as HTMLSelectElement).value,
-      ciudad: (form.elements.namedItem("ciudad") as HTMLSelectElement).value,
+      interes: `Sponsor ${paquete || "sin especificar"} | ${empresa || ""} | ${ciudad || ""}`.trim(),
+      fuente: "formulario-sponsors",
     };
     try {
       await fetch(SHEETS_URL, {

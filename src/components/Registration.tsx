@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx5Y5LIKu60jcAaCsotwuFg7kgpXQKmD_36XSBqQd8tfDdSSYb46LVLLotC-buE9P4B7A/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbx9REseP7lAFQ5-Y52XP300tGeTHvgXcF2vaYPd15vRMtkDsrS-d6gPbflJN-Rh-8v4UQ/exec";
 
 export default function Registration() {
   const [sending, setSending] = useState(false);
@@ -13,13 +13,14 @@ export default function Registration() {
     e.preventDefault();
     setSending(true);
     const form = e.currentTarget;
+    const participacion = (form.elements.namedItem("participacion") as HTMLSelectElement).value;
     const data = {
-      form_type: "asistente",
-      source: "landing-asistentes",
+      tipo: participacion === "sponsor" ? "sponsor" : "asistente-free",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      participacion: (form.elements.namedItem("participacion") as HTMLSelectElement).value,
+      interes: participacion === "sponsor" ? "Quiere ser sponsor" : participacion === "speaker" ? "Quiere ser speaker" : "Quiere asistir al evento",
+      fuente: "formulario-asistentes",
     };
     try {
       await fetch(SHEETS_URL, {
