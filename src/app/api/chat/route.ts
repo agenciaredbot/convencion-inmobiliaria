@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     const { messages, pageSource } = await req.json();
 
     const response = await client.messages.create({
-      model: "claude-3-5-haiku-20241022",
+      model: "claude-3-haiku-20240307",
       max_tokens: 200,
       system: SYSTEM_PROMPT + `\n\nEl usuario está navegando desde: ${pageSource || "página principal"}`,
       messages: messages.map((m: { role: string; content: string }) => ({
