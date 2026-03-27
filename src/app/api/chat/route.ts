@@ -67,21 +67,18 @@ export async function POST(req: NextRequest) {
     const assistantMessage =
       response.content[0].type === "text" ? response.content[0].text : "";
 
-    // Only save to Sheets when we detect contact info (name + phone/email)
-    const allUserMessages = messages
+    // After getting a response, check if we have enough data to extract lead
+    const allUserText = messages
       .filter((m: { role: string }) => m.role === "user")
       .map((m: { content: string }) => m.content)
       .join(" ");
 
-    const hasPhone = /\d{7,}/.test(allUserMessages);
-    const hasEmail = /@/.test(allUserMessages);
-    const hasContactInfo = hasPhone || hasEmail;
-    const messageCount = messages.length;
+    const hasPhone = /[\d+\-()]{7,}/.test(allUserText.replace(/\s/g, ""));
+    const hasEmail = /[\w.-]+@[\w.-]+\.\w+/.test(allUserText);
 
-    // Save only when contact info detected OR every 10 messages as summary
-    if (hasContactInfo || messageCount === 10) {
-      const summary = buildLeadSummary(messages, pageSource || "principal");
-      saveToSheets(summary).catch(() => {});
+    if (hasPhone || hasEmail) {
+      // Use Claude to extract structured data cleanly
+      extractAndSaveLead(messages, pageSource || "principal").catch(() => {});
     }
 
     return NextResponse.json({ message: assistantMessage });
@@ -94,64 +91,51 @@ export async function POST(req: NextRequest) {
   }
 }
 
-interface LeadData {
-  form_type: string;
-  source: string;
-  nombre: string;
-  email: string;
-  telefono: string;
-  participacion: string;
-}
-
-function buildLeadSummary(messages: { role: string; content: string }[], pageSource: string): LeadData {
-  const userMessages = messages
-    .filter((m) => m.role === "user")
-    .map((m) => m.content);
-  const allText = userMessages.join(" ");
-
-  // Extract name (first user message usually has it)
-  const nombre = userMessages[0]?.substring(0, 80) || "Sin nombre";
-
-  // Extract phone
-  const phoneMatch = allText.match(/[\d+\-().\s]{7,20}/);
-  const telefono = phoneMatch ? phoneMatch[0].trim() : "";
-
-  // Extract email
-  const emailMatch = allText.match(/[\w.-]+@[\w.-]+\.\w+/);
-  const email = emailMatch ? emailMatch[0] : "";
-
-  // Determine interest type
-  let tipo = "asistente-free";
-  const lowerText = allText.toLowerCase();
-  if (lowerText.includes("sponsor")) tipo = "sponsor";
-  else if (lowerText.includes("vip") || lowerText.includes("lunch")) tipo = "asistente-vip";
-  else if (lowerText.includes("platinum") || lowerText.includes("50")) tipo = "asistente-vip";
-  else if (lowerText.includes("advance") || lowerText.includes("100") || lowerText.includes("a.i")) tipo = "asistente-vip";
-
-  // Build short summary (max 250 chars)
-  const resumen = userMessages
-    .slice(0, 5)
-    .map((m) => m.substring(0, 60))
-    .join(" → ")
-    .substring(0, 250);
-
-  return {
-    form_type: tipo === "sponsor" ? "sponsor" : tipo,
-    source: `chat-sofia-${pageSource}`,
-    nombre,
-    email,
-    telefono,
-    participacion: `[Chat Sofía] ${resumen}`,
-  };
-}
-
-async function saveToSheets(data: LeadData) {
+async function extractAndSaveLead(messages: { role: string; content: string }[], pageSource: string) {
   try {
+    // Build conversation transcript
+    const transcript = messages
+      .map((m) => `${m.role === "user" ? "USUARIO" : "SOFIA"}: ${m.content}`)
+      .join("\n");
+
+    // Use Claude to extract clean structured data
+    const extraction = await client.messages.create({
+      model: "claude-3-haiku-20240307",
+      max_tokens: 200,
+      system: `Extrae datos de contacto de esta conversación. Responde SOLO con JSON válido, sin texto adicional. Formato exacto:
+{"nombre":"","email":"","telefono":"","tipo":"asistente-free","resumen":""}
+
+Reglas:
+- nombre: Solo el nombre de la persona (ej: "Juan Pérez"). NO incluir emails, teléfonos ni otra info.
+- email: Solo el email (ej: "juan@gmail.com"). Dejar vacío "" si no hay.
+- telefono: Solo números y + (ej: "+573001234567"). Dejar vacío "" si no hay.
+- tipo: "sponsor" si quiere ser sponsor, "asistente-vip" si mencionó VIP/Platinum/Advance, "asistente-free" si no especificó.
+- resumen: Máximo 100 caracteres describiendo el interés de la persona.`,
+      messages: [{ role: "user", content: transcript }],
+    });
+
+    const jsonText = extraction.content[0].type === "text" ? extraction.content[0].text : "{}";
+
+    // Parse the JSON response
+    const data = JSON.parse(jsonText.trim());
+
+    // Only save if we have at least a name
+    if (!data.nombre || data.nombre === "") return;
+
+    const formType = data.tipo === "sponsor" ? "sponsor" : data.tipo || "asistente-free";
+
     await fetch(SHEETS_URL, {
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        form_type: formType,
+        source: `chat-sofia-${pageSource}`,
+        nombre: data.nombre || "",
+        email: data.email || "",
+        telefono: data.telefono || "",
+        participacion: data.resumen || "[Chat Sofía]",
+      }),
     });
   } catch {
-    // Silent fail
+    // Silent fail for extraction errors
   }
 }
