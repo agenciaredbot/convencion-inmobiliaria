@@ -80,7 +80,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
       .replace(/\n/g, "<br/>")
       .replace(
         /(https?:\/\/[^\s<]+)/g,
-        '<a href="$1" target="_blank" rel="noopener" class="text-gold-500 underline hover:text-gold-400">$1</a>'
+        '<a href="$1" target="_blank" rel="noopener" class="text-gold-500 underline hover:text-gold-400 break-all">🔗 Ir al link</a>'
       );
   }
 
