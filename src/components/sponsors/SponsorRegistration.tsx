@@ -175,9 +175,9 @@ export default function SponsorRegistration() {
                 <div>
                   <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white/95 text-sm focus:outline-none focus:border-gold-500/50 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿Qué paquete te interesa?</option>
-                    <option value="silver" className="bg-navy-900">Silver</option>
-                    <option value="gold" className="bg-navy-900">Gold</option>
-                    <option value="platinum" className="bg-navy-900">Platinum</option>
+                    <option value="vip" className="bg-navy-900">⭐ VIP</option>
+                    <option value="platinum" className="bg-navy-900">💎 Platinum</option>
+                    <option value="advance-ai" className="bg-navy-900">🚀 Advance A.I.</option>
                     <option value="personalizado" className="bg-navy-900">Paquete personalizado</option>
                   </select>
                 </div>
