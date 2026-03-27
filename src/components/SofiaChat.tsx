@@ -89,25 +89,41 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
       {/* Float button */}
       <AnimatePresence>
         {!open && (
-          <motion.button
+          <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setOpen(true)}
-            className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold text-sm shadow-2xl shadow-gold-500/30 hover:shadow-gold-500/50 transition-shadow duration-300 group"
+            className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-2"
           >
-            <div className="w-10 h-10 rounded-full bg-navy-950/20 flex items-center justify-center">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-              </svg>
-            </div>
-            <span className="hidden sm:block">Pregúntale a Sofía</span>
+            {/* Text bubble */}
+            <motion.div
+              animate={{ y: [0, -4, 0] }}
+              transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+              className="bg-white text-navy-950 text-xs font-bold px-4 py-2 rounded-xl shadow-lg relative"
+            >
+              💬 ¡Pregúntame lo que necesites!
+              <div className="absolute -bottom-1.5 right-8 w-3 h-3 bg-white rotate-45" />
+            </motion.div>
 
-            {/* Pulse ring */}
-            <span className="absolute inset-0 rounded-full bg-gold-500/30 animate-ping pointer-events-none" />
-          </motion.button>
+            {/* Agent image button */}
+            <motion.button
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setOpen(true)}
+              className="relative w-20 h-20 rounded-full overflow-hidden shadow-2xl shadow-gold-500/40 hover:shadow-gold-500/60 transition-shadow duration-300"
+            >
+              <img
+                src="/sofia-agente.png"
+                alt="Sofía — Asistente IA"
+                className="w-full h-full object-cover rounded-full border-3 border-gold-500"
+              />
+              {/* Glow ring */}
+              <div className="absolute inset-0 rounded-full border-2 border-gold-500/50 animate-pulse" />
+              <div className="absolute -inset-1 rounded-full bg-gold-500/20 animate-ping pointer-events-none" />
+              {/* Online badge */}
+              <div className="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-green-500 border-2 border-white" />
+            </motion.button>
+          </motion.div>
         )}
       </AnimatePresence>
 
