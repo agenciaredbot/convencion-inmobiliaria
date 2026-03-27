@@ -55,8 +55,8 @@ export async function POST(req: NextRequest) {
     const { messages, pageSource } = await req.json();
 
     const response = await client.messages.create({
-      model: "claude-3-haiku-20240307",
-      max_tokens: 200,
+      model: "claude-sonnet-4-20250514",
+      max_tokens: 250,
       system: SYSTEM_PROMPT + `\n\nEl usuario está navegando desde: ${pageSource || "página principal"}`,
       messages: messages.map((m: { role: string; content: string }) => ({
         role: m.role as "user" | "assistant",
@@ -100,8 +100,8 @@ async function extractAndSaveLead(messages: { role: string; content: string }[],
 
     // Use Claude to extract clean structured data
     const extraction = await client.messages.create({
-      model: "claude-3-haiku-20240307",
-      max_tokens: 200,
+      model: "claude-sonnet-4-20250514",
+      max_tokens: 250,
       system: `Extrae datos de contacto de esta conversación. Responde SOLO con JSON válido, sin texto adicional. Formato exacto:
 {"nombre":"","email":"","telefono":"","tipo":"asistente-free","resumen":""}
 
