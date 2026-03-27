@@ -338,7 +338,7 @@ export default function Pricing() {
             </div>
 
             <a
-              href="https://wa.me/17542804030?text=Hola%2C%20quiero%20info%20sobre%20el%20acceso%20Advance%20A.I."
+              href="https://checkout.bold.co/payment/LNK_DM1LN0WEN8"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
