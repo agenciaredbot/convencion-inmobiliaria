@@ -34,6 +34,9 @@ export default function Footer() {
             Todos los derechos reservados 2026 ® Claudia Rivera
           </p>
         </div>
+        <div className="mt-8 pt-4 border-t border-white/5 text-center">
+          <p className="text-white/15 text-[10px]">Diseño y desarrollo Grupo V3 - 2026.</p>
+        </div>
       </div>
     </footer>
   );
