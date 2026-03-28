@@ -149,17 +149,28 @@ EJEMPLO INCORRECTO (NO hagas esto):
     // Only save if we have at least a name
     if (!data.nombre || data.nombre === "") return;
 
+    const leadData = {
+      tipo: data.tipo || (pageSource === "sponsors" ? "chat-sponsors" : "chat-asistentes"),
+      nombre: data.nombre || "",
+      email: data.email || "",
+      telefono: data.telefono || "",
+      interes: data.resumen || "",
+      fuente: `chat-sofia-${pageSource}`,
+    };
+
+    // Send to Google Sheets
     await fetch(SHEETS_URL, {
       method: "POST",
-      body: JSON.stringify({
-        tipo: data.tipo || "asistente-free",
-        nombre: data.nombre || "",
-        email: data.email || "",
-        telefono: data.telefono || "",
-        interes: data.resumen || "",
-        fuente: `chat-sofia-${pageSource}`,
-      }),
+      body: JSON.stringify(leadData),
     });
+
+    // Send to Kommo CRM
+    const kommoUrl = new URL("/api/kommo", "https://convencioninmobiliariausa.com");
+    fetch(kommoUrl.toString(), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(leadData),
+    }).catch(() => {});
   } catch {
     // Silent fail for extraction errors
   }

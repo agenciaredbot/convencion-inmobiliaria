@@ -34,10 +34,17 @@ export default function SponsorRegistration() {
       fuente: "formulario-sponsors",
     };
     try {
-      await fetch(SHEETS_URL, {
+      // Send to Google Sheets
+      fetch(SHEETS_URL, {
         method: "POST",
         body: JSON.stringify(data),
         mode: "no-cors",
+      });
+      // Send to Kommo CRM
+      fetch("/api/kommo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
       setSent(true);
       form.reset();
