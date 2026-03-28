@@ -23,7 +23,7 @@ export default function SponsorWhatsApp() {
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
       </div>
       <span className="hidden sm:block bg-[#25D366] text-white text-xs font-bold px-3 py-2 rounded-lg shadow-lg">
-        Habla con Claudia
+        Habla con Ana
       </span>
     </motion.a>
   );
