@@ -7,6 +7,7 @@ import Sponsors from "@/components/Sponsors";
 import EventCarousel from "@/components/EventCarousel";
 import Footer from "@/components/Footer";
 import SofiaChat from "@/components/SofiaChat";
+import SponsorWhatsApp from "@/components/sponsors/SponsorWhatsApp";
 
 export const metadata = {
   title: "Ser Sponsor — Convención Inmobiliaria 2026",
@@ -26,6 +27,7 @@ export default function SponsorsPage() {
       <Sponsors />
       <Footer />
       <SofiaChat pageSource="sponsors" />
+      <SponsorWhatsApp />
     </>
   );
 }
