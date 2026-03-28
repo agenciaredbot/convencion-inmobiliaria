@@ -15,11 +15,11 @@ export default function Registration() {
     const form = e.currentTarget;
     const participacion = (form.elements.namedItem("participacion") as HTMLSelectElement).value;
     const data = {
-      tipo: participacion === "sponsor" ? "sponsor" : "asistente-free",
+      tipo: participacion || "asistente-free",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      interes: participacion === "sponsor" ? "Quiere ser sponsor" : participacion === "speaker" ? "Quiere ser speaker" : "Quiere asistir al evento",
+      interes: `Asistente ${participacion || "free"} — Convención Inmobiliaria 2026`,
       fuente: "formulario-asistentes",
     };
     try {
