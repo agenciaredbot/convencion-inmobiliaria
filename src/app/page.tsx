@@ -24,8 +24,8 @@ export default function Home() {
       <EventCarousel />
       <Countries />
       <ForWho />
-      <Agenda />
       <Pricing />
+      <Agenda />
       <Organizer />
       <Registration />
       <Sponsors />
