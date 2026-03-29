@@ -1,5 +1,7 @@
-import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+
+const OPENROUTER_BASE = "https://openrouter.ai/api/v1";
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY || "";
 
 const SHEETS_URL =
   "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
@@ -65,25 +67,43 @@ const SYSTEM_PROMPT = `Eres Sofía, asistente virtual de la Convención Inmobili
 - Nunca alucines ni inventes datos, precios, speakers o información que no tengas.
 - Sé honesta: "Esa información la maneja directamente Claudia Rivera, nuestra organizadora. Te comparto su contacto para que te dé todos los detalles 😊"`;
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+async function chatCompletion(model: string, systemPrompt: string, messages: { role: string; content: string }[], maxTokens: number) {
+  const res = await fetch(`${OPENROUTER_BASE}/chat/completions`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "https://convencioninmobiliariausa.com",
+      "X-Title": "Convencion Inmobiliaria Sofia Chat",
+    },
+    body: JSON.stringify({
+      model,
+      max_tokens: maxTokens,
+      messages: [
+        { role: "system", content: systemPrompt },
+        ...messages.map((m) => ({ role: m.role, content: m.content })),
+      ],
+    }),
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`OpenRouter error ${res.status}: ${err}`);
+  }
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || "";
+}
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { messages, pageSource, leadSaved } = body;
 
-    const response = await client.messages.create({
-      model: "claude-opus-4-0-20250514",
-      max_tokens: 400,
-      system: SYSTEM_PROMPT + `\n\nEl usuario está navegando desde: ${pageSource || "página principal"}`,
-      messages: messages.map((m: { role: string; content: string }) => ({
-        role: m.role as "user" | "assistant",
-        content: m.content,
-      })),
-    });
-
-    const assistantMessage =
-      response.content[0].type === "text" ? response.content[0].text : "";
+    const assistantMessage = await chatCompletion(
+      "anthropic/claude-sonnet-4",
+      SYSTEM_PROMPT + `\n\nEl usuario está navegando desde: ${pageSource || "página principal"}`,
+      messages,
+      400
+    );
 
     // Only save lead ONCE per conversation
     if (!leadSaved) {
@@ -118,11 +138,10 @@ async function extractAndSaveLead(messages: { role: string; content: string }[],
       .map((m) => `${m.role === "user" ? "USUARIO" : "SOFIA"}: ${m.content}`)
       .join("\n");
 
-    // Use Claude to extract clean structured data
-    const extraction = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 250,
-      system: `Extrae datos de contacto de la conversación. Responde UNICAMENTE con un JSON válido. Nada más.
+    // Use Claude via OpenRouter to extract clean structured data
+    const jsonText = await chatCompletion(
+      "anthropic/claude-sonnet-4",
+      `Extrae datos de contacto de la conversación. Responde UNICAMENTE con un JSON válido. Nada más.
 
 {"nombre":"","email":"","telefono":"","tipo":"","resumen":""}
 
@@ -138,10 +157,9 @@ EJEMPLO CORRECTO:
 
 EJEMPLO INCORRECTO (NO hagas esto):
 {"nombre":"Carlos López, carlos@gmail.com y 3015557890","email":"","telefono":"","tipo":"","resumen":""}`,
-      messages: [{ role: "user", content: transcript }],
-    });
-
-    const jsonText = extraction.content[0].type === "text" ? extraction.content[0].text : "{}";
+      [{ role: "user", content: transcript }],
+      250
+    );
 
     // Parse the JSON response
     const data = JSON.parse(jsonText.trim());
