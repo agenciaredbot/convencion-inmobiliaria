@@ -176,7 +176,7 @@ export default function SponsorRegistration() {
                   <input
                     type="tel"
                     name="telefono"
-                    placeholder="Teléfono (con código de país)"
+                    placeholder="Teléfono con código de país. Ej: +57 300 123 4567"
                     className="w-full px-5 py-3.5 rounded-xl glass border border-white/10 text-white placeholder:text-white/90 text-sm focus:outline-none focus:border-gold-500/50 transition-colors"
                   />
                 </div>

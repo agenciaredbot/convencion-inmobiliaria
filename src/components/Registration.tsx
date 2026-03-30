@@ -148,7 +148,7 @@ export default function Registration() {
                   <input
                     type="tel"
                     name="telefono"
-                    placeholder="Teléfono (con código de país)"
+                    placeholder="Teléfono con código de país. Ej: +57 300 123 4567"
                     className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
