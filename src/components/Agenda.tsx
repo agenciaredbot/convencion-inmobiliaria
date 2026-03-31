@@ -45,9 +45,9 @@ const jornadaManana = [
 const jornadaTarde = [
   {
     time: "3:00 — 7:00 PM",
-    title: "Segunda Jornada",
-    desc: "Se repite el mismo programa de la jornada de la mañana. Una segunda oportunidad para quienes no pudieron asistir en horario AM o desean profundizar en los contenidos.",
-    icon: "🌆",
+    title: "VIP Cena + Networking",
+    desc: "Cena exclusiva y espacio de networking premium para cerrar negocios, fortalecer alianzas y conectar directamente con inversionistas y líderes del sector.",
+    icon: "🥂",
   },
 ];
 
@@ -155,9 +155,9 @@ export default function Agenda() {
           className="mb-6"
         >
           <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2 mb-8">
-            <span className="text-lg">🌆</span>
+            <span className="text-lg">🥂</span>
             <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
-              Segunda Jornada — 3:00 PM a 7:00 PM
+              VIP Cena + Networking — 3:00 PM a 7:00 PM
             </span>
           </div>
         </motion.div>
