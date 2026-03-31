@@ -112,33 +112,30 @@ export default function Pricing() {
             </a>
           </motion.div>
 
-          {/* VIP LUNCH Tier — Most Popular */}
+          {/* VIP LUNCH Tier */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="relative glass-strong rounded-2xl p-7 sm:p-8 border-2 border-gold-500/30 glow-gold transition-all duration-500 group hover:border-gold-500/50 lg:scale-[1.02]"
+            className="relative glass rounded-2xl p-7 sm:p-8 gradient-border hover:bg-white/[0.03] transition-all duration-500 group border border-white/10 hover:border-white/20"
           >
-            {/* Popular badge */}
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-              <span className="px-4 py-1.5 bg-gold-500 text-navy-950 text-xs font-bold uppercase tracking-wider rounded-full shadow-lg shadow-gold-500/20 whitespace-nowrap">
-                ⭐ Más Popular
+            <div className="absolute -top-3.5 left-6">
+              <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">
+                🥂 VIP
               </span>
             </div>
 
-            <div className="absolute -top-20 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-[80px] pointer-events-none" />
-
             <div className="mt-4 mb-6">
               <h3
-                className="text-2xl sm:text-3xl font-bold text-gold-500 mb-1"
+                className="text-2xl sm:text-3xl font-bold text-white mb-1"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
-                <span className="brush-underline-red">VIP LUNCH</span>
+                VIP LUNCH
               </h3>
               <div className="flex items-baseline gap-2">
                 <span
-                  className="text-4xl sm:text-5xl font-bold text-gold-500 brush-underline-red"
+                  className="text-4xl sm:text-5xl font-bold text-white"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   $27
@@ -147,9 +144,9 @@ export default function Pricing() {
               </div>
             </div>
 
-            <div className="w-full h-px bg-gold-500/20 mb-6" />
+            <div className="w-full h-px bg-white/10 mb-6" />
 
-            <div className="glass rounded-xl p-3 mb-5 border border-gold-500/10">
+            <div className="glass rounded-xl p-3 mb-5 border border-white/10">
               <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
                 Lunch privado con los protagonistas del evento.
                 <span className="text-gold-400 font-semibold"> ¡La mesa donde nacen las alianzas!</span> 🥂
@@ -187,36 +184,39 @@ export default function Pricing() {
               href="https://checkout.bold.co/payment/LNK_668PMLKYFP"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
+              className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
             >
               Quiero Acceso VIP
             </a>
           </motion.div>
 
-          {/* Platinum Tier */}
+          {/* Platinum Tier — FEATURED */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative glass rounded-2xl p-7 sm:p-8 gradient-border hover:bg-white/[0.03] transition-all duration-500 group border border-white/10 hover:border-white/20"
+            className="relative glass-strong rounded-2xl p-7 sm:p-8 border-2 border-gold-500/30 glow-gold transition-all duration-500 group hover:border-gold-500/50 lg:scale-[1.02]"
           >
-            <div className="absolute -top-3.5 left-6">
-              <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">
-                💎 Platinum
+            {/* Featured badge */}
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span className="px-4 py-1.5 bg-gold-500 text-navy-950 text-xs font-bold uppercase tracking-wider rounded-full shadow-lg shadow-gold-500/20 whitespace-nowrap">
+                ⭐ Más Popular
               </span>
             </div>
 
+            <div className="absolute -top-20 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-[80px] pointer-events-none" />
+
             <div className="mt-4 mb-6">
               <h3
-                className="text-2xl sm:text-3xl font-bold text-white mb-1"
+                className="text-2xl sm:text-3xl font-bold text-gold-500 mb-1"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
-                PLATINUM
+                <span className="brush-underline-red">PLATINUM</span>
               </h3>
               <div className="flex items-baseline gap-1">
                 <span
-                  className="text-4xl sm:text-5xl font-bold text-white"
+                  className="text-4xl sm:text-5xl font-bold text-gold-500 brush-underline-red"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   $50
@@ -225,9 +225,9 @@ export default function Pricing() {
               </div>
             </div>
 
-            <div className="w-full h-px bg-white/10 mb-6" />
+            <div className="w-full h-px bg-gold-500/20 mb-6" />
 
-            <div className="glass rounded-xl p-3 mb-5 border border-white/10">
+            <div className="glass rounded-xl p-3 mb-5 border border-gold-500/10">
               <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
                 La experiencia completa con contenido exclusivo 💎
               </p>
@@ -252,13 +252,19 @@ export default function Pricing() {
                   📋 Directorio exclusivo de participantes
                 </span>
               </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  🥂 Acceso a <strong className="text-white">Cena VIP + Networking</strong>
+                </span>
+              </div>
             </div>
 
             <a
               href="https://checkout.bold.co/payment/LNK_TXYZG2V7CV"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
+              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
             >
               Quiero Platinum 💎
             </a>
