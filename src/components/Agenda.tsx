@@ -172,13 +172,14 @@ export default function Agenda() {
         <div className="relative">
           <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-gold-500/60 to-gold-500/20" />
 
+          <div className="space-y-10">
           {jornadaTarde.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
               className="relative pl-12 group"
             >
               <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-navy-950 border-2 border-gold-500 group-hover:bg-gold-500 transition-colors duration-300 z-10" />
@@ -202,6 +203,7 @@ export default function Agenda() {
               </div>
             </motion.div>
           ))}
+          </div>
         </div>
       </div>
     </section>
