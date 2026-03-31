@@ -44,7 +44,7 @@ const jornadaManana = [
 
 const jornadaTarde = [
   {
-    time: "3:00 — 7:00 PM",
+    time: "6:30 — 9:00 PM",
     title: "VIP Cena + Networking",
     desc: "Cena exclusiva y espacio de networking premium para cerrar negocios, fortalecer alianzas y conectar directamente con inversionistas y líderes del sector.",
     icon: "🥂",
@@ -157,7 +157,7 @@ export default function Agenda() {
           <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2 mb-8">
             <span className="text-lg">🥂</span>
             <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
-              VIP Cena + Networking — 3:00 PM a 7:00 PM
+              VIP Cena + Networking — 6:30 PM a 9:00 PM
             </span>
           </div>
         </motion.div>
