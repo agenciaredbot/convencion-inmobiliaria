@@ -44,8 +44,14 @@ const jornadaManana = [
 
 const jornadaTarde = [
   {
-    time: "6:30 — 9:00 PM",
-    title: "VIP Cena + Networking",
+    time: "6:30 — 7:00 PM",
+    title: "Registro",
+    desc: "Acreditación y bienvenida a la cena VIP exclusiva.",
+    icon: "📋",
+  },
+  {
+    time: "7:00 — 9:00 PM",
+    title: "Cena y Networking",
     desc: "Cena exclusiva y espacio de networking premium para cerrar negocios, fortalecer alianzas y conectar directamente con inversionistas y líderes del sector.",
     icon: "🥂",
   },
@@ -148,21 +154,7 @@ export default function Agenda() {
         </div>
 
         {/* Jornada Tarde */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mb-6"
-        >
-          <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2 mb-8">
-            <span className="text-lg">🥂</span>
-            <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
-              VIP Cena + Networking — 6:30 PM a 9:00 PM
-            </span>
-          </div>
-        </motion.div>
-
-        <div className="relative">
+        <div className="relative mt-10">
           <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-gold-500/60 to-gold-500/20" />
 
           {jornadaTarde.map((item, i) => (
@@ -192,10 +184,6 @@ export default function Agenda() {
                 <p className="text-white/95 text-sm leading-relaxed">
                   {item.desc}
                 </p>
-                <div className="mt-4 flex items-center gap-2 text-gold-500/80 text-xs">
-                  <span>🔄</span>
-                  <span>Misma programación de la jornada de la mañana</span>
-                </div>
               </div>
             </motion.div>
           ))}
