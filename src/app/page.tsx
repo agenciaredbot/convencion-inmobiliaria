@@ -22,6 +22,7 @@ export default function Home() {
       <InfoBar />
       <About />
       <Pricing />
+      <Registration />
       <EventCarousel />
       <Countries />
       <ForWho />
