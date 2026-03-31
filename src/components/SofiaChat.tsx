@@ -95,7 +95,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-2"
+            className="fixed bottom-6 right-2 z-50 flex flex-col items-center gap-2"
           >
             {/* Text bubble */}
             <motion.div
@@ -103,7 +103,7 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
               transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
               className="bg-white text-navy-950 text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg relative"
             >
-              💬 ¡Pregúntame lo que necesites!
+              💬 ¿Tienes preguntas?
               <div className="absolute -bottom-1.5 right-10 w-3 h-3 bg-white rotate-45" />
             </motion.div>
 
