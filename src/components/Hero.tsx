@@ -164,17 +164,17 @@ export default function Hero() {
         </motion.div>
 
         {/* CTAs */}
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
+        <motion.div variants={itemVariants} className="flex flex-row gap-2 sm:gap-4 justify-center">
           <a
             href="#registro"
-            className="group relative px-8 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-gold-500/30 hover:scale-[1.03] active:scale-[0.98]"
+            className="group relative px-4 py-2.5 sm:px-8 sm:py-4 bg-gold-500 text-navy-950 font-bold text-[11px] sm:text-sm uppercase tracking-wider rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-gold-500/30 hover:scale-[1.03] active:scale-[0.98]"
           >
             <span className="relative z-10">Deseo Asistir al Evento</span>
             <div className="absolute inset-0 bg-gold-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
           <a
             href="/sponsors"
-            className="px-8 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] animate-sponsor-pulse"
+            className="px-4 py-2.5 sm:px-8 sm:py-4 bg-gold-500 text-navy-950 font-bold text-[11px] sm:text-sm uppercase tracking-wider rounded-lg sm:rounded-xl hover:bg-gold-400 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] animate-sponsor-pulse"
           >
             Quiero Ser Sponsor
           </a>
