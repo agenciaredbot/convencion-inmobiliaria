@@ -153,8 +153,23 @@ export default function Agenda() {
           </div>
         </div>
 
+        {/* Jornada Tarde Badge */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-12 mb-6"
+        >
+          <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2">
+            <span className="text-lg">🥂</span>
+            <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
+              Cena VIP + Networking — 6:30 PM a 9:00 PM
+            </span>
+          </div>
+        </motion.div>
+
         {/* Jornada Tarde */}
-        <div className="relative mt-10">
+        <div className="relative">
           <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-gold-500/60 to-gold-500/20" />
 
           {jornadaTarde.map((item, i) => (
