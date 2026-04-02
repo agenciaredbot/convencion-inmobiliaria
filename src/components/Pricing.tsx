@@ -148,8 +148,7 @@ export default function Pricing() {
 
             <div className="glass rounded-xl p-3 mb-5 border border-white/10">
               <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
-                Lunch privado con los protagonistas del evento.
-                <span className="text-gold-400 font-semibold"> ¡La mesa donde nacen las alianzas!</span> 🥂
+                Participa del Lunch con los protagonistas del evento.
               </p>
             </div>
 
