@@ -23,9 +23,9 @@ export default function SponsorsPage() {
       <SponsorBenefits />
       <SponsorRegistration />
       <SponsorPackages />
-      <SponsorRegistration />
       <EventCarousel />
       <Sponsors />
+      <SponsorRegistration />
       <Footer />
       <SofiaChat pageSource="sponsors" />
       <SponsorWhatsApp />
