@@ -98,10 +98,6 @@ export default function Pricing() {
                 {checkIconWhite}
                 <span className="text-white/95 text-sm leading-relaxed">Presentación de proyectos internacionales</span>
               </div>
-              <div className="flex items-start gap-3">
-                {checkIconWhite}
-                <span className="text-white/95 text-sm leading-relaxed">Networking general</span>
-              </div>
             </div>
 
             <a
