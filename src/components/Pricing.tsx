@@ -106,7 +106,7 @@ export default function Pricing() {
 
             <a
               href="#registro"
-              className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
+              className="block text-center w-full py-3.5 glass border border-gold-500/40 text-gold-500/70 font-bold text-sm uppercase tracking-wider rounded-xl hover:border-gold-500/60 hover:text-gold-500/90 transition-all duration-300"
             >
               Registrarme Gratis
             </a>
@@ -183,7 +183,7 @@ export default function Pricing() {
               href="https://checkout.bold.co/payment/LNK_668PMLKYFP"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
+              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
             >
               Quiero Acceso VIP
             </a>
@@ -346,7 +346,7 @@ export default function Pricing() {
               href="https://checkout.bold.co/payment/LNK_DM1LN0WEN8"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 glass border border-white/20 text-white font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-white/[0.06] hover:border-white/30 transition-all duration-300"
+              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
             >
               Quiero Advance A.I. 🚀
             </a>
