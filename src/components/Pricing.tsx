@@ -224,7 +224,7 @@ export default function Pricing() {
 
             <div className="glass rounded-xl p-3 mb-5 border border-gold-500/10">
               <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
-                La experiencia completa con contenido exclusivo 💎
+                Experiencia mejorada con contenido exclusivo 💎
               </p>
             </div>
 
