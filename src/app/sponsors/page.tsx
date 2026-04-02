@@ -21,6 +21,7 @@ export default function SponsorsPage() {
       <Navbar />
       <SponsorHero />
       <SponsorBenefits />
+      <SponsorRegistration />
       <SponsorPackages />
       <SponsorRegistration />
       <EventCarousel />
