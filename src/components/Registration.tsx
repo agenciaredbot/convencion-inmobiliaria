@@ -133,7 +133,7 @@ export default function Registration() {
                     type="text"
                     name="nombre"
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -141,7 +141,7 @@ export default function Registration() {
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -149,11 +149,11 @@ export default function Registration() {
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono con código de país. Ej: +57 300 123 4567"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
-                  <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white/95 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
+                  <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
                     <option value="">¿Cómo deseas participar?</option>
                     <option value="asistente-free">Asistente — Acceso Free</option>
                     <option value="asistente-vip">Asistente — VIP Lunch ($27 USD)</option>
