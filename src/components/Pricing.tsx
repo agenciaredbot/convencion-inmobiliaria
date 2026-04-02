@@ -131,11 +131,11 @@ export default function Pricing() {
                 className="text-2xl sm:text-3xl font-bold text-white mb-1"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
-                VIP LUNCH
+                <span className="brush-underline-red">VIP LUNCH</span>
               </h3>
               <div className="flex items-baseline gap-2">
                 <span
-                  className="text-4xl sm:text-5xl font-bold text-white"
+                  className="text-4xl sm:text-5xl font-bold text-white brush-underline-red"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   $27
@@ -288,11 +288,11 @@ export default function Pricing() {
                 className="text-2xl sm:text-3xl font-bold text-white mb-1"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
-                ADVANCE A.I
+                <span className="brush-underline-red">ADVANCE A.I</span>
               </h3>
               <div className="flex items-baseline gap-1">
                 <span
-                  className="text-4xl sm:text-5xl font-bold text-white"
+                  className="text-4xl sm:text-5xl font-bold text-white brush-underline-red"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   $100
