@@ -191,10 +191,9 @@ export default function SponsorRegistration() {
                 </div>
                 <div>
                   <select name="ciudad" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
-                    <option value="" className="bg-navy-900">¿En qué ciudad deseas participar?</option>
-                    <option value="barranquilla" className="bg-navy-900">Barranquilla — Miércoles 22 de Abril</option>
-                    <option value="medellin" className="bg-navy-900">Medellín — Viernes 24 de Abril</option>
-                    <option value="ambas" className="bg-navy-900">Ambas ciudades</option>
+                    <option value="" className="bg-navy-900">¿Cómo deseas participar?</option>
+                    <option value="asistente" className="bg-navy-900">Asistente</option>
+                    <option value="sponsor" className="bg-navy-900">Sponsor</option>
                   </select>
                 </div>
 

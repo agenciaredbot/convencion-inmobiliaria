@@ -155,10 +155,8 @@ export default function Registration() {
                 <div>
                   <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
                     <option value="">¿Cómo deseas participar?</option>
-                    <option value="asistente-free">Asistente — Acceso Free</option>
-                    <option value="asistente-vip">Asistente — VIP Lunch ($27 USD)</option>
-                    <option value="asistente-platinum">Asistente — Platinum ($50 USD)</option>
-                    <option value="asistente-advance-ai">Asistente — Advance A.I ($100 USD)</option>
+                    <option value="asistente">Asistente</option>
+                    <option value="sponsor">Sponsor</option>
                   </select>
                 </div>
                 <button
