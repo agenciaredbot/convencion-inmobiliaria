@@ -251,12 +251,6 @@ export default function Pricing() {
                   📋 Directorio exclusivo de participantes
                 </span>
               </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  🥂 Acceso a <strong className="text-white">Cena VIP + Networking</strong>
-                </span>
-              </div>
             </div>
 
             <a
@@ -338,6 +332,12 @@ export default function Pricing() {
                 {checkIconGold}
                 <span className="text-white/95 text-sm leading-relaxed">
                   📦 <strong className="text-white">Kit de Marketing</strong>
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                {checkIconGold}
+                <span className="text-white/95 text-sm leading-relaxed">
+                  🥂 Acceso a <strong className="text-white">Cena VIP + Networking</strong>
                 </span>
               </div>
             </div>
