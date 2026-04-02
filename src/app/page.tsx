@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing";
 import Organizer from "@/components/Organizer";
 import Registration from "@/components/Registration";
 import Sponsors from "@/components/Sponsors";
+import ProximosEventos from "@/components/ProximosEventos";
 import Footer from "@/components/Footer";
 import SofiaChat from "@/components/SofiaChat";
 import SponsorFloat from "@/components/SponsorFloat";
@@ -30,6 +31,7 @@ export default function Home() {
       <Organizer />
       <Registration />
       <Sponsors />
+      <ProximosEventos />
       <Footer />
       <SofiaChat pageSource="asistentes" />
       <SponsorFloat />
