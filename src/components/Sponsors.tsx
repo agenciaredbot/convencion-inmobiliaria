@@ -34,8 +34,8 @@ export default function Sponsors() {
           className="glass rounded-2xl p-6 sm:p-10 gradient-border"
         >
           <img
-            src="/images/sponsors-logos.png"
-            alt="Sponsors de Convención Inmobiliaria — QKapital Group, Constructora La Meseta, Glass & Windows, Luxury Homes, Home2InvestUS, Doxa, Near North Title Group, Gus Capital Group, Hamilton Rua, Baycana Properties, La Vida Real de un Realtor, Franchise Connectors, Flip that House, Mr. Credit 305, Visions Resort & Spa, Nexx Office"
+            src="/images/MARCAS-ALIADAS.jpeg"
+            alt="Marcas aliadas de Convención Inmobiliaria 2026"
             className="w-full h-auto rounded-xl"
           />
         </motion.div>
