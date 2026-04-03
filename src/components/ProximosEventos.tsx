@@ -9,13 +9,15 @@ export default function ProximosEventos() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="w-full"
+      className="w-full bg-black py-10"
     >
-      <img
-        src="/images/PROXIMOS EVENTOS.jpeg"
-        alt="Próximos Eventos — Convención Inmobiliaria 2026"
-        className="w-full h-auto block"
-      />
+      <div className="max-w-[70%] mx-auto">
+        <img
+          src="/images/PROXIMOS EVENTOS.jpeg"
+          alt="Próximos Eventos — Convención Inmobiliaria 2026"
+          className="w-full h-auto block rounded-xl"
+        />
+      </div>
     </motion.section>
   );
 }
