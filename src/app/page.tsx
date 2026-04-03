@@ -22,8 +22,8 @@ export default function Home() {
       <Hero />
       <InfoBar />
       <About />
-      <Pricing />
       <Registration />
+      <Pricing />
       <EventCarousel />
       <Countries />
       <ForWho />
