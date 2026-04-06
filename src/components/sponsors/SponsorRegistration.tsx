@@ -23,15 +23,19 @@ export default function SponsorRegistration() {
     setSending(true);
     const form = e.currentTarget;
     const paquete = (form.elements.namedItem("paquete") as HTMLSelectElement).value;
-    const ciudad = (form.elements.namedItem("ciudad") as HTMLSelectElement).value;
+    const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement).value;
+    const pais = (form.elements.namedItem("pais") as HTMLInputElement).value;
     const empresa = (form.elements.namedItem("empresa") as HTMLInputElement).value;
     const data = {
       tipo: "sponsor",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      interes: `Sponsor ${paquete || "sin especificar"} | ${empresa || ""} | ${ciudad || ""}`.trim(),
+      pais,
+      perfil,
+      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] Sponsor ${paquete || "sin especificar"} | ${empresa || ""}`.trim(),
       fuente: "formulario-sponsors",
+      tag: "Nueva landing",
     };
     try {
       // Send to Google Sheets
@@ -181,6 +185,14 @@ export default function SponsorRegistration() {
                   />
                 </div>
                 <div>
+                  <input
+                    type="text"
+                    name="pais"
+                    placeholder="País"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white placeholder:text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
+                  />
+                </div>
+                <div>
                   <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿Qué paquete te interesa?</option>
                     <option value="silver" className="bg-navy-900">Silver</option>
@@ -190,8 +202,12 @@ export default function SponsorRegistration() {
                   </select>
                 </div>
                 <div>
-                  <select name="ciudad" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
-                    <option value="" className="bg-navy-900">¿Cómo deseas participar?</option>
+                  <select name="perfil" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
+                    <option value="" className="bg-navy-900">Tipo de Perfil</option>
+                    <option value="agente-inmobiliario" className="bg-navy-900">Agente Inmobiliario</option>
+                    <option value="constructora" className="bg-navy-900">Constructora</option>
+                    <option value="broker" className="bg-navy-900">Broker</option>
+                    <option value="inversionista" className="bg-navy-900">Inversionista</option>
                     <option value="asistente" className="bg-navy-900">Asistente</option>
                     <option value="sponsor" className="bg-navy-900">Sponsor</option>
                   </select>

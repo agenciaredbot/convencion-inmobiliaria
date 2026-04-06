@@ -14,13 +14,18 @@ export default function Registration() {
     setSending(true);
     const form = e.currentTarget;
     const participacion = (form.elements.namedItem("participacion") as HTMLSelectElement).value;
+    const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement).value;
+    const pais = (form.elements.namedItem("pais") as HTMLInputElement).value;
     const data = {
-      tipo: participacion || "asistente-free",
+      tipo: participacion || "asistente",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      interes: `Asistente ${participacion || "free"} — Convención Inmobiliaria 2026`,
+      pais,
+      perfil,
+      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] — Convención Inmobiliaria 2026`,
       fuente: "formulario-asistentes",
+      tag: "Nueva landing",
     };
     try {
       // Send to Google Sheets
@@ -153,8 +158,20 @@ export default function Registration() {
                   />
                 </div>
                 <div>
-                  <select name="participacion" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
-                    <option value="">¿Cómo deseas participar?</option>
+                  <input
+                    type="text"
+                    name="pais"
+                    placeholder="País"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                  />
+                </div>
+                <div>
+                  <select name="perfil" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
+                    <option value="">Tipo de Perfil</option>
+                    <option value="agente-inmobiliario">Agente Inmobiliario</option>
+                    <option value="constructora">Constructora</option>
+                    <option value="broker">Broker</option>
+                    <option value="inversionista">Inversionista</option>
                     <option value="asistente">Asistente</option>
                     <option value="sponsor">Sponsor</option>
                   </select>
