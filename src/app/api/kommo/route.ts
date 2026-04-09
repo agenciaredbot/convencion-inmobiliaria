@@ -3,15 +3,16 @@ import { NextResponse } from "next/server";
 const KOMMO_TOKEN = process.env.KOMMO_API_TOKEN || "";
 const KOMMO_URL = "https://convencioninfomiamigmailcom.kommo.com/api/v4";
 
-// Pipeline & Status mapping
+// Pipeline & Status mapping — Pipeline IA (13509519)
 const PIPELINE_MAP: Record<string, { pipeline_id: number; status_id: number }> = {
-  "asistente-free":       { pipeline_id: 13292719, status_id: 103001247 },  // ENTRADAS AGENTES → GRATIS
-  "asistente-vip":        { pipeline_id: 13292719, status_id: 103001251 },  // ENTRADAS AGENTES → VIP
-  "asistente-platinum":   { pipeline_id: 13292719, status_id: 103001247 },  // ENTRADAS AGENTES → GRATIS (temp)
-  "asistente-advance-ai": { pipeline_id: 13292719, status_id: 103001247 },  // ENTRADAS AGENTES → GRATIS (temp)
-  "chat-asistentes":      { pipeline_id: 13292719, status_id: 102506659 },  // ENTRADAS AGENTES → Leads Entrantes
-  "sponsor":              { pipeline_id: 13122763, status_id: 101189499 },  // SPONSOR → PATROCINADOR
-  "chat-sponsors":        { pipeline_id: 13122763, status_id: 101189487 },  // SPONSOR → Leads Entrantes
+  "asistente":            { pipeline_id: 13509519, status_id: 104226315 },  // IA → ENTRADA
+  "asistente-free":       { pipeline_id: 13509519, status_id: 104226315 },  // IA → ENTRADA
+  "asistente-vip":        { pipeline_id: 13509519, status_id: 104226315 },  // IA → ENTRADA
+  "asistente-platinum":   { pipeline_id: 13509519, status_id: 104226315 },  // IA → ENTRADA
+  "asistente-advance-ai": { pipeline_id: 13509519, status_id: 104226315 },  // IA → ENTRADA
+  "chat-asistentes":      { pipeline_id: 13509519, status_id: 104226315 },  // IA → ENTRADA
+  "sponsor":              { pipeline_id: 13509519, status_id: 104226311 },  // IA → SPONSOR
+  "chat-sponsors":        { pipeline_id: 13509519, status_id: 104226311 },  // IA → SPONSOR
 };
 
 export async function POST(req: Request) {
