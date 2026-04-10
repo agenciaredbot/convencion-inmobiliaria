@@ -28,14 +28,14 @@ const jornadaManana = [
     icon: "🏗️",
   },
   {
-    time: "12:00 — 1:00 PM",
+    time: "1:00 — 3:00 PM",
     title: "Lunch VIP & Networking",
     desc: "Almuerzo exclusivo para conectar directamente con inversionistas, empresarios y líderes de proyectos. ¡La mesa donde nacen las alianzas reales!",
     icon: "🥂",
     highlight: true,
   },
   {
-    time: "1:00 — 3:00 PM",
+    time: "12:00 — 1:00 PM",
     title: "Panel Inversionistas & Expertos",
     desc: "Mesa de discusión con inversionistas y expertos del sector sobre tendencias, retos y oportunidades del mercado global.",
     icon: "💡",
@@ -50,7 +50,7 @@ const jornadaTarde = [
     icon: "📋",
   },
   {
-    time: "7:00 — 9:00 PM",
+    time: "7:00 — 8:30 PM",
     title: "Cena y Networking",
     desc: "Cena exclusiva y espacio de networking premium para cerrar negocios, fortalecer alianzas y conectar directamente con inversionistas y líderes del sector.",
     icon: "🥂",
@@ -163,7 +163,7 @@ export default function Agenda() {
           <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2">
             <span className="text-lg">🥂</span>
             <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
-              Cena VIP + Networking — 6:30 PM a 9:00 PM
+              Cena VIP + Networking — 6:30 PM a 8:30 PM
             </span>
           </div>
         </motion.div>
