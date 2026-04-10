@@ -28,17 +28,17 @@ const jornadaManana = [
     icon: "🏗️",
   },
   {
+    time: "12:00 — 1:00 PM",
+    title: "Panel Inversionistas & Expertos",
+    desc: "Mesa de discusión con inversionistas y expertos del sector sobre tendencias, retos y oportunidades del mercado global.",
+    icon: "💡",
+  },
+  {
     time: "1:00 — 3:00 PM",
     title: "Lunch VIP & Networking",
     desc: "Almuerzo exclusivo para conectar directamente con inversionistas, empresarios y líderes de proyectos. ¡La mesa donde nacen las alianzas reales!",
     icon: "🥂",
     highlight: true,
-  },
-  {
-    time: "12:00 — 1:00 PM",
-    title: "Panel Inversionistas & Expertos",
-    desc: "Mesa de discusión con inversionistas y expertos del sector sobre tendencias, retos y oportunidades del mercado global.",
-    icon: "💡",
   },
 ];
 
