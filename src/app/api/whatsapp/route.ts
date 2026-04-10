@@ -114,7 +114,11 @@ async function createKommoLead(phone: string, pushName: string): Promise<{ leadI
         name: `WA ${pushName || phone} — Convención 2026`,
         pipeline_id: KOMMO_PIPELINE_ID,
         status_id: KOMMO_STATUS_ENTRADA,
-        tags_to_add: [{ name: "whatsapp-sofia" }, { name: "Nueva landing" }, { name: "chat-ia" }],
+        tags_to_add: [
+          { name: "WhatsApp" },
+          { name: "Sofia-IA" },
+          { name: "Nueva landing" },
+        ],
         _embedded: {
           contacts: [
             {
@@ -125,7 +129,10 @@ async function createKommoLead(phone: string, pushName: string): Promise<{ leadI
                   values: [{ value: `+${phone}`, enum_code: "WHATSAPP" }],
                 },
               ],
-              tags_to_add: [{ name: "whatsapp-sofia" }],
+              tags_to_add: [
+                { name: "WhatsApp" },
+                { name: "Sofia-IA" },
+              ],
             },
           ],
         },
