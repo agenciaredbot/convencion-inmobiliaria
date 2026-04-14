@@ -18,7 +18,7 @@ export default function InvestBanner() {
       <div className="absolute inset-0 noise" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28">
-        <div className="max-w-2xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — headline */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -82,6 +82,33 @@ export default function InvestBanner() {
             </div>
           </motion.div>
 
+          {/* Right — About card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="hidden lg:flex justify-center"
+          >
+            <div className="glass-strong rounded-2xl p-8 border border-gold-500/15 max-w-sm text-center">
+              <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
+                Sobre el Evento
+              </span>
+              <h3
+                className="text-2xl font-bold text-white mt-3 mb-4 leading-tight"
+                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+              >
+                ¿POR QUÉ{" "}
+                <span className="text-gold-500">CONVENCIÓN INMOBILIARIA</span>?
+              </h3>
+              <div className="w-10 h-1 bg-gold-500 rounded-full mx-auto mb-5" />
+              <p className="text-white/70 text-sm leading-relaxed">
+                Tu oportunidad para conectar con los más grandes inversionistas
+                internacionales y con grandes empresas para presentar y vender
+                tu proyecto en mercados sólidos como USA, RD, MX, DU, COL.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
