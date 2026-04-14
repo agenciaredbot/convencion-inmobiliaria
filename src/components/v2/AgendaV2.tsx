@@ -141,6 +141,27 @@ export default function AgendaV2() {
         >
           El programa aplica para ambas sedes: Barranquilla (22 Abr) y Medellín (24 Abr)
         </motion.p>
+
+        {/* Ticket badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-10"
+        >
+          <a
+            href="#registro"
+            className="inline-flex items-center gap-4 glass rounded-xl px-8 py-5 border border-white/10 hover:border-gold-500/30 transition-all duration-300 group"
+          >
+            <span className="text-3xl">🎟️</span>
+            <div>
+              <p className="text-gold-500 font-bold text-lg" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                ENTRADA COMPLETAMENTE GRATIS
+              </p>
+              <p className="text-white/50 text-sm group-hover:text-white/70 transition-colors">Solo necesitas registrarte</p>
+            </div>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

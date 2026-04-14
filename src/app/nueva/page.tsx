@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroV2 from "@/components/v2/HeroV2";
 import InvestBanner from "@/components/v2/InvestBanner";
 import CountriesBanner from "@/components/v2/CountriesBanner";
+import PricingV2 from "@/components/v2/PricingV2";
 import AgendaV2 from "@/components/v2/AgendaV2";
 import RegistrationV2 from "@/components/v2/RegistrationV2";
 import Organizer from "@/components/Organizer";
@@ -23,6 +24,7 @@ export default function V2Page() {
       <HeroV2 />
       <InvestBanner />
       <CountriesBanner />
+      <PricingV2 />
       <AgendaV2 />
       <Organizer />
       <RegistrationV2 />

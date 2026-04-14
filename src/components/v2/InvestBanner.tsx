@@ -69,6 +69,17 @@ export default function InvestBanner() {
             >
               Asistir Gratis al Evento
             </a>
+
+            {/* Ticket badge */}
+            <div className="mt-8 inline-flex items-center gap-4 glass rounded-xl px-6 py-4 border border-white/10">
+              <span className="text-3xl">🎟️</span>
+              <div>
+                <p className="text-gold-500 font-bold text-lg" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  ENTRADA COMPLETAMENTE GRATIS
+                </p>
+                <p className="text-white/50 text-sm">Solo necesitas registrarte</p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Right — floating stat cards */}
