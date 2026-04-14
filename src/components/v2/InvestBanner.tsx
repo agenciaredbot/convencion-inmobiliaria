@@ -18,7 +18,7 @@ export default function InvestBanner() {
       <div className="absolute inset-0 noise" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-2xl">
           {/* Left — headline */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -82,46 +82,6 @@ export default function InvestBanner() {
             </div>
           </motion.div>
 
-          {/* Right — floating stat cards */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:block"
-          >
-            <div className="relative">
-              {/* Main card */}
-              <div className="glass-strong rounded-2xl p-8 border border-gold-500/20 glow-gold">
-                <h3
-                  className="text-3xl font-bold text-gold-500 text-center mb-4"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  4 MERCADOS INTERNACIONALES
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    { icon: "🌴", text: "Proyectos Turísticos frente al mar" },
-                    { icon: "🏙️", text: "Desarrollos Urbanos de alto nivel" },
-                    { icon: "💵", text: "Propiedades en Dólares" },
-                    { icon: "📈", text: "Plusvalía y renta garantizada" },
-                  ].map((item) => (
-                    <div key={item.text} className="flex items-center gap-3 px-5 py-4 bg-navy-950/90 border border-gold-500/30 rounded-xl">
-                      <span className="text-xl">{item.icon}</span>
-                      <span className="text-white text-sm font-bold">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Floating accent */}
-              <div className="absolute -top-4 -right-4 glass-gold rounded-xl px-5 py-3 border border-gold-500/30">
-                <p className="text-gold-500 font-bold text-sm" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                  ENTRADA GRATIS
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
