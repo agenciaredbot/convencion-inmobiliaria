@@ -115,8 +115,11 @@ export default function SofiaChat({ pageSource = "asistentes" }: { pageSource?: 
               className="relative w-28 h-28 rounded-full overflow-hidden shadow-2xl shadow-gold-500/40 hover:shadow-gold-500/60 transition-shadow duration-300"
             >
               <img
-                src="/sofia-agente.png"
+                src="/sofia-agente.jpg"
                 alt="Sofía — Asistente IA"
+                width={112}
+                height={112}
+                loading="lazy"
                 className="w-full h-full object-cover rounded-full border-3 border-gold-500"
               />
               {/* Glow ring */}

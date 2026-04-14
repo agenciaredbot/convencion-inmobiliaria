@@ -8,8 +8,11 @@ export default function InvestBanner() {
       {/* Background image — beach/conference split */}
       <div className="absolute inset-0">
         <img
-          src="/images/fondo-banner.png"
+          src="/images/fondo-banner.jpg"
           alt=""
+          width={1920}
+          height={800}
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-navy-950/60" />

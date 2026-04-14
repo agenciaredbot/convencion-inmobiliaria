@@ -49,6 +49,8 @@ export default function Navbar() {
           <img
             src="/images/logo-oficial.png"
             alt="Convención Inmobiliaria 2026"
+            width={200}
+            height={56}
             className="h-12 sm:h-14 w-auto object-contain"
           />
         </a>

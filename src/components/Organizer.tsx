@@ -27,6 +27,9 @@ export default function Organizer() {
                 <img
                   src="/images/claudia-rivera.jpeg"
                   alt="Claudia Rivera — CEO & Organizadora de Convención Inmobiliaria"
+                  width={400}
+                  height={533}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />
                 {/* Subtle gradient overlay for depth */}
@@ -60,8 +63,11 @@ export default function Organizer() {
                 CLAUDIA <span className="text-gold-500">RIVERA</span>
               </h2>
               <img
-                src="/images/logo-claudia.png"
+                src="/images/logo-claudia.jpg"
                 alt="Claudia Rivera Real Estate"
+                width={200}
+                height={60}
+                loading="lazy"
                 className="h-15 w-auto opacity-60"
               />
             </div>

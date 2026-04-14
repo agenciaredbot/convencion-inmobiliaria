@@ -63,6 +63,7 @@ export default function HeroV2() {
         loop
         muted
         playsInline
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/images/miami-bg.mp4" type="video/mp4" />
@@ -96,6 +97,8 @@ export default function HeroV2() {
           <img
             src="/images/logo-oficial.png"
             alt="Convención Inmobiliaria 2026"
+            width={400}
+            height={200}
             className="h-32 sm:h-44 lg:h-56 mx-auto object-contain drop-shadow-2xl"
           />
         </motion.div>

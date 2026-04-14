@@ -10,6 +10,9 @@ export default function Footer() {
             <img
               src="/images/logo-oficial.png"
               alt="Convención Inmobiliaria 2026"
+              width={120}
+              height={40}
+              loading="lazy"
               className="h-10 w-auto object-contain mb-2"
             />
             <p className="text-white/95 text-xs">

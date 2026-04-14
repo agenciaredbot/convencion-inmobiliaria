@@ -32,8 +32,11 @@ export default function CountriesBanner() {
           {/* Banner image with glow effect */}
           <div className="relative rounded-2xl overflow-hidden glow-gold">
             <img
-              src="/images/banner-paises.png"
+              src="/images/banner-paises.jpg"
               alt="Estados Unidos, República Dominicana, México, Colombia — Mercados internacionales de inversión"
+              width={1200}
+              height={400}
+              loading="lazy"
               className="w-full h-auto block"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent" />

@@ -18,6 +18,7 @@ export default function About() {
         loop
         muted
         playsInline
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/images/convencion-bg.mp4" type="video/mp4" />
@@ -43,6 +44,7 @@ export default function About() {
                 muted
                 playsInline
                 controls
+                preload="none"
                 className="absolute inset-0 w-full h-full object-cover"
               >
                 <source src="/images/video-evento.mp4" type="video/mp4" />

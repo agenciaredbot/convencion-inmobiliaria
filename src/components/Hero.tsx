@@ -108,6 +108,8 @@ export default function Hero() {
           <img
             src="/images/logo-oficial.png"
             alt="Convención Inmobiliaria 2026"
+            width={400}
+            height={200}
             className="h-32 sm:h-44 lg:h-56 mx-auto object-contain drop-shadow-2xl"
           />
         </motion.div>

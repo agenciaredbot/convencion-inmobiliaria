@@ -79,6 +79,9 @@ export default function EventCarousel() {
                 key={slides[current].id}
                 src={slides[current].src}
                 alt={slides[current].alt}
+                width={800}
+                height={450}
+                loading="lazy"
                 custom={direction}
                 variants={variants}
                 initial="enter"

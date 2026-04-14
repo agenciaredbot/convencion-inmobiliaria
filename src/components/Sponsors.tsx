@@ -36,6 +36,9 @@ export default function Sponsors() {
           <img
             src="/images/MARCAS-ALIADAS.jpeg"
             alt="Marcas aliadas de Convención Inmobiliaria 2026"
+            width={1200}
+            height={400}
+            loading="lazy"
             className="w-full h-auto rounded-xl"
           />
         </motion.div>
