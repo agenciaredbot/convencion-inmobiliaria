@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const infoItems = [
   {
     icon: (
@@ -50,12 +46,8 @@ export default function InfoBar() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {infoItems.map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
                 className="flex flex-col items-center text-center group"
               >
                 <div className="text-gold-500 mb-3 group-hover:scale-110 transition-transform duration-300">
@@ -67,7 +59,7 @@ export default function InfoBar() {
                 <p className="text-sm sm:text-base font-semibold text-white">
                   {item.answer}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

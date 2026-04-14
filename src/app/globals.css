@@ -171,6 +171,35 @@ body {
   transform: scale(1.04);
 }
 
+/* ===== CSS ANIMATIONS (Framer Motion replacements) ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInOnly {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 /* ===== BRUSH UNDERLINE (RED) ===== */
 .brush-underline-red {
   position: relative;

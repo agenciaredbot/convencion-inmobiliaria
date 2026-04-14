@@ -71,7 +71,7 @@ export default function Organizer() {
                 className="h-15 w-auto opacity-60"
               />
             </div>
-            <p className="text-white/95 text-sm mb-5" style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic" }}>
+            <p className="text-white/95 text-sm mb-5" style={{ fontStyle: "italic" }}>
               De Convención Inmobiliaria 2026
             </p>
             <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />

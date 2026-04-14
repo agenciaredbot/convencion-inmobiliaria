@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
@@ -33,11 +32,8 @@ export default function Navbar() {
       </a>
     </div>
 
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-[42px] left-0 right-0 z-50 transition-all duration-500 ${
+    <nav
+      className={`fixed top-[42px] left-0 right-0 z-50 transition-all duration-500 animate-slide-down ${
         scrolled
           ? "bg-navy-950/80 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20"
           : "bg-transparent"
@@ -81,53 +77,39 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Menu"
         >
-          <motion.span
-            animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-white block"
-          />
-          <motion.span
-            animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="w-6 h-0.5 bg-white block"
-          />
-          <motion.span
-            animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className="w-6 h-0.5 bg-white block"
-          />
+          <span className={`w-6 h-0.5 bg-white block transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-[8px]" : ""}`} />
+          <span className={`w-6 h-0.5 bg-white block transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`w-6 h-0.5 bg-white block transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-[8px]" : ""}`} />
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/5"
+      <div
+        className={`md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/5 overflow-hidden transition-all duration-300 ${
+          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-6 flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="text-white/95 hover:text-gold-500 text-lg font-medium transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="#registro"
+            onClick={() => setMobileOpen(false)}
+            className="mt-2 px-6 py-3 bg-gold-500 text-navy-950 font-bold text-center rounded-lg"
           >
-            <div className="px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-white/95 hover:text-gold-500 text-lg font-medium transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="#registro"
-                onClick={() => setMobileOpen(false)}
-                className="mt-2 px-6 py-3 bg-gold-500 text-navy-950 font-bold text-center rounded-lg"
-              >
-                RESERVA TU ESPACIO
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+            RESERVA TU ESPACIO
+          </a>
+        </div>
+      </div>
+    </nav>
     </>
   );
 }
