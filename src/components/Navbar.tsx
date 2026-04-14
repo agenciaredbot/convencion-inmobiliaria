@@ -21,11 +21,23 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
+    {/* Red free-entry banner */}
+    <div className="fixed top-0 left-0 right-0 z-[60] bg-red-600 text-white text-center py-2.5 shadow-lg">
+      <a href="#registro" className="flex items-center justify-center gap-2">
+        <span className="text-lg">🎟️</span>
+        <span className="font-bold text-sm sm:text-base uppercase tracking-wider">
+          ENTRADA 100% GRATIS — Regístrate Ahora
+        </span>
+        <span className="text-lg">🎟️</span>
+      </a>
+    </div>
+
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-[42px] left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-navy-950/80 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20"
           : "bg-transparent"
@@ -114,5 +126,6 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
+    </>
   );
 }

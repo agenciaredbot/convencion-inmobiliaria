@@ -26,6 +26,7 @@ export default function SponsorRegistration() {
     const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement).value;
     const pais = (form.elements.namedItem("pais") as HTMLInputElement).value;
     const empresa = (form.elements.namedItem("empresa") as HTMLInputElement).value;
+    const evento = (form.elements.namedItem("evento") as HTMLSelectElement).value;
     const data = {
       tipo: "sponsor",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
@@ -33,7 +34,8 @@ export default function SponsorRegistration() {
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
       pais,
       perfil,
-      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] Sponsor ${paquete || "sin especificar"} | ${empresa || ""}`.trim(),
+      evento,
+      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] [${evento || "Sin evento"}] Sponsor ${paquete || "sin especificar"} | ${empresa || ""}`.trim(),
       fuente: "formulario-sponsors",
       tag: "Nueva landing",
     };
@@ -191,6 +193,13 @@ export default function SponsorRegistration() {
                     placeholder="País"
                     className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold placeholder:text-white placeholder:font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
                   />
+                </div>
+                <div>
+                  <select name="evento" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
+                    <option value="" className="bg-navy-900">¿A qué evento quieres asistir?</option>
+                    <option value="barranquilla" className="bg-navy-900">Barranquilla</option>
+                    <option value="medellin" className="bg-navy-900">Medellín</option>
+                  </select>
                 </div>
                 <div>
                   <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">

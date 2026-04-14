@@ -15,6 +15,7 @@ export default function RegistrationV2() {
     const form = e.currentTarget;
     const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement).value;
     const pais = (form.elements.namedItem("pais") as HTMLInputElement).value;
+    const evento = (form.elements.namedItem("evento") as HTMLSelectElement).value;
     const data = {
       tipo: "asistente",
       nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
@@ -22,7 +23,8 @@ export default function RegistrationV2() {
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
       pais,
       perfil,
-      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] — Convención Inmobiliaria 2026`,
+      evento,
+      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] [${evento || "Sin evento"}] — Convención Inmobiliaria 2026`,
       fuente: "formulario-nueva",
       tag: "Nueva landing",
     };
@@ -172,6 +174,14 @@ export default function RegistrationV2() {
                     placeholder="País"
                     className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
+                  <select
+                    name="evento"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
+                  >
+                    <option value="">¿A qué evento quieres asistir?</option>
+                    <option value="barranquilla">Barranquilla</option>
+                    <option value="medellin">Medellín</option>
+                  </select>
                   <select
                     name="perfil"
                     className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
