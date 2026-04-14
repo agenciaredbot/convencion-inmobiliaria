@@ -1,15 +1,18 @@
 import Navbar from "@/components/Navbar";
 import HeroV2 from "@/components/v2/HeroV2";
-import InvestBanner from "@/components/v2/InvestBanner";
-import CountriesBanner from "@/components/v2/CountriesBanner";
-import PricingV2 from "@/components/v2/PricingV2";
-import AgendaV2 from "@/components/v2/AgendaV2";
-import RegistrationV2 from "@/components/v2/RegistrationV2";
-import Organizer from "@/components/Organizer";
-import Sponsors from "@/components/Sponsors";
-import ProximosEventos from "@/components/ProximosEventos";
-import Footer from "@/components/Footer";
-import SofiaChat from "@/components/SofiaChat";
+import dynamic from "next/dynamic";
+
+// Lazy load below-fold components
+const InvestBanner = dynamic(() => import("@/components/v2/InvestBanner"));
+const CountriesBanner = dynamic(() => import("@/components/v2/CountriesBanner"));
+const PricingV2 = dynamic(() => import("@/components/v2/PricingV2"));
+const AgendaV2 = dynamic(() => import("@/components/v2/AgendaV2"));
+const Organizer = dynamic(() => import("@/components/Organizer"));
+const RegistrationV2 = dynamic(() => import("@/components/v2/RegistrationV2"));
+const Sponsors = dynamic(() => import("@/components/Sponsors"));
+const ProximosEventos = dynamic(() => import("@/components/ProximosEventos"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const SofiaChat = dynamic(() => import("@/components/SofiaChat"));
 
 export const metadata = {
   title: "Convención Inmobiliaria 2026 — Invierte en el Exterior",

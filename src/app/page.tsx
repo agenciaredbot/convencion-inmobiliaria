@@ -1,19 +1,22 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import InfoBar from "@/components/InfoBar";
-import About from "@/components/About";
-import EventCarousel from "@/components/EventCarousel";
-import Countries from "@/components/Countries";
-import ForWho from "@/components/ForWho";
-import Agenda from "@/components/Agenda";
-import Pricing from "@/components/Pricing";
-import Organizer from "@/components/Organizer";
-import Registration from "@/components/Registration";
-import Sponsors from "@/components/Sponsors";
-import ProximosEventos from "@/components/ProximosEventos";
-import Footer from "@/components/Footer";
-import SofiaChat from "@/components/SofiaChat";
-import SponsorFloat from "@/components/SponsorFloat";
+import dynamic from "next/dynamic";
+
+// Lazy load below-fold components to reduce initial bundle
+const About = dynamic(() => import("@/components/About"));
+const EventCarousel = dynamic(() => import("@/components/EventCarousel"));
+const Countries = dynamic(() => import("@/components/Countries"));
+const ForWho = dynamic(() => import("@/components/ForWho"));
+const Agenda = dynamic(() => import("@/components/Agenda"));
+const Pricing = dynamic(() => import("@/components/Pricing"));
+const Organizer = dynamic(() => import("@/components/Organizer"));
+const Registration = dynamic(() => import("@/components/Registration"));
+const Sponsors = dynamic(() => import("@/components/Sponsors"));
+const ProximosEventos = dynamic(() => import("@/components/ProximosEventos"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const SofiaChat = dynamic(() => import("@/components/SofiaChat"));
+const SponsorFloat = dynamic(() => import("@/components/SponsorFloat"));
 
 export default function Home() {
   return (

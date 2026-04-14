@@ -45,7 +45,7 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
 function Particles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {Array.from({ length: 20 }).map((_, i) => (
+      {Array.from({ length: 8 }).map((_, i) => (
         <div
           key={i}
           className="absolute rounded-full bg-gold-500/20"
@@ -110,6 +110,7 @@ export default function Hero() {
             alt="Convención Inmobiliaria 2026"
             width={400}
             height={200}
+            fetchPriority="high"
             className="h-32 sm:h-44 lg:h-56 mx-auto object-contain drop-shadow-2xl"
           />
         </motion.div>
