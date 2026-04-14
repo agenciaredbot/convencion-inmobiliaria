@@ -2,14 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const checkIconWhite = (
-  <div className="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5">
-    <svg className="w-3 h-3 text-white/95" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
-  </div>
-);
-
 const checkIconGold = (
   <div className="w-5 h-5 rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center shrink-0 mt-0.5">
     <svg className="w-3 h-3 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -25,7 +17,7 @@ export default function Pricing() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-navy-800)_0%,_transparent_70%)]" />
       <div className="absolute inset-0 noise" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -34,314 +26,106 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
-            Elige Tu Experiencia
+            Acceso al Evento
           </span>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 leading-[0.95]"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
-            TIPO DE <span className="text-gold-500">ACCESO</span>
+            ENTRADA <span className="text-gold-500">100% GRATUITA</span>
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
-          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed">
-            Cuatro formas de vivir la Convención Inmobiliaria 2026.
-            Elige la que mejor se adapte a tus objetivos.
+          <p className="text-white/95 max-w-2xl mx-auto leading-relaxed text-lg">
+            Todos los accesos a la Convención Inmobiliaria 2026 son completamente gratis.
+            Regístrate y vive la experiencia completa sin costo alguno.
           </p>
         </motion.div>
 
-        {/* Pricing Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {/* FREE Tier */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="relative glass rounded-2xl p-7 sm:p-8 gradient-border hover:bg-white/[0.03] transition-all duration-500 group"
-          >
-            <div className="absolute -top-3.5 left-6">
-              <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">
-                Acceso General
-              </span>
-            </div>
+        {/* Single FREE Card — Featured */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative glass-strong rounded-2xl p-8 sm:p-10 border-2 border-gold-500/30 glow-gold max-w-2xl mx-auto"
+        >
+          {/* Featured badge */}
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span className="px-6 py-2 bg-gold-500 text-navy-950 text-sm font-bold uppercase tracking-wider rounded-full shadow-lg shadow-gold-500/20 whitespace-nowrap">
+              🎟️ Acceso Gratuito
+            </span>
+          </div>
 
-            <div className="mt-4 mb-6">
-              <h3
-                className="text-2xl sm:text-3xl font-bold text-white mb-1"
+          <div className="absolute -top-20 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-[80px] pointer-events-none" />
+
+          <div className="text-center mt-4 mb-8">
+            <h3
+              className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+              ENTRADA FREE
+            </h3>
+            <div className="flex items-baseline justify-center gap-2">
+              <span
+                className="text-6xl sm:text-7xl font-bold text-gold-500"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
-                FREE
-              </h3>
-              <div className="flex items-baseline gap-1">
-                <span
-                  className="text-4xl sm:text-5xl font-bold text-white"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  $0
-                </span>
-                <span className="text-white/95 text-sm">USD</span>
-              </div>
+                $0
+              </span>
+              <span className="text-white/70 text-lg">USD</span>
             </div>
+            <p className="text-white/60 text-sm mt-2">Sin costo. Sin letra pequeña.</p>
+          </div>
 
-            <div className="w-full h-px bg-white/10 mb-6" />
+          <div className="w-full h-px bg-gold-500/20 mb-8" />
 
-            <div className="space-y-3 mb-8">
-              <div className="flex items-start gap-3">
-                {checkIconWhite}
-                <span className="text-white/95 text-sm leading-relaxed">Acceso completo al evento</span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconWhite}
-                <span className="text-white/95 text-sm leading-relaxed">Todas las conferencias y paneles</span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconWhite}
-                <span className="text-white/95 text-sm leading-relaxed">Presentación de proyectos internacionales</span>
-              </div>
-            </div>
-
-            <a
-              href="#registro"
-              className="block text-center w-full py-3.5 glass border border-gold-500/40 text-gold-500/70 font-bold text-sm uppercase tracking-wider rounded-xl hover:border-gold-500/60 hover:text-gold-500/90 transition-all duration-300"
-            >
-              Registrarme Gratis
-            </a>
-          </motion.div>
-
-          {/* VIP LUNCH Tier */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="relative glass rounded-2xl p-7 sm:p-8 gradient-border hover:bg-white/[0.03] transition-all duration-500 group border border-white/10 hover:border-white/20"
-          >
-            <div className="absolute -top-3.5 left-6">
-              <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">
-                🥂 VIP
+          {/* Benefits grid */}
+          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="flex items-start gap-3">
+              {checkIconGold}
+              <span className="text-white/95 text-sm leading-relaxed">
+                Acceso completo al evento
               </span>
             </div>
-
-            <div className="mt-4 mb-6">
-              <h3
-                className="text-2xl sm:text-3xl font-bold text-white mb-1"
-                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-              >
-                <span className="brush-underline-red">VIP LUNCH</span>
-              </h3>
-              <div className="flex items-baseline gap-2">
-                <span
-                  className="text-4xl sm:text-5xl font-bold text-white brush-underline-red"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  $27
-                </span>
-                <span className="text-white/95 text-sm">USD</span>
-              </div>
-            </div>
-
-            <div className="w-full h-px bg-white/10 mb-6" />
-
-            <div className="glass rounded-xl p-3 mb-5 border border-white/10">
-              <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
-                Participa del Lunch con los protagonistas del evento.
-              </p>
-            </div>
-
-            <div className="space-y-3 mb-8">
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  <strong className="text-white">Todo lo del FREE</strong> incluido
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  🤝 Lunch con <strong className="text-white">Inversionistas</strong>
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  🚀 Conexión con <strong className="text-white">Líderes de proyectos</strong>
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  🎁 <strong className="text-white">Ofertas de Sponsors</strong>
-                </span>
-              </div>
-            </div>
-
-            <a
-              href="https://checkout.bold.co/payment/LNK_668PMLKYFP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
-            >
-              Quiero Acceso VIP
-            </a>
-          </motion.div>
-
-          {/* Platinum Tier — FEATURED */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative glass-strong rounded-2xl p-7 sm:p-8 border-2 border-gold-500/30 glow-gold transition-all duration-500 group hover:border-gold-500/50 lg:scale-[1.02]"
-          >
-            {/* Featured badge */}
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-              <span className="px-4 py-1.5 bg-gold-500 text-navy-950 text-xs font-bold uppercase tracking-wider rounded-full shadow-lg shadow-gold-500/20 whitespace-nowrap">
-                ⭐ Más Popular
+            <div className="flex items-start gap-3">
+              {checkIconGold}
+              <span className="text-white/95 text-sm leading-relaxed">
+                Todas las conferencias y paneles
               </span>
             </div>
-
-            <div className="absolute -top-20 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-[80px] pointer-events-none" />
-
-            <div className="mt-4 mb-6">
-              <h3
-                className="text-2xl sm:text-3xl font-bold text-gold-500 mb-1"
-                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-              >
-                <span className="brush-underline-red">PLATINUM</span>
-              </h3>
-              <div className="flex items-baseline gap-1">
-                <span
-                  className="text-4xl sm:text-5xl font-bold text-gold-500 brush-underline-red"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  $50
-                </span>
-                <span className="text-white/95 text-sm">USD</span>
-              </div>
-            </div>
-
-            <div className="w-full h-px bg-gold-500/20 mb-6" />
-
-            <div className="glass rounded-xl p-3 mb-5 border border-gold-500/10">
-              <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
-                Experiencia mejorada con contenido exclusivo 💎
-              </p>
-            </div>
-
-            <div className="space-y-3 mb-8">
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  ⭐ <strong className="text-white">Todo lo del VIP</strong> incluido
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  📖 <strong className="text-white">Magazine Digital</strong> con detalles y contactos de los proyectos
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  📋 Directorio exclusivo de participantes
-                </span>
-              </div>
-            </div>
-
-            <a
-              href="https://checkout.bold.co/payment/LNK_TXYZG2V7CV"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
-            >
-              Quiero Platinum 💎
-            </a>
-          </motion.div>
-
-          {/* Advance A.I Tier */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative glass rounded-2xl p-7 sm:p-8 gradient-border hover:bg-white/[0.03] transition-all duration-500 group border border-white/10 hover:border-white/20"
-          >
-            <div className="absolute -top-3.5 left-6">
-              <span className="px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-full">
-                🤖 Advance
+            <div className="flex items-start gap-3">
+              {checkIconGold}
+              <span className="text-white/95 text-sm leading-relaxed">
+                Presentación de proyectos internacionales
               </span>
             </div>
-
-            <div className="mt-4 mb-6">
-              <h3
-                className="text-2xl sm:text-3xl font-bold text-white mb-1"
-                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-              >
-                <span className="brush-underline-red">ADVANCE A.I</span>
-              </h3>
-              <div className="flex items-baseline gap-1">
-                <span
-                  className="text-4xl sm:text-5xl font-bold text-white brush-underline-red"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  $100
-                </span>
-                <span className="text-white/95 text-sm">USD</span>
-              </div>
+            <div className="flex items-start gap-3">
+              {checkIconGold}
+              <span className="text-white/95 text-sm leading-relaxed">
+                Networking con inversionistas
+              </span>
             </div>
-
-            <div className="w-full h-px bg-white/10 mb-6" />
-
-            <div className="glass rounded-xl p-3 mb-5 border border-white/10">
-              <p className="text-white/95 text-xs sm:text-sm leading-relaxed">
-                El paquete más completo + tecnología de vanguardia 🚀
-              </p>
+            <div className="flex items-start gap-3">
+              {checkIconGold}
+              <span className="text-white/95 text-sm leading-relaxed">
+                Conexión con líderes de proyectos
+              </span>
             </div>
-
-            <div className="space-y-3 mb-8">
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  💎 <strong className="text-white">Todo lo del Platinum</strong> incluido
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  💳 <strong className="text-white">ECard Digital</strong> personalizada
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  🤖 <strong className="text-white">Workshop de Inteligencia Artificial</strong>
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  📦 <strong className="text-white">Kit de Marketing</strong>
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                {checkIconGold}
-                <span className="text-white/95 text-sm leading-relaxed">
-                  🥂 Acceso a <strong className="text-white">Cena VIP + Networking</strong>
-                </span>
-              </div>
+            <div className="flex items-start gap-3">
+              {checkIconGold}
+              <span className="text-white/95 text-sm leading-relaxed">
+                Entrada a ambas sedes (Barranquilla y Medellín)
+              </span>
             </div>
+          </div>
 
-            <a
-              href="https://checkout.bold.co/payment/LNK_DM1LN0WEN8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center w-full py-3.5 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.01] active:scale-[0.99]"
-            >
-              Quiero Advance A.I. 🚀
-            </a>
-          </motion.div>
-        </div>
+          <a
+            href="#registro"
+            className="block text-center w-full py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/30 hover:scale-[1.01] active:scale-[0.99]"
+          >
+            Registrarme Gratis
+          </a>
+        </motion.div>
 
         {/* Bottom note */}
         <motion.p
@@ -350,7 +134,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="text-center text-gold-500 text-sm mt-10 italic"
         >
-          Ambos accesos incluyen entrada a las dos sedes: Barranquilla (Miércoles 22 de Abril) y Medellín (Viernes 24 de Abril)
+          El acceso incluye entrada a las dos sedes: Barranquilla (Miércoles 22 de Abril) y Medellín (Viernes 24 de Abril)
         </motion.p>
       </div>
     </section>
