@@ -22,9 +22,9 @@ export default function RegistrationV2() {
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
       pais,
       perfil,
-      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] — Convención Inmobiliaria 2026 v2`,
-      fuente: "formulario-v2",
-      tag: "Landing V2",
+      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] — Convención Inmobiliaria 2026`,
+      fuente: "formulario-nueva",
+      tag: "Nueva landing",
     };
     try {
       fetch(SHEETS_URL, {
