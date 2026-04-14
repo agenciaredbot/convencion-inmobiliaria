@@ -11,23 +11,23 @@ export default function RegistrationV2() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSending(true);
-    const form = e.currentTarget;
-    const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement).value;
-    const pais = (form.elements.namedItem("pais") as HTMLInputElement).value;
-    const evento = (form.elements.namedItem("evento") as HTMLSelectElement).value;
-    const data = {
-      tipo: "asistente",
-      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      pais,
-      perfil,
-      evento,
-      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] [${evento || "Sin evento"}] — Convención Inmobiliaria 2026`,
-      fuente: "formulario-nueva",
-      tag: "Nueva landing",
-    };
     try {
+      const form = e.currentTarget;
+      const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement)?.value || "";
+      const pais = (form.elements.namedItem("pais") as HTMLInputElement)?.value || "";
+      const evento = (form.elements.namedItem("evento") as HTMLSelectElement)?.value || "";
+      const data = {
+        tipo: "asistente",
+        nombre: (form.elements.namedItem("nombre") as HTMLInputElement)?.value || "",
+        email: (form.elements.namedItem("email") as HTMLInputElement)?.value || "",
+        telefono: (form.elements.namedItem("telefono") as HTMLInputElement)?.value || "",
+        pais,
+        perfil,
+        evento,
+        interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] [${evento || "Sin evento"}] — Convención Inmobiliaria 2026`,
+        fuente: "formulario-nueva",
+        tag: "Nueva landing",
+      };
       const [sheetsRes, kommoRes] = await Promise.allSettled([
         fetch(SHEETS_URL, {
           method: "POST",

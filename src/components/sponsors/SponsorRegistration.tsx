@@ -20,25 +20,25 @@ export default function SponsorRegistration() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSending(true);
-    const form = e.currentTarget;
-    const paquete = (form.elements.namedItem("paquete") as HTMLSelectElement).value;
-    const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement).value;
-    const pais = (form.elements.namedItem("pais") as HTMLInputElement).value;
-    const empresa = (form.elements.namedItem("empresa") as HTMLInputElement).value;
-    const evento = (form.elements.namedItem("evento") as HTMLSelectElement).value;
-    const data = {
-      tipo: "sponsor",
-      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      pais,
-      perfil,
-      evento,
-      interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] [${evento || "Sin evento"}] Sponsor ${paquete || "sin especificar"} | ${empresa || ""}`.trim(),
-      fuente: "formulario-sponsors",
-      tag: "Nueva landing",
-    };
     try {
+      const form = e.currentTarget;
+      const paquete = (form.elements.namedItem("paquete") as HTMLSelectElement)?.value || "";
+      const perfil = (form.elements.namedItem("perfil") as HTMLSelectElement)?.value || "";
+      const pais = (form.elements.namedItem("pais") as HTMLInputElement)?.value || "";
+      const empresa = (form.elements.namedItem("empresa") as HTMLInputElement)?.value || "";
+      const evento = (form.elements.namedItem("evento") as HTMLSelectElement)?.value || "";
+      const data = {
+        tipo: "sponsor",
+        nombre: (form.elements.namedItem("nombre") as HTMLInputElement)?.value || "",
+        email: (form.elements.namedItem("email") as HTMLInputElement)?.value || "",
+        telefono: (form.elements.namedItem("telefono") as HTMLInputElement)?.value || "",
+        pais,
+        perfil,
+        evento,
+        interes: `[${perfil || "Sin perfil"}] [${pais || "Sin país"}] [${evento || "Sin evento"}] Sponsor ${paquete || "sin especificar"} | ${empresa || ""}`.trim(),
+        fuente: "formulario-sponsors",
+        tag: "Nueva landing",
+      };
       const [sheetsRes, kommoRes] = await Promise.allSettled([
         fetch(SHEETS_URL, {
           method: "POST",
