@@ -90,23 +90,34 @@ export default function InvestBanner() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden lg:flex justify-center"
           >
-            <div className="glass-strong rounded-2xl p-8 border border-gold-500/15 max-w-sm text-center">
-              <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
+            <div className="bg-navy-950/95 rounded-2xl p-10 border border-gold-500/30 max-w-md text-center shadow-2xl">
+              <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-bold">
                 Sobre el Evento
               </span>
               <h3
-                className="text-2xl font-bold text-white mt-3 mb-4 leading-tight"
+                className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4 leading-tight"
                 style={{ fontFamily: "'Bebas Neue', sans-serif" }}
               >
                 ¿POR QUÉ{" "}
                 <span className="text-gold-500">CONVENCIÓN INMOBILIARIA</span>?
               </h3>
-              <div className="w-10 h-1 bg-gold-500 rounded-full mx-auto mb-5" />
-              <p className="text-white/70 text-sm leading-relaxed">
+              <div className="w-12 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
+              <p className="text-white text-base leading-relaxed font-medium">
                 Tu oportunidad para conectar con los más grandes inversionistas
                 internacionales y con grandes empresas para presentar y vender
                 tu proyecto en mercados sólidos como USA, RD, MX, DU, COL.
               </p>
+
+              {/* Ticket badge */}
+              <div className="mt-8 inline-flex items-center gap-4 bg-navy-950 rounded-xl px-6 py-4 border border-gold-500/30">
+                <span className="text-3xl">🎟️</span>
+                <div className="text-left">
+                  <p className="text-gold-500 font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                    ENTRADA COMPLETAMENTE GRATIS
+                  </p>
+                  <p className="text-white/60 text-sm">Solo necesitas registrarte</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
