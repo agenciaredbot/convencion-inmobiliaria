@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
@@ -79,11 +78,8 @@ export default function SponsorRegistration() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="animate-fade-in"
           >
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               Reserva Tu Espacio
@@ -105,13 +101,9 @@ export default function SponsorRegistration() {
 
             <div className="space-y-3">
               {highlights.map((item, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + i * 0.08 }}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-3 animate-fade-in"
                 >
                   <div className="w-6 h-6 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0">
                     <svg className="w-3.5 h-3.5 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -119,17 +111,14 @@ export default function SponsorRegistration() {
                     </svg>
                   </div>
                   <span className="text-white/95 text-sm">{item}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right - Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div
+            className="animate-fade-in"
           >
             <div className="glass-strong rounded-2xl p-8 sm:p-10 glow-gold gradient-border">
               <h3
@@ -237,7 +226,7 @@ export default function SponsorRegistration() {
               </form>
               )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

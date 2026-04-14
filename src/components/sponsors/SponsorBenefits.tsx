@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const benefits = [
   {
     icon: "🎯",
@@ -43,11 +39,8 @@ export default function SponsorBenefits() {
       <div className="absolute inset-0 noise" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fade-in"
         >
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             ¿Por Qué Ser Sponsor?
@@ -64,24 +57,20 @@ export default function SponsorBenefits() {
             ante una audiencia de alto valor. Estos son los beneficios que
             obtendrás al reservar tu espacio.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="glass-strong rounded-2xl p-8 gradient-border hover:bg-white/[0.04] transition-all duration-500 group hover:glow-gold"
+              className="glass-strong rounded-2xl p-8 gradient-border hover:bg-white/[0.04] transition-all duration-500 group hover:glow-gold animate-fade-in"
             >
               <div className="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-500">
                 {item.icon}
               </div>
               <h3 className="text-white font-bold text-lg mb-3">{item.title}</h3>
               <p className="text-white/95 text-sm leading-relaxed">{item.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

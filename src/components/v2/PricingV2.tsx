@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const checkIconGold = (
   <div className="w-5 h-5 rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center shrink-0 mt-0.5">
     <svg className="w-3 h-3 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -19,12 +15,7 @@ export default function PricingV2() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Acceso al Evento
           </span>
@@ -39,16 +30,10 @@ export default function PricingV2() {
             Todos los accesos a la Convención Inmobiliaria 2026 son completamente
             gratis. Regístrate y vive la experiencia completa sin costo alguno.
           </p>
-        </motion.div>
+        </div>
 
         {/* Single FREE Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="relative glass-strong rounded-2xl p-8 sm:p-10 border-2 border-gold-500/30 glow-gold max-w-2xl mx-auto"
-        >
+        <div className="relative glass-strong rounded-2xl p-8 sm:p-10 border-2 border-gold-500/30 glow-gold max-w-2xl mx-auto animate-fade-in">
           <div className="absolute -top-4 left-1/2 -translate-x-1/2">
             <span className="px-6 py-2 bg-gold-500 text-navy-950 text-sm font-bold uppercase tracking-wider rounded-full shadow-lg shadow-gold-500/20 whitespace-nowrap">
               🎟️ Acceso Gratuito
@@ -123,16 +108,11 @@ export default function PricingV2() {
           >
             Registrarme Gratis
           </a>
-        </motion.div>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center text-gold-500 text-sm mt-10 italic"
-        >
+        <p className="text-center text-gold-500 text-sm mt-10 italic animate-fade-in">
           El acceso incluye entrada a las dos sedes: Barranquilla (Miércoles 22 de Abril) y Medellín (Viernes 24 de Abril)
-        </motion.p>
+        </p>
       </div>
     </section>
   );

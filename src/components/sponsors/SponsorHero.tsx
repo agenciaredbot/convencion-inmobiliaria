@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -23,16 +22,6 @@ function useCountdown(targetDate: Date) {
   return timeLeft;
 }
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
-};
-
 export default function SponsorHero() {
   const countdown = useCountdown(new Date("2026-04-22T09:00:00-05:00"));
 
@@ -47,14 +36,11 @@ export default function SponsorHero() {
 
       <div className="absolute inset-0 noise" />
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+      <div
         className="relative z-10 max-w-5xl mx-auto px-6 text-center"
       >
         {/* Exclusive badge */}
-        <motion.div variants={itemVariants} className="mb-8">
+        <div className="mb-8 animate-fade-in">
           <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-gold-500/30 bg-gold-500/10 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
             <span className="text-gold-400 text-xs uppercase tracking-[0.25em] font-semibold">
@@ -62,10 +48,10 @@ export default function SponsorHero() {
             </span>
             <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
           </span>
-        </motion.div>
+        </div>
 
         {/* Headline */}
-        <motion.div variants={itemVariants}>
+        <div className="animate-fade-in">
           <h1 className="leading-[0.9] mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             <span className="block text-5xl sm:text-7xl lg:text-8xl text-white">
               POSICIONA TU
@@ -77,18 +63,18 @@ export default function SponsorHero() {
               ANTE INVERSIONISTAS GLOBALES
             </span>
           </h1>
-        </motion.div>
+        </div>
 
         {/* Subtitle */}
-        <motion.div variants={itemVariants} className="mb-8">
+        <div className="mb-8 animate-fade-in">
           <p className="text-white/95 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Conecta tu empresa con los principales actores del mercado inmobiliario
             internacional. Espacios limitados para máximo impacto y exclusividad.
           </p>
-        </motion.div>
+        </div>
 
         {/* Event badges */}
-        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-3 mb-10 animate-fade-in">
           <div className="glass rounded-lg px-5 py-3 flex items-center gap-3 border border-gold-500/10">
             <svg className="w-5 h-5 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -113,10 +99,10 @@ export default function SponsorHero() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Countdown */}
-        <motion.div variants={itemVariants} className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <p className="text-xs uppercase tracking-[0.3em] text-white/95 mb-5 font-medium">
             Asegura tu espacio antes de
           </p>
@@ -142,10 +128,10 @@ export default function SponsorHero() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTAs */}
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
           <a
             href="#paquetes"
             className="group px-8 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/30 hover:scale-[1.02] active:scale-[0.98]"
@@ -158,19 +144,17 @@ export default function SponsorHero() {
           >
             Solicitar Información
           </a>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
       >
         <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
           <div className="w-1 h-2 rounded-full bg-gold-500/60" />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const properties = [
   {
     image: "/images/v2/miami-skyline.jpg",
@@ -47,12 +43,7 @@ export default function PropertyShowcase() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
+        <div className="text-center mb-14 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Proyectos que se presentan
           </span>
@@ -67,18 +58,15 @@ export default function PropertyShowcase() {
             Conoce en persona los proyectos que se presentarán en la convención.
             Habla directamente con los desarrolladores y toma decisiones informadas.
           </p>
-        </motion.div>
+        </div>
 
         {/* Property Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {properties.map((prop, i) => (
-            <motion.div
+            <div
               key={prop.location}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.7 }}
-              className="group relative rounded-2xl overflow-hidden gradient-border hover:glow-gold transition-all duration-500"
+              className="group relative rounded-2xl overflow-hidden gradient-border hover:glow-gold transition-all duration-500 animate-fade-in"
+              style={{ animationDelay: `${i * 0.1}s`, animationFillMode: "both" }}
             >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
@@ -122,17 +110,12 @@ export default function PropertyShowcase() {
                   {prop.desc}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12 animate-fade-in">
           <p className="text-white/50 text-sm mb-4">
             Estos y muchos más proyectos serán presentados en vivo durante la convención.
           </p>
@@ -142,7 +125,7 @@ export default function PropertyShowcase() {
           >
             Registrarme Gratis
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

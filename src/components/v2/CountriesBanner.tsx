@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function CountriesBanner() {
   return (
     <section className="relative bg-navy-950 overflow-hidden">
@@ -9,13 +5,7 @@ export default function CountriesBanner() {
 
       <div className="relative z-10">
         {/* Countries banner image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto px-6 pt-16"
-        >
+        <div className="max-w-6xl mx-auto px-6 pt-16 animate-fade-in">
           <div className="text-center mb-10">
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               Destinos de Inversión
@@ -41,7 +31,7 @@ export default function CountriesBanner() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent" />
           </div>
-        </motion.div>
+        </div>
 
         {/* Category cards below the banner */}
         <div className="max-w-6xl mx-auto px-6 py-14">
@@ -66,13 +56,10 @@ export default function CountriesBanner() {
                 countries: "USA · RD · Panamá",
               },
             ].map((cat, i) => (
-              <motion.div
+              <div
                 key={cat.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="glass rounded-2xl p-6 gradient-border hover:bg-white/[0.04] transition-all duration-500 group hover:glow-gold text-center"
+                className="glass rounded-2xl p-6 gradient-border hover:bg-white/[0.04] transition-all duration-500 group hover:glow-gold text-center animate-fade-in"
+                style={{ animationDelay: `${i * 0.1}s`, animationFillMode: "both" }}
               >
                 <span className="text-4xl mb-4 block">{cat.icon}</span>
                 <h3
@@ -87,17 +74,12 @@ export default function CountriesBanner() {
                 <span className="text-xs text-gold-500/70 font-medium uppercase tracking-wider">
                   {cat.countries}
                 </span>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Ticket badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex justify-center mt-10 pb-4"
-          >
+          <div className="flex justify-center mt-10 pb-4 animate-fade-in">
             <a
               href="#registro"
               className="inline-flex items-center gap-4 glass rounded-xl px-8 py-5 border border-white/10 hover:border-gold-500/30 transition-all duration-300 group"
@@ -110,7 +92,7 @@ export default function CountriesBanner() {
                 <p className="text-white/50 text-sm group-hover:text-white/70 transition-colors">Solo necesitas registrarte</p>
               </div>
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const countries = [
   {
     flag: "🇨🇴",
@@ -61,12 +57,7 @@ export default function InvestmentSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Oportunidades Internacionales
           </span>
@@ -82,18 +73,15 @@ export default function InvestmentSection() {
             En la Convención Inmobiliaria 2026 te presentamos los mejores proyectos
             en 4 mercados internacionales. Propiedades en dólares al alcance de tu mano.
           </p>
-        </motion.div>
+        </div>
 
         {/* Country cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {countries.map((country, i) => (
-            <motion.div
+            <div
               key={country.name}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.7 }}
-              className="relative glass rounded-2xl p-6 gradient-border hover:bg-white/[0.04] transition-all duration-500 group hover:glow-gold"
+              className="relative glass rounded-2xl p-6 gradient-border hover:bg-white/[0.04] transition-all duration-500 group hover:glow-gold animate-fade-in"
+              style={{ animationDelay: `${i * 0.1}s`, animationFillMode: "both" }}
             >
               {/* Gradient accent */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${country.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
@@ -131,18 +119,12 @@ export default function InvestmentSection() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 glass-strong rounded-2xl p-8 sm:p-10 border border-gold-500/20 glow-gold text-center"
-        >
+        <div className="mt-16 glass-strong rounded-2xl p-8 sm:p-10 border border-gold-500/20 glow-gold text-center animate-fade-in">
           <p className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold mb-3">
             Acceso Completamente Gratuito
           </p>
@@ -162,7 +144,7 @@ export default function InvestmentSection() {
           >
             Quiero Asistir — Es Gratis
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

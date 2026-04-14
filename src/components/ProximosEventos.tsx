@@ -1,16 +1,6 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function ProximosEventos() {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="w-full bg-black py-10"
-    >
+    <section className="w-full bg-black py-10 animate-fade-in">
       <div className="max-w-[70%] mx-auto">
         <img
           src="/images/PROXIMOS EVENTOS.jpeg"
@@ -21,6 +11,6 @@ export default function ProximosEventos() {
           className="w-full h-auto block rounded-xl"
         />
       </div>
-    </motion.section>
+    </section>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   { id: 1, src: "/images/carousel/evento-1.jpg", alt: "Convención Inmobiliaria — Evento 1" },
@@ -21,15 +20,12 @@ const slides = [
 
 export default function EventCarousel() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(1);
 
   const next = useCallback(() => {
-    setDirection(1);
     setCurrent((prev) => (prev + 1) % slides.length);
   }, []);
 
   const prev = useCallback(() => {
-    setDirection(-1);
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   }, []);
 
@@ -39,12 +35,6 @@ export default function EventCarousel() {
     return () => clearInterval(timer);
   }, [next]);
 
-  const variants = {
-    enter: (dir: number) => ({ x: dir > 0 ? 600 : -600, opacity: 0, scale: 0.95 }),
-    center: { x: 0, opacity: 1, scale: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? -600 : 600, opacity: 0, scale: 0.95 }),
-  };
-
   return (
     <section className="relative py-20 lg:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-navy-950" />
@@ -52,12 +42,7 @@ export default function EventCarousel() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Revive la Experiencia
           </span>
@@ -68,29 +53,21 @@ export default function EventCarousel() {
             EVENTOS <span className="text-gold-500">ANTERIORES</span>
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto" />
-        </motion.div>
+        </div>
 
         {/* Carousel */}
         <div className="relative">
           {/* Main slide */}
           <div className="relative aspect-[16/9] sm:aspect-[2.2/1] rounded-2xl overflow-hidden glass-strong glow-gold">
-            <AnimatePresence custom={direction} mode="wait">
-              <motion.img
-                key={slides[current].id}
-                src={slides[current].src}
-                alt={slides[current].alt}
-                width={800}
-                height={450}
-                loading="lazy"
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            </AnimatePresence>
+            <img
+              key={slides[current].id}
+              src={slides[current].src}
+              alt={slides[current].alt}
+              width={800}
+              height={450}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+            />
 
             {/* Gradient overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent pointer-events-none" />
@@ -129,10 +106,7 @@ export default function EventCarousel() {
             {slides.map((slide, i) => (
               <button
                 key={slide.id}
-                onClick={() => {
-                  setDirection(i > current ? 1 : -1);
-                  setCurrent(i);
-                }}
+                onClick={() => setCurrent(i)}
                 className={`shrink-0 rounded-full transition-all duration-300 ${
                   i === current
                     ? "w-8 h-2.5 bg-gold-500 shadow-lg shadow-gold-500/30"

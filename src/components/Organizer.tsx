@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function Organizer() {
   return (
     <section id="speakers" className="relative py-24 lg:py-32 overflow-hidden">
@@ -14,13 +10,7 @@ export default function Organizer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Photo side */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
+          <div className="relative animate-fade-in">
             <div className="relative max-w-md mx-auto">
               {/* Photo with golden frame effect */}
               <div className="aspect-[3/4] rounded-2xl overflow-hidden glass-strong relative">
@@ -43,15 +33,10 @@ export default function Organizer() {
                 <p className="text-gold-500 text-xs font-bold uppercase tracking-wider">CEO & Organizadora</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content side */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="animate-fade-in">
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               Organizadora
             </span>
@@ -120,7 +105,7 @@ export default function Organizer() {
             >
               Deseo Asistir al Evento
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
@@ -70,11 +69,7 @@ export default function Registration() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left text */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fade-in">
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               No te quedes fuera
             </span>
@@ -107,15 +102,10 @@ export default function Registration() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right form */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
+          <div className="animate-fade-in">
             <div className="glass-strong rounded-2xl p-8 sm:p-10 glow-gold gradient-border">
               <h3
                 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8"
@@ -199,7 +189,7 @@ export default function Registration() {
               </form>
               )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

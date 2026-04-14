@@ -1,16 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function SponsorFloat() {
   return (
-    <motion.a
+    <a
       href="/sponsors"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ delay: 2.5, type: "spring", stiffness: 200 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
       className="fixed bottom-6 left-6 z-50 flex items-center gap-2 px-5 py-3 bg-gold-500 rounded-full shadow-2xl shadow-gold-500/30 hover:shadow-gold-500/50 transition-shadow duration-300 animate-sponsor-pulse"
       aria-label="Quiero Ser Sponsor"
     >
@@ -25,6 +16,6 @@ export default function SponsorFloat() {
       </span>
       {/* Pulse ring */}
       <span className="absolute inset-0 rounded-full bg-gold-500 animate-ping opacity-15 pointer-events-none" />
-    </motion.a>
+    </a>
   );
 }

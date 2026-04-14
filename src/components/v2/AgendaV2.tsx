@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const agenda = [
   {
     time: "8:30 — 9:00 AM",
@@ -44,12 +40,7 @@ export default function AgendaV2() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-14"
-        >
+        <div className="mb-14 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Programa del Evento
           </span>
@@ -64,22 +55,17 @@ export default function AgendaV2() {
             Un programa intenso y enfocado: conoce los proyectos, conecta con los actores clave
             y toma decisiones de inversión informadas.
           </p>
-        </motion.div>
+        </div>
 
         {/* Jornada badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mb-8"
-        >
+        <div className="mb-8 animate-fade-in">
           <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2">
             <span className="text-lg">🌅</span>
             <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
               Jornada — 8:30 AM a 2:00 PM
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Timeline */}
         <div className="relative">
@@ -87,13 +73,10 @@ export default function AgendaV2() {
 
           <div className="space-y-8">
             {agenda.map((item, i) => (
-              <motion.div
+              <div
                 key={i}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="relative pl-12 group"
+                className="relative pl-12 group animate-fade-in"
+                style={{ animationDelay: `${i * 0.15}s`, animationFillMode: "both" }}
               >
                 <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-navy-950 border-2 border-gold-500 group-hover:bg-gold-500 transition-colors duration-300 z-10">
                   <div className="absolute inset-0 rounded-full bg-gold-500/20 scale-0 group-hover:scale-[2.5] transition-transform duration-500" />
@@ -128,28 +111,18 @@ export default function AgendaV2() {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Note */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center text-white/50 text-sm mt-10 italic"
-        >
+        <p className="text-center text-white/50 text-sm mt-10 italic animate-fade-in">
           El programa aplica para ambas sedes: Barranquilla (22 Abr) y Medellín (24 Abr)
-        </motion.p>
+        </p>
 
         {/* Ticket badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center mt-10"
-        >
+        <div className="flex justify-center mt-10 animate-fade-in">
           <a
             href="#registro"
             className="inline-flex items-center gap-4 glass rounded-xl px-8 py-5 border border-white/10 hover:border-gold-500/30 transition-all duration-300 group"
@@ -162,7 +135,7 @@ export default function AgendaV2() {
               <p className="text-white/50 text-sm group-hover:text-white/70 transition-colors">Solo necesitas registrarte</p>
             </div>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

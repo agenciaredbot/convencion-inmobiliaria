@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function Sponsors() {
   return (
     <section className="relative py-20 overflow-hidden">
@@ -9,11 +5,7 @@ export default function Sponsors() {
       <div className="absolute inset-0 noise" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Confían en nosotros
           </span>
@@ -23,16 +15,10 @@ export default function Sponsors() {
           >
             MARCAS QUE YA <span className="text-gold-500">NOS HAN ACOMPAÑADO</span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* Sponsors logos image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="glass rounded-2xl p-6 sm:p-10 gradient-border"
-        >
+        <div className="glass rounded-2xl p-6 sm:p-10 gradient-border animate-fade-in">
           <img
             src="/images/MARCAS-ALIADAS.jpeg"
             alt="Marcas aliadas de Convención Inmobiliaria 2026"
@@ -41,21 +27,16 @@ export default function Sponsors() {
             loading="lazy"
             className="w-full h-auto rounded-xl"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-10"
-        >
+        <div className="mt-10 animate-fade-in">
           <a
             href="/sponsors"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/20 hover:scale-[1.02] animate-sponsor-pulse"
           >
             Quiero Ser Sponsor
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

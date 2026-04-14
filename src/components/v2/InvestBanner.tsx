@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function InvestBanner() {
   return (
     <section className="relative overflow-hidden">
@@ -23,12 +19,7 @@ export default function InvestBanner() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — headline */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="animate-fade-in">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-gold text-gold-500 text-xs font-semibold uppercase tracking-[0.2em] mb-6">
               <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
               Convención Inmobiliaria 2026
@@ -73,16 +64,10 @@ export default function InvestBanner() {
               Asistir Gratis al Evento
             </a>
 
-          </motion.div>
+          </div>
 
           {/* Right — About card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex justify-center"
-          >
+          <div className="hidden lg:flex justify-center animate-fade-in">
             <div className="bg-navy-950/95 rounded-2xl p-10 border border-gold-500/30 max-w-md text-center shadow-2xl">
               <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-bold">
                 Sobre el Evento
@@ -112,7 +97,7 @@ export default function InvestBanner() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

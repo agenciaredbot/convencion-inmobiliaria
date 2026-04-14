@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const packages = [
   {
     tier: "Silver",
@@ -65,11 +61,8 @@ export default function SponsorPackages() {
       <div className="absolute inset-0 noise" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fade-in"
         >
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Niveles de Sponsorship
@@ -85,17 +78,13 @@ export default function SponsorPackages() {
             Elige el nivel de exposición que mejor se adapte a tu marca.
             Cada paquete está diseñado para maximizar tu retorno de inversión.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {packages.map((pkg, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
-              className={`relative rounded-2xl p-8 transition-all duration-500 ${
+              className={`relative rounded-2xl p-8 transition-all duration-500 animate-fade-in ${
                 pkg.featured
                   ? "glass-strong border-2 border-gold-500/30 glow-gold scale-[1.02] lg:scale-105"
                   : "glass gradient-border hover:bg-white/[0.04]"
@@ -144,18 +133,15 @@ export default function SponsorPackages() {
               >
                 Solicitar {pkg.tier}
               </a>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center text-white/95 text-sm mt-10"
+        <p
+          className="text-center text-white/95 text-sm mt-10 animate-fade-in"
         >
           * Los precios y beneficios son personalizables. Contáctanos para crear un paquete a tu medida.
-        </motion.p>
+        </p>
       </div>
     </section>
   );

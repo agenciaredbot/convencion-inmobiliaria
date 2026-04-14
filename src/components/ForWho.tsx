@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const audiences = [
   { label: "Pre-Constructores", icon: "🏗️" },
   { label: "Agentes Inmobiliarios", icon: "🏠" },
@@ -61,12 +57,7 @@ export default function ForWho() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Audience section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             ¿Para quién es?
           </span>
@@ -80,33 +71,23 @@ export default function ForWho() {
             Si eres una pre-constructora, inversionista o agente inmobiliario con proyectos de finca raíz en mercados internacionales
             y deseas acceder a una audiencia selecta de inversionistas, este evento es para ti.
           </p>
-        </motion.div>
+        </div>
 
         {/* Audience grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-24">
           {audiences.map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="glass rounded-xl p-5 text-center cursor-default hover:bg-white/[0.06] transition-all duration-300 gradient-border"
+              className="glass rounded-xl p-5 text-center cursor-default hover:bg-white/[0.06] transition-all duration-300 gradient-border animate-fade-in"
             >
               <span className="text-2xl mb-2 block">{item.icon}</span>
               <p className="text-sm font-medium text-white/95">{item.label}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Benefits section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
+        <div className="text-center mb-14 animate-fade-in">
           <h3
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
@@ -114,25 +95,20 @@ export default function ForWho() {
             ¿Por qué reservar tu espacio como{" "}
             <span className="text-gold-500">SPONSOR</span>?
           </h3>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {benefits.map((b, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="glass-strong rounded-2xl p-8 group hover:bg-white/[0.08] transition-all duration-500 gradient-border"
+              className="glass-strong rounded-2xl p-8 group hover:bg-white/[0.08] transition-all duration-500 gradient-border animate-fade-in"
             >
               <div className="w-14 h-14 rounded-xl glass-gold flex items-center justify-center text-gold-500 mb-5 group-hover:scale-110 transition-transform duration-300">
                 {b.icon}
               </div>
               <h4 className="text-xl font-bold text-white mb-3">{b.title}</h4>
               <p className="text-white/95 text-sm leading-relaxed">{b.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

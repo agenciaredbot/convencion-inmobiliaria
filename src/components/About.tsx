@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const highlights = [
   "Evento más reconocido en Estados Unidos por su trayectoria",
   "La mayoría de asistentes salen con negocios cerrados",
@@ -31,12 +27,7 @@ export default function About() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Video placeholder */}
-          <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="animate-fade-in">
             <div className="relative aspect-video rounded-2xl overflow-hidden glass-strong glow-gold group">
               <video
                 autoPlay
@@ -53,15 +44,10 @@ export default function About() {
               <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-gold-500/30 rounded-tl-2xl pointer-events-none" />
               <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-gold-500/30 rounded-br-2xl pointer-events-none" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Right - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="animate-fade-in">
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               Sobre el Evento
             </span>
@@ -82,17 +68,13 @@ export default function About() {
 
             <div className="space-y-4 mb-8">
               {highlights.map((item, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.1 }}
-                  className="flex items-start gap-3"
+                  className="flex items-start gap-3 animate-fade-in"
                 >
                   <div className="mt-1 w-2 h-2 rounded-full bg-gold-500 shrink-0" />
                   <p className="text-white/95 text-sm leading-relaxed">{item}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -102,7 +84,7 @@ export default function About() {
             >
               Quiero Ser Sponsor
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

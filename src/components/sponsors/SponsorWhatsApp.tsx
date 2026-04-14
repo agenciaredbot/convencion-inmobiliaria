@@ -1,18 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function SponsorWhatsApp() {
   return (
-    <motion.a
+    <a
       href="https://wa.me/573059700506?text=Hola%2C%20me%20interesa%20ser%20Sponsor%20de%20la%20Convenci%C3%B3n%20Inmobiliaria%202026"
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ delay: 2, type: "spring", stiffness: 200 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
       className="fixed bottom-6 left-6 z-50 flex items-center gap-3"
       aria-label="Contactar por WhatsApp para Sponsors"
     >
@@ -25,6 +16,6 @@ export default function SponsorWhatsApp() {
       <span className="hidden sm:block bg-[#25D366] text-white text-xs font-bold px-3 py-2 rounded-lg shadow-lg">
         Habla con Ana
       </span>
-    </motion.a>
+    </a>
   );
 }
