@@ -44,9 +44,9 @@ const SYSTEM_PROMPT = `Eres Sofía, asistente virtual de la Convención Inmobili
 - 10:00 AM-12:00 PM: Presentación de Proyectos Internacionales
 - 12:00-1:00 PM: Panel Inversionistas & Expertos
 - 1:00-3:00 PM: Lunch VIP & Networking exclusivo
-- 3:00-7:00 PM: Segunda jornada (mismo programa)
+- 3:00-6:30 PM: Segunda jornada (mismo programa)
 - 6:30-7:00 PM: Registro Cena VIP
-- 7:00-8:30 PM: Cena y Networking
+- 7:00-8:30 PM: Cena y Networking (solo plan Advance A.I)
 
 ## TICKETS Y LINKS DE PAGO
 - **FREE** ($0 USD): Acceso completo al evento, conferencias y networking → Registro: https://convencioninmobiliariausa.com/#registro
