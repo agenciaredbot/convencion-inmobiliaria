@@ -29,24 +29,30 @@ export default function Registration() {
       tag: "Nueva landing",
     };
     try {
-      // Send to Google Sheets
-      fetch(SHEETS_URL, {
-        method: "POST",
-        body: JSON.stringify(data),
-        mode: "no-cors",
-      });
-      // Send to Kommo CRM
-      fetch("/api/kommo", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      // Send to Google Sheets + Kommo CRM in parallel
+      const [sheetsRes, kommoRes] = await Promise.allSettled([
+        fetch(SHEETS_URL, {
+          method: "POST",
+          body: JSON.stringify(data),
+          mode: "no-cors",
+        }),
+        fetch("/api/kommo", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }),
+      ]);
+      // Log failures but still show success to user (data reached at least one system)
+      if (kommoRes.status === "rejected") console.error("Kommo error:", kommoRes.reason);
+      if (sheetsRes.status === "rejected") console.error("Sheets error:", sheetsRes.reason);
       setSent(true);
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error("Form submit error:", err);
       alert("Error al enviar. Intenta de nuevo.");
+    } finally {
+      setSending(false);
     }
-    setSending(false);
   }
   return (
     <section id="registro" className="relative py-24 lg:py-32 overflow-hidden">
