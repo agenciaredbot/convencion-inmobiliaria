@@ -151,30 +151,30 @@ export default function RegistrationV2() {
                     name="nombre"
                     placeholder="Nombre completo"
                     required
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                   <input
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
                     required
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                   <input
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono con código de país. Ej: +57 300 123 4567"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                   <input
                     type="text"
                     name="pais"
                     placeholder="País"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                   <select
                     name="perfil"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
                   >
                     <option value="">Tipo de Perfil</option>
                     <option value="agente-inmobiliario">Agente Inmobiliario</option>
@@ -191,7 +191,7 @@ export default function RegistrationV2() {
                   >
                     {sending ? "Enviando..." : "Registrarme Gratis"}
                   </button>
-                  <p className="text-white/40 text-xs text-center">
+                  <p className="text-white/70 text-xs text-center font-medium">
                     Al registrarte aceptas recibir información sobre el evento.
                   </p>
                 </form>

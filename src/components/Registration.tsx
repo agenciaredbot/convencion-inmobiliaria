@@ -138,7 +138,7 @@ export default function Registration() {
                     type="text"
                     name="nombre"
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -146,7 +146,7 @@ export default function Registration() {
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -154,7 +154,7 @@ export default function Registration() {
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono con código de país. Ej: +57 300 123 4567"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
@@ -162,11 +162,11 @@ export default function Registration() {
                     type="text"
                     name="pais"
                     placeholder="País"
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white placeholder-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm"
                   />
                 </div>
                 <div>
-                  <select name="perfil" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
+                  <select name="perfil" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
                     <option value="">Tipo de Perfil</option>
                     <option value="agente-inmobiliario">Agente Inmobiliario</option>
                     <option value="constructora">Constructora</option>

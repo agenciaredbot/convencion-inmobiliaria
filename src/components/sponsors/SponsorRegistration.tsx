@@ -157,7 +157,7 @@ export default function SponsorRegistration() {
                     type="text"
                     name="nombre"
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white placeholder:text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold placeholder:text-white placeholder:font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
                   />
                 </div>
                 <div>
@@ -165,7 +165,7 @@ export default function SponsorRegistration() {
                     type="text"
                     name="empresa"
                     placeholder="Empresa / Marca"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white placeholder:text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold placeholder:text-white placeholder:font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
                   />
                 </div>
                 <div>
@@ -173,7 +173,7 @@ export default function SponsorRegistration() {
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white placeholder:text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold placeholder:text-white placeholder:font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
                   />
                 </div>
                 <div>
@@ -181,7 +181,7 @@ export default function SponsorRegistration() {
                     type="tel"
                     name="telefono"
                     placeholder="Teléfono con código de país. Ej: +57 300 123 4567"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white placeholder:text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold placeholder:text-white placeholder:font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
                   />
                 </div>
                 <div>
@@ -189,11 +189,11 @@ export default function SponsorRegistration() {
                     type="text"
                     name="pais"
                     placeholder="País"
-                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white placeholder:text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
+                    className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold placeholder:text-white placeholder:font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors"
                   />
                 </div>
                 <div>
-                  <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
+                  <select name="paquete" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿Qué paquete te interesa?</option>
                     <option value="silver" className="bg-navy-900">Silver</option>
                     <option value="gold" className="bg-navy-900">Gold</option>
@@ -202,7 +202,7 @@ export default function SponsorRegistration() {
                   </select>
                 </div>
                 <div>
-                  <select name="perfil" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
+                  <select name="perfil" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">Tipo de Perfil</option>
                     <option value="agente-inmobiliario" className="bg-navy-900">Agente Inmobiliario</option>
                     <option value="constructora" className="bg-navy-900">Constructora</option>
