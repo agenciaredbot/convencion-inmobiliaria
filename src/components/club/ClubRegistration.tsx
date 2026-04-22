@@ -12,21 +12,44 @@ export default function ClubRegistration() {
     e.preventDefault();
     setSending(true);
     const form = e.currentTarget;
-    const data = {
-      form_type: "club-inmobiliario",
-      source: "landing-club",
-      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      pais: (form.elements.namedItem("pais") as HTMLInputElement).value,
-      rol: (form.elements.namedItem("rol") as HTMLSelectElement).value,
-    };
     try {
-      await fetch(SHEETS_URL, {
-        method: "POST",
-        body: JSON.stringify(data),
-        mode: "no-cors",
-      });
+      const nombre = (form.elements.namedItem("nombre") as HTMLInputElement)?.value || "";
+      const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || "";
+      const telefono = (form.elements.namedItem("telefono") as HTMLInputElement)?.value || "";
+      const pais = (form.elements.namedItem("pais") as HTMLInputElement)?.value || "";
+      const rol = (form.elements.namedItem("rol") as HTMLSelectElement)?.value || "";
+      const data = {
+        tipo: "club-inmobiliario",
+        nombre,
+        email,
+        telefono,
+        pais,
+        perfil: rol,
+        evento: "Club Inmobiliario",
+        interes: `[${rol}] [${pais}] [Club Inmobiliario] — Pre-registro Early Bird 30% OFF`,
+        fuente: "landing-club",
+        tag: "Club Inmobiliario",
+      };
+
+      const fetchWithTimeout = (url: string, opts: RequestInit, ms = 8000) => {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), ms);
+        return fetch(url, { ...opts, signal: controller.signal }).finally(() => clearTimeout(timer));
+      };
+
+      await Promise.allSettled([
+        fetchWithTimeout("/api/kommo", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }),
+        fetchWithTimeout(SHEETS_URL, {
+          method: "POST",
+          body: JSON.stringify(data),
+          mode: "no-cors",
+        }).catch(() => null),
+      ]);
+
       setSent(true);
       form.reset();
     } catch {
