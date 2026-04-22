@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 
-const SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbx5Y5LIKu60jcAaCsotwuFg7kgpXQKmD_36XSBqQd8tfDdSSYb46LVLLotC-buE9P4B7A/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
 export default function ClubRegistration() {
   const [sending, setSending] = useState(false);
