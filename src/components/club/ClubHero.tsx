@@ -64,13 +64,7 @@ export default function ClubHero() {
         <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <h1 className="flex flex-col items-center gap-0">
             <span
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-wide"
-              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-            >
-              CONVENCIÓN INMOBILIARIA
-            </span>
-            <span
-              className="text-6xl sm:text-8xl lg:text-9xl text-gold-400 leading-none -mt-2"
+              className="text-7xl sm:text-9xl lg:text-[10rem] text-gold-400 leading-none"
               style={{
                 fontFamily: "'Dancing Script', cursive",
                 fontWeight: 700,
@@ -78,6 +72,12 @@ export default function ClubHero() {
               }}
             >
               Club
+            </span>
+            <span
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-[0.15em] -mt-2"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+              INMOBILIARIO
             </span>
           </h1>
         </div>
