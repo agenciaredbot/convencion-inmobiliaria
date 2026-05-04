@@ -1,6 +1,7 @@
 import ClubHero from "@/components/club/ClubHero";
 import ClubBenefits from "@/components/club/ClubBenefits";
 import ClubExperience from "@/components/club/ClubExperience";
+import ClubPricing from "@/components/club/ClubPricing";
 import ClubRegistration from "@/components/club/ClubRegistration";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -17,6 +18,7 @@ export default function ClubPage() {
       <ClubHero />
       <ClubBenefits />
       <ClubExperience />
+      <ClubPricing />
       <ClubRegistration />
       <Footer />
       <WhatsAppFloat />
