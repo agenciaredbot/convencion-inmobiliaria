@@ -53,7 +53,7 @@ export default function Organizer() {
                 width={200}
                 height={60}
                 loading="lazy"
-                className="h-15 w-auto opacity-60"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-white/95 text-sm mb-5" style={{ fontStyle: "italic" }}>

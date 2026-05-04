@@ -29,7 +29,7 @@ const destinations = [
         date: "Jueves 28 de Mayo",
         type: "Evento Presencial",
         typeIcon: "🎯",
-        hours: ["9:00 AM — 2:00 PM"],
+        hours: ["9:00 AM — 12:00 PM"],
         desc: "Jornada completa de presentaciones, oportunidades de inversión y conexión directa con desarrolladores y compradores internacionales.",
       },
       {
