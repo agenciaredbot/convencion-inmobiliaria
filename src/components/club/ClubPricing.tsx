@@ -33,6 +33,7 @@ const tiers = [
       "25% de descuento en los tours inmobiliarios",
       "Acceso completo a nuestra plataforma de A.I. para vender propiedades",
       "Generación de contenidos con A.I. incluida",
+      "Acceso exclusivo a oportunidades de inversión con realtors e inversionistas de alto nivel",
     ],
     featured: false,
     ctaLabel: "Quiero el Elite",
