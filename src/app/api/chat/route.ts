@@ -25,13 +25,13 @@ const SYSTEM_PROMPT = `Eres Sofía, asistente virtual de la Convención Inmobili
   - Lunes 25 de Mayo: Visita de Proyectos — turnos a las 9AM, 11AM, 2PM y 4PM
   - Martes 26 de Mayo: Evento Presencial — 9AM a 12PM
 - **Cancún, México 🇲🇽**
-  - Jueves 28 de Mayo: Evento Presencial — 9AM a 2PM
+  - Jueves 28 de Mayo: Evento Presencial — 9AM a 12PM
   - Viernes 29 de Mayo: Visita de Proyectos — turnos a las 9AM, 11AM, 2PM y 4PM
 - Organizadora: Claudia Rivera, Realtor Internacional y CEO de Convención Inmobiliaria
 
 ## AGENDA DEL EVENTO PRESENCIAL
 - 9:00 AM: Bienvenida y Registro
-- 9:00 AM - 12:00 PM (RD) / 2:00 PM (México): Presentación de Proyectos Internacionales
+- 9:00 AM - 12:00 PM: Presentación de Proyectos Internacionales
 - Cierre con Networking
 
 ## ACCESO AL EVENTO
