@@ -1,22 +1,45 @@
-const agenda = [
+const destinations = [
   {
-    time: "8:30 — 9:00 AM",
-    title: "Registro y Bienvenida",
-    desc: "Acreditación de asistentes. Primer espacio de networking para conectar con profesionales del sector inmobiliario internacional.",
-    icon: "📋",
+    country: "Rep. Dominicana",
+    flag: "🇩🇴",
+    city: "Punta Cana",
+    days: [
+      {
+        date: "Lunes 25 de Mayo",
+        type: "Visita de Proyectos",
+        typeIcon: "🏗️",
+        hours: ["9:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],
+        desc: "Recorridos guiados por proyectos internacionales en cuatro turnos. Conoce en persona las oportunidades de inversión disponibles en Punta Cana.",
+      },
+      {
+        date: "Martes 26 de Mayo",
+        type: "Evento Presencial",
+        typeIcon: "🎯",
+        hours: ["9:00 AM — 12:00 PM"],
+        desc: "Presentaciones de proyectos, conferencias de expertos y networking con inversionistas internacionales.",
+      },
+    ],
   },
   {
-    time: "9:00 AM — 12:00 PM",
-    title: "Presentación de Proyectos Internacionales",
-    desc: "Presentación de oportunidades de inversión en Colombia, Miami, República Dominicana y México. Desarrolladores y expertos exponen sus proyectos en vivo.",
-    icon: "🏗️",
-    highlight: true,
-  },
-  {
-    time: "12:00 — 2:00 PM",
-    title: "Networking & Cierre",
-    desc: "Espacio dedicado para conectar directamente con inversionistas, desarrolladores y expertos del sector. El momento donde nacen las alianzas reales.",
-    icon: "🤝",
+    country: "México",
+    flag: "🇲🇽",
+    city: "Cancún",
+    days: [
+      {
+        date: "Jueves 28 de Mayo",
+        type: "Evento Presencial",
+        typeIcon: "🎯",
+        hours: ["9:00 AM — 2:00 PM"],
+        desc: "Jornada completa de presentaciones, oportunidades de inversión y conexión directa con desarrolladores y compradores internacionales.",
+      },
+      {
+        date: "Viernes 29 de Mayo",
+        type: "Visita de Proyectos",
+        typeIcon: "🏗️",
+        hours: ["9:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],
+        desc: "Recorridos en cuatro turnos por los proyectos más exclusivos del Caribe Mexicano. Inversión en vivo, cara a cara.",
+      },
+    ],
   },
 ];
 
@@ -38,9 +61,9 @@ export default function Agenda() {
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950/70 via-transparent to-navy-950/70" />
       <div className="absolute inset-0 noise" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+      <div className="relative z-10 max-w-5xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-14 animate-fade-in">
+        <div className="mb-16 animate-fade-in">
           <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
             Programa del Evento
           </span>
@@ -52,73 +75,82 @@ export default function Agenda() {
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mb-6" />
           <p className="text-white/80 max-w-xl leading-relaxed">
-            Un programa intenso y enfocado: conoce los proyectos, conecta con los actores clave
-            y toma decisiones de inversión informadas.
+            Dos destinos del Caribe. Cuatro días de conexiones reales, proyectos en vivo
+            y oportunidades de inversión internacional.
           </p>
         </div>
 
-        {/* Jornada badge */}
-        <div className="mb-8 animate-fade-in">
-          <div className="inline-flex items-center gap-2 glass-gold rounded-full px-5 py-2">
-            <span className="text-lg">🌅</span>
-            <span className="text-gold-500 text-sm font-bold uppercase tracking-wider">
-              Jornada — 8:30 AM a 2:00 PM
-            </span>
-          </div>
-        </div>
-
-        {/* Timeline */}
-        <div className="relative">
-          <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-gold-500/60 via-gold-500/30 to-gold-500/60" />
-
-          <div className="space-y-8">
-            {agenda.map((item, i) => (
-              <div
-                key={i}
-                className="relative pl-12 group animate-fade-in"
-              >
-                <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-navy-950 border-2 border-gold-500 group-hover:bg-gold-500 transition-colors duration-300 z-10">
-                  <div className="absolute inset-0 rounded-full bg-gold-500/20 scale-0 group-hover:scale-[2.5] transition-transform duration-500" />
-                </div>
-
-                <div className={`glass rounded-xl p-6 sm:p-8 hover:bg-white/[0.06] transition-all duration-300 gradient-border group-hover:glow-gold ${item.highlight ? "border-gold-500/30 bg-gold-500/5" : ""}`}>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                    <span className="text-3xl">{item.icon}</span>
-                    <span
-                      className="text-gold-500 text-xl sm:text-2xl font-bold shrink-0"
-                      style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                    >
-                      {item.time}
-                    </span>
-                  </div>
-                  <h3 className="text-white font-semibold text-lg sm:text-xl mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/75 text-sm leading-relaxed">
-                    {item.desc}
+        {/* Destinations */}
+        <div className="space-y-16">
+          {destinations.map((dest, di) => (
+            <div key={di} className="animate-fade-in">
+              {/* Destination header */}
+              <div className="flex items-center gap-4 mb-8">
+                <span className="text-5xl">{dest.flag}</span>
+                <div>
+                  <p className="text-gold-500 text-xs uppercase tracking-[0.25em] font-semibold mb-1">
+                    {dest.country}
                   </p>
-                  {item.highlight && (
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {["🇨🇴 Colombia", "🇺🇸 Miami", "🇩🇴 Rep. Dominicana", "🇲🇽 México"].map((country) => (
-                        <span
-                          key={country}
-                          className="text-xs px-3 py-1 glass-gold rounded-full text-gold-500 font-medium"
-                        >
-                          {country}
-                        </span>
-                      ))}
+                  <h3
+                    className="text-3xl sm:text-4xl font-bold text-white leading-none"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    {dest.city}
+                  </h3>
+                </div>
+                <div className="flex-1 h-px bg-gold-500/20 ml-4" />
+              </div>
+
+              {/* Days timeline */}
+              <div className="relative">
+                <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-gold-500/60 via-gold-500/30 to-gold-500/60" />
+
+                <div className="space-y-6">
+                  {dest.days.map((day, di2) => (
+                    <div key={di2} className="relative pl-12 group">
+                      <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-navy-950 border-2 border-gold-500 group-hover:bg-gold-500 transition-colors duration-300 z-10">
+                        <div className="absolute inset-0 rounded-full bg-gold-500/20 scale-0 group-hover:scale-[2.5] transition-transform duration-500" />
+                      </div>
+
+                      <div className="glass rounded-xl p-6 sm:p-8 hover:bg-white/[0.06] transition-all duration-300 gradient-border group-hover:glow-gold">
+                        <div className="flex flex-col sm:flex-row sm:items-start gap-3 mb-4">
+                          <span className="text-3xl shrink-0">{day.typeIcon}</span>
+                          <div>
+                            <p className="text-gold-500 text-xs uppercase tracking-widest font-semibold mb-1">
+                              {day.date}
+                            </p>
+                            <h4
+                              className="text-white text-2xl sm:text-3xl font-bold leading-none"
+                              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                            >
+                              {day.type}
+                            </h4>
+                          </div>
+                        </div>
+
+                        <p className="text-white/75 text-sm leading-relaxed mb-4">
+                          {day.desc}
+                        </p>
+
+                        {/* Hours */}
+                        <div className="flex flex-wrap gap-2">
+                          {day.hours.map((h, hi) => (
+                            <span
+                              key={hi}
+                              className="text-xs px-3 py-1.5 glass-gold rounded-full text-gold-500 font-bold tracking-wider"
+                            >
+                              {h}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  )}
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-
-        {/* Note */}
-        <p className="text-center text-white/50 text-sm mt-10 italic animate-fade-in">
-          El programa aplica para ambas sedes: Barranquilla (22 Abr) y Medellín (24 Abr)
-        </p>
       </div>
     </section>
   );

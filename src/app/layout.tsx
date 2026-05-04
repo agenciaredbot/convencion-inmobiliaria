@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Convención Inmobiliaria 2026 | Invierte · Acciona · Crece",
   description:
-    "El evento inmobiliario más importante de habla hispana. Conecta con inversionistas internacionales en Barranquilla y Medellín, Abril 2026.",
+    "El evento inmobiliario más importante de habla hispana. Conecta con inversionistas internacionales en Punta Cana y Cancún, Mayo 2026.",
 };
 
 export default function RootLayout({

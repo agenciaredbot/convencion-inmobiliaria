@@ -6,7 +6,7 @@ const infoItems = [
       </svg>
     ),
     question: "¿Cuándo?",
-    answer: "22 - 24 Abril 2026",
+    answer: "25 - 29 Mayo 2026",
   },
   {
     icon: (
@@ -16,7 +16,7 @@ const infoItems = [
       </svg>
     ),
     question: "¿Dónde?",
-    answer: "Hotel Estelar — Barranquilla & Medellín",
+    answer: "Punta Cana, RD & Cancún, México",
   },
   {
     icon: (

@@ -165,8 +165,8 @@ export default function Registration() {
                 <div>
                   <select name="evento" className="w-full px-5 py-4 bg-white/5 border border-gold-500/30 rounded-xl text-white font-bold focus:outline-none focus:border-gold-500/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none">
                     <option value="">¿A qué evento quieres asistir?</option>
-                    <option value="barranquilla">Barranquilla</option>
-                    <option value="medellin">Medellín</option>
+                    <option value="punta-cana-rd">Punta Cana, Rep. Dominicana</option>
+                    <option value="cancun-mexico">Cancún, México</option>
                   </select>
                 </div>
                 <div>

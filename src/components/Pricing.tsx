@@ -99,7 +99,7 @@ export default function Pricing() {
             <div className="flex items-start gap-3">
               {checkIconGold}
               <span className="text-white/95 text-sm leading-relaxed">
-                Entrada a ambas sedes (Barranquilla y Medellín)
+                Acceso a ambos destinos (Punta Cana y Cancún)
               </span>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Pricing() {
 
         {/* Bottom note */}
         <p className="text-center text-gold-500 text-sm mt-10 italic animate-fade-in">
-          El acceso incluye entrada a las dos sedes: Barranquilla (Miércoles 22 de Abril) y Medellín (Viernes 24 de Abril)
+          El acceso incluye ambos destinos: Punta Cana, RD (25 & 26 Mayo) y Cancún, México (28 & 29 Mayo)
         </p>
       </div>
     </section>

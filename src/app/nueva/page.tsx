@@ -17,7 +17,7 @@ const SofiaChat = dynamic(() => import("@/components/SofiaChat"));
 export const metadata = {
   title: "Convención Inmobiliaria 2026 — Invierte en el Exterior",
   description:
-    "Conecta con proyectos en Colombia, Miami, República Dominicana y México. Acceso 100% gratuito. Barranquilla 22 Abr · Medellín 24 Abr.",
+    "Conecta con proyectos en Colombia, Miami, República Dominicana y México. Acceso 100% gratuito. Punta Cana 25-26 Mayo · Cancún 28-29 Mayo.",
 };
 
 export default function V2Page() {
