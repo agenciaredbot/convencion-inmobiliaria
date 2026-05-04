@@ -112,15 +112,15 @@ export default function HeroV2() {
           <div className="glass rounded-lg px-5 py-3 flex items-center gap-3">
             <span className="text-gold-500">📅</span>
             <div className="text-left">
-              <p className="text-xs text-white/70 uppercase tracking-wider">Miércoles 22 de Abril</p>
-              <p className="text-sm font-semibold text-white">🇨🇴 Barranquilla — Hotel Estelar</p>
+              <p className="text-xs text-white/70 uppercase tracking-wider">25 & 26 de Mayo</p>
+              <p className="text-sm font-semibold text-white">🇩🇴 Punta Cana, Rep. Dominicana</p>
             </div>
           </div>
           <div className="glass rounded-lg px-5 py-3 flex items-center gap-3">
             <span className="text-gold-500">📅</span>
             <div className="text-left">
-              <p className="text-xs text-white/70 uppercase tracking-wider">Viernes 24 de Abril</p>
-              <p className="text-sm font-semibold text-white">🇨🇴 Medellín — Hotel Estelar</p>
+              <p className="text-xs text-white/70 uppercase tracking-wider">28 & 29 de Mayo</p>
+              <p className="text-sm font-semibold text-white">🇲🇽 Cancún, México</p>
             </div>
           </div>
         </div>

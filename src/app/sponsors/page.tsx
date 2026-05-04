@@ -13,7 +13,7 @@ import ProximosEventos from "@/components/ProximosEventos";
 export const metadata = {
   title: "Ser Sponsor — Convención Inmobiliaria 2026",
   description:
-    "Posiciona tu marca ante inversionistas internacionales. Paquetes de sponsorship exclusivos para la Convención Inmobiliaria 2026 en Barranquilla y Medellín.",
+    "Posiciona tu marca ante inversionistas internacionales. Paquetes de sponsorship exclusivos para la Convención Inmobiliaria 2026 en Punta Cana y Cancún.",
 };
 
 export default function SponsorsPage() {

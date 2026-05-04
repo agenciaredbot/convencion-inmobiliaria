@@ -191,8 +191,8 @@ export default function SponsorRegistration() {
                 <div>
                   <select name="evento" className="w-full px-5 py-3.5 rounded-xl glass border border-gold-500/30 text-white font-bold text-sm focus:outline-none focus:border-gold-500/60 transition-colors bg-transparent">
                     <option value="" className="bg-navy-900">¿A qué evento quieres asistir?</option>
-                    <option value="barranquilla" className="bg-navy-900">Barranquilla</option>
-                    <option value="medellin" className="bg-navy-900">Medellín</option>
+                    <option value="punta-cana-rd" className="bg-navy-900">Punta Cana, Rep. Dominicana</option>
+                    <option value="cancun-mexico" className="bg-navy-900">Cancún, México</option>
                   </select>
                 </div>
                 <div>
