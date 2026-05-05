@@ -1,12 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
+
+const PLANS: Record<string, { label: string; full: string }> = {
+  esencial: { label: "Esencial", full: "Esencial — $27/mes" },
+  profesional: { label: "Profesional", full: "Profesional — $47/mes" },
+  elite: { label: "Elite", full: "Elite — $87/mes" },
+  indeciso: { label: "Indeciso", full: "Aún no estoy seguro" },
+};
+
+const VALID_PLANS = ["esencial", "profesional", "elite", "indeciso"];
 
 export default function ClubRegistration() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [plan, setPlan] = useState("");
+
+  useEffect(() => {
+    const urlPlan = new URLSearchParams(window.location.search).get("plan");
+    if (urlPlan && VALID_PLANS.includes(urlPlan)) {
+      setPlan(urlPlan);
+    }
+  }, []);
+
+  const buttonLabel = sending
+    ? "Enviando..."
+    : plan && plan !== "indeciso" && PLANS[plan]
+    ? `Reservar mi plan ${PLANS[plan].label} con 30% OFF`
+    : "Quiero mi 30% de descuento";
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -18,6 +41,8 @@ export default function ClubRegistration() {
       const telefono = (form.elements.namedItem("telefono") as HTMLInputElement)?.value || "";
       const pais = (form.elements.namedItem("pais") as HTMLInputElement)?.value || "";
       const rol = (form.elements.namedItem("rol") as HTMLSelectElement)?.value || "";
+      const planValue = (form.elements.namedItem("plan") as HTMLSelectElement)?.value || "";
+      const planFull = PLANS[planValue]?.full || "Sin especificar";
       const data = {
         tipo: "club-inmobiliario",
         nombre,
@@ -25,8 +50,9 @@ export default function ClubRegistration() {
         telefono,
         pais,
         perfil: rol,
+        plan: planValue,
         evento: "Club Inmobiliario",
-        interes: `[${rol}] [${pais}] [Club Inmobiliario] — Pre-registro Early Bird 30% OFF`,
+        interes: `[Plan: ${planFull}] [${rol}] [${pais}] [Club Inmobiliario] — Pre-registro Early Bird 30% OFF`,
         fuente: "landing-club",
         tag: "Club Inmobiliario",
       };
@@ -179,6 +205,19 @@ export default function ClubRegistration() {
                 </div>
               ) : (
                 <form className="space-y-4" onSubmit={handleSubmit}>
+                  <select
+                    name="plan"
+                    required
+                    value={plan}
+                    onChange={(e) => setPlan(e.target.value)}
+                    className="w-full px-5 py-4 bg-white/5 border border-gold-400/30 rounded-xl text-white/90 focus:outline-none focus:border-gold-400/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
+                  >
+                    <option value="">Selecciona un plan</option>
+                    <option value="esencial">Esencial — $27/mes</option>
+                    <option value="profesional">Profesional — $47/mes</option>
+                    <option value="elite">Elite — $87/mes</option>
+                    <option value="indeciso">Aún no estoy seguro / Quiero asesoría</option>
+                  </select>
                   <input
                     type="text"
                     name="nombre"
@@ -225,9 +264,7 @@ export default function ClubRegistration() {
                     disabled={sending}
                     className="w-full py-4 bg-gold-400 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-300 transition-all duration-300 hover:shadow-lg hover:shadow-gold-400/30 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed mt-2"
                   >
-                    {sending
-                      ? "Enviando..."
-                      : "Quiero mi 30% de descuento"}
+                    {buttonLabel}
                   </button>
 
                   <p className="text-white/40 text-xs text-center">

@@ -1,5 +1,6 @@
 const tiers = [
   {
+    id: "esencial",
     name: "Esencial",
     price: 27,
     tagline: "Empieza tu camino en el Club",
@@ -12,6 +13,7 @@ const tiers = [
     ctaLabel: "Quiero el Esencial",
   },
   {
+    id: "profesional",
     name: "Profesional",
     price: 47,
     tagline: "El plan más elegido",
@@ -25,6 +27,7 @@ const tiers = [
     ctaLabel: "Quiero el Profesional",
   },
   {
+    id: "elite",
     name: "Elite",
     price: 87,
     tagline: "Acceso total y prioridad VIP",
@@ -133,7 +136,7 @@ export default function ClubPricing() {
 
               {/* CTA */}
               <a
-                href="#registro-club"
+                href={`/club-inmobiliario?plan=${tier.id}#pre-registro`}
                 className={`block text-center w-full py-4 font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                   tier.featured
                     ? "bg-gold-500 text-navy-950 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/30"
