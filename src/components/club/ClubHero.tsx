@@ -2,107 +2,72 @@
 
 export default function ClubHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/images/miami-bg.mp4" type="video/mp4" />
-      </video>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden club-light">
+      {/* Blueprint grid */}
+      <div className="absolute inset-0 blueprint-bg opacity-70" />
 
-      {/* Overlays */}
-      <div className="absolute inset-0 bg-navy-950/75" />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-transparent to-navy-950" />
-      <div className="absolute inset-0 noise" />
+      {/* Yellow marker accents floating */}
+      <div className="absolute top-20 -left-20 w-80 h-80 bg-[var(--color-marker-yellow)] opacity-20 rotate-12 rounded-3xl pointer-events-none" />
+      <div className="absolute bottom-32 -right-24 w-96 h-64 bg-[var(--color-marker-yellow)] opacity-15 -rotate-6 rounded-3xl pointer-events-none" />
 
-      {/* Animated gold particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-gold-400 rounded-full opacity-40"
-            style={{
-              left: `${15 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
-              animation: `float ${3 + i * 0.7}s ease-in-out infinite`,
-              animationDelay: `${i * 0.5}s`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Golden radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/8 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-24">
         {/* Back to main */}
         <a
           href="/"
-          className="inline-flex items-center gap-2 text-white/60 hover:text-gold-400 text-xs uppercase tracking-widest mb-8 transition-colors animate-fade-in"
-          style={{ animationDelay: "0.3s" }}
+          className="inline-flex items-center gap-2 text-black/60 hover:text-black text-xs uppercase tracking-widest mb-10 transition-colors animate-fade-in font-bold"
+          style={{ animationDelay: "0.2s" }}
         >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
           Convención Inmobiliaria
         </a>
 
-        {/* Logo */}
-        <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <img
-            src="/images/logo-oficial.png"
-            alt="Convención Inmobiliaria"
-            className="h-16 sm:h-20 mx-auto mb-4 object-contain"
-          />
+        {/* Logo placeholder */}
+        <div className="mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="inline-flex items-center justify-center w-48 h-24 sm:w-56 sm:h-28 border-2 border-dashed border-black/30 rounded-xl bg-white/60 backdrop-blur-sm">
+            <span className="text-black/40 text-xs uppercase tracking-[0.2em] font-bold">
+              Logo aquí
+            </span>
+          </div>
         </div>
 
         {/* CLUB title */}
-        <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          <h1 className="flex flex-col items-center gap-0">
+        <div className="mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <h1 className="flex flex-col items-center leading-none">
             <span
-              className="text-7xl sm:text-9xl lg:text-[10rem] text-gold-400 leading-none"
-              style={{
-                fontFamily: "'Dancing Script', cursive",
-                fontWeight: 700,
-                filter: "drop-shadow(0 0 40px rgba(255,210,0,0.5))",
-              }}
-            >
-              Club
-            </span>
-            <span
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-[0.15em] -mt-2"
+              className="text-[5.5rem] sm:text-[8rem] lg:text-[11rem] font-bold text-black tracking-tight leading-[0.85]"
               style={{ fontFamily: "'Bebas Neue', sans-serif" }}
             >
-              INMOBILIARIO
+              CLUB
+            </span>
+            <span className="marker-bg mt-2">
+              <span
+                className="text-3xl sm:text-5xl lg:text-6xl font-bold text-black tracking-[0.12em] px-4"
+                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+              >
+                INMOBILIARIO
+              </span>
             </span>
           </h1>
         </div>
 
-        {/* Divider */}
-        <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-8 animate-fade-in" style={{ animationDelay: "0.5s" }} />
-
         {/* Tagline */}
         <p
-          className="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 animate-fade-in"
+          className="text-base sm:text-lg lg:text-xl text-black/80 max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in"
           style={{ animationDelay: "0.6s" }}
         >
-          Únete a un{" "}
-          <span className="text-gold-400 font-bold">grupo exclusivo</span> de
-          inversionistas, realtors y actores del ecosistema de Real Estate que
-          toman las{" "}
-          <span className="text-gold-400 font-bold">mejores decisiones</span>
+          Únete al{" "}
+          <span className="marker-underline font-bold text-black">grupo exclusivo</span>{" "}
+          de inversionistas, realtors y actores del Real Estate que toman las mejores decisiones.
         </p>
 
         {/* Próximamente badge */}
         <div className="mb-10 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          <span className="inline-flex items-center gap-2 px-6 py-2.5 glass-gold rounded-full">
-            <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-black rounded-full">
+            <span className="w-2 h-2 rounded-full bg-[var(--color-marker-yellow)] animate-pulse" />
             <span
-              className="text-gold-400 text-sm font-bold uppercase tracking-[0.2em]"
+              className="text-white text-sm font-bold uppercase tracking-[0.2em]"
               style={{ fontFamily: "'Bebas Neue', sans-serif" }}
             >
               Próximamente — Cupos Limitados
@@ -113,21 +78,22 @@ export default function ClubHero() {
         {/* CTA */}
         <div className="flex flex-col items-center gap-4 animate-fade-in" style={{ animationDelay: "1s" }}>
           <a
-            href="#pre-registro"
-            className="px-10 py-4 bg-gold-500 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-gold-500/30 active:scale-[0.98] animate-sponsor-pulse"
+            href="#planes"
+            className="group relative px-12 py-4 bg-[var(--color-marker-yellow)] text-black font-bold text-sm uppercase tracking-[0.15em] rounded-none hover:bg-black hover:text-[var(--color-marker-yellow)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] border-2 border-black"
+            style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.1rem" }}
           >
             Pre-inscríbete con 30% OFF
           </a>
-          <p className="text-white/40 text-xs">
+          <p className="text-black/50 text-xs font-medium">
             Descuento exclusivo para los primeros inscritos
           </p>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: "1.5s" }}>
-          <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
-            <div className="w-1 h-2.5 bg-gold-400 rounded-full animate-bounce" />
-          </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: "1.5s" }}>
+        <div className="w-6 h-10 rounded-full border-2 border-black/30 flex items-start justify-center p-2">
+          <div className="w-1 h-2.5 bg-black rounded-full animate-bounce" />
         </div>
       </div>
     </section>

@@ -84,42 +84,38 @@ export default function ClubRegistration() {
     setSending(false);
   }
 
+  const inputClass =
+    "w-full px-5 py-4 bg-white border-2 border-black text-black placeholder-black/50 focus:outline-none focus:bg-[var(--color-marker-yellow)] transition-all duration-300 text-sm font-medium";
+
   return (
     <section
       id="pre-registro"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-24 lg:py-32 overflow-hidden club-light"
     >
-      <div className="absolute inset-0 bg-navy-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(255,210,0,0.08)_0%,_transparent_60%)]" />
-      <div className="absolute inset-0 noise" />
+      <div className="absolute inset-0 blueprint-bg opacity-50" />
 
-      {/* Decorative gold line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/30 to-transparent" />
+      {/* Yellow corner */}
+      <div className="absolute -bottom-32 -right-24 w-96 h-96 bg-[var(--color-marker-yellow)] opacity-20 -rotate-12 rounded-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left – Message */}
           <div className="animate-fade-in">
-            <span className="text-gold-400 text-xs uppercase tracking-[0.3em] font-semibold">
+            <span className="text-black text-xs uppercase tracking-[0.3em] font-bold">
               Cupos Limitados
             </span>
             <h2
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-3 mb-6 leading-[0.95]"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mt-3 mb-6 leading-[0.95]"
               style={{ fontFamily: "'Bebas Neue', sans-serif" }}
             >
               ASEGURA TU{" "}
-              <span
-                className="text-gold-400"
-                style={{ filter: "drop-shadow(0 0 20px rgba(255,210,0,0.4))" }}
-              >
-                LUGAR
-              </span>
+              <span className="marker-bg px-2">LUGAR</span>
             </h2>
-            <div className="w-16 h-0.5 bg-gold-400 rounded-full mb-6" />
+            <div className="w-16 h-1 bg-black mb-6" />
 
-            <p className="text-white/80 leading-relaxed mb-8">
+            <p className="text-black/80 leading-relaxed mb-8">
               Pre-inscríbete ahora y obtén un{" "}
-              <span className="text-gold-400 font-bold text-lg">
+              <span className="marker-underline font-bold text-black">
                 30% de descuento exclusivo
               </span>{" "}
               como Early Bird. Serás de los primeros en acceder a todas las
@@ -127,7 +123,7 @@ export default function ClubRegistration() {
             </p>
 
             {/* Trust signals */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 "Descuento exclusivo del 30% para Early Birds",
                 "Primer acceso a tours internacionales",
@@ -135,32 +131,28 @@ export default function ClubRegistration() {
                 "Sin compromiso — cancela cuando quieras",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-gold-400/15 border border-gold-400/30 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 bg-[var(--color-marker-yellow)] border border-black flex items-center justify-center shrink-0">
                     <svg
-                      className="w-3 h-3 text-gold-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
+                      className="w-3 h-3 text-black"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3.5}
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-white/80 text-sm">{item}</p>
+                  <p className="text-black/85 text-sm font-medium">{item}</p>
                 </div>
               ))}
             </div>
 
             {/* Backed by badge */}
-            <div className="mt-8 flex items-center gap-3">
-              <img
-                src="/images/logo-oficial.png"
-                alt="Convención Inmobiliaria"
-                className="h-8 object-contain opacity-60"
-              />
-              <span className="text-white/40 text-xs">
+            <div className="mt-8 flex items-center gap-3 pt-6 border-t-2 border-black/10">
+              <div className="w-12 h-12 border-2 border-dashed border-black/30 flex items-center justify-center bg-white">
+                <span className="text-black/40 text-[8px] uppercase tracking-wider font-bold">Logo</span>
+              </div>
+              <span className="text-black/60 text-xs font-medium">
                 Respaldado por Convención Inmobiliaria
               </span>
             </div>
@@ -168,37 +160,37 @@ export default function ClubRegistration() {
 
           {/* Right – Form */}
           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="glass-strong rounded-2xl p-8 sm:p-10 border border-gold-400/20 shadow-xl shadow-gold-500/5">
+            <div className="bg-white border-2 border-black p-8 sm:p-10 shadow-[8px_8px_0_0_#000]">
               {/* Header */}
               <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-gold-400/30" />
+                <div className="h-0.5 flex-1 bg-black" />
                 <span
-                  className="text-gold-400 text-lg font-bold uppercase tracking-wider"
+                  className="text-black text-lg font-bold uppercase tracking-wider"
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   Pre-Registro Early Bird
                 </span>
-                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-gold-400/30" />
+                <div className="h-0.5 flex-1 bg-black" />
               </div>
 
               {sent ? (
                 <div className="text-center py-10">
                   <div className="text-5xl mb-4">🎉</div>
                   <h4
-                    className="text-white text-2xl font-bold mb-2"
+                    className="text-black text-3xl font-bold mb-2"
                     style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                   >
-                    ¡ESTÁS EN LA LISTA!
+                    ¡ESTÁS EN LA <span className="marker-bg px-2">LISTA</span>!
                   </h4>
-                  <p className="text-white/70 text-sm mb-2">
+                  <p className="text-black/80 text-sm mb-2 font-medium">
                     Tu descuento del 30% está reservado.
                   </p>
-                  <p className="text-white/50 text-xs">
+                  <p className="text-black/60 text-xs">
                     Te notificaremos cuando abramos oficialmente.
                   </p>
                   <button
                     onClick={() => setSent(false)}
-                    className="mt-6 text-gold-400 text-sm underline hover:text-gold-300"
+                    className="mt-6 text-black text-sm underline hover:text-black/70 font-bold"
                   >
                     Registrar otra persona
                   </button>
@@ -210,7 +202,7 @@ export default function ClubRegistration() {
                     required
                     value={plan}
                     onChange={(e) => setPlan(e.target.value)}
-                    className="w-full px-5 py-4 bg-white/5 border border-gold-400/30 rounded-xl text-white/90 focus:outline-none focus:border-gold-400/60 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
+                    className={inputClass + " appearance-none"}
                   >
                     <option value="">Selecciona un plan</option>
                     <option value="esencial">Esencial — $27/mes</option>
@@ -223,33 +215,33 @@ export default function ClubRegistration() {
                     name="nombre"
                     required
                     placeholder="Nombre completo"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-400/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className={inputClass}
                   />
                   <input
                     type="email"
                     name="email"
                     required
                     placeholder="Correo electrónico"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-400/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className={inputClass}
                   />
                   <input
                     type="tel"
                     name="telefono"
                     required
                     placeholder="Teléfono (con código de país)"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-400/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className={inputClass}
                   />
                   <input
                     type="text"
                     name="pais"
                     required
                     placeholder="País de residencia"
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/90 focus:outline-none focus:border-gold-400/50 focus:bg-white/[0.07] transition-all duration-300 text-sm"
+                    className={inputClass}
                   />
                   <select
                     name="rol"
                     required
-                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white/90 focus:outline-none focus:border-gold-400/50 focus:bg-white/[0.07] transition-all duration-300 text-sm appearance-none"
+                    className={inputClass + " appearance-none"}
                   >
                     <option value="">¿Cuál es tu rol?</option>
                     <option value="realtor">Realtor / Agente Inmobiliario</option>
@@ -262,12 +254,13 @@ export default function ClubRegistration() {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="w-full py-4 bg-gold-400 text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-300 transition-all duration-300 hover:shadow-lg hover:shadow-gold-400/30 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed mt-2"
+                    className="w-full py-4 bg-[var(--color-marker-yellow)] text-black font-bold uppercase tracking-wider border-2 border-black hover:bg-black hover:text-[var(--color-marker-yellow)] transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed mt-2"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem", letterSpacing: "0.1em" }}
                   >
                     {buttonLabel}
                   </button>
 
-                  <p className="text-white/40 text-xs text-center">
+                  <p className="text-black/50 text-xs text-center font-medium">
                     Pre-registro sin costo. Te avisaremos cuando estemos listos.
                   </p>
                 </form>

@@ -10,6 +10,7 @@
   --color-gold-400: #FFD200;
   --color-gold-300: #FFE066;
   --color-red-accent: #E63946;
+  --color-marker-yellow: #F5E947;
   --color-glass-white: rgba(255, 255, 255, 0.06);
   --color-glass-border: rgba(255, 255, 255, 0.1);
   --font-heading: 'Bebas Neue', sans-serif;
@@ -217,4 +218,73 @@ body {
   transform: rotate(-1deg) skewX(-12deg);
   opacity: 0.85;
   z-index: -1;
+}
+
+/* ===== MARKER / HIGHLIGHTER UTILITIES (Club Light Theme) ===== */
+.marker-bg {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+.marker-bg::before {
+  content: '';
+  position: absolute;
+  left: -6%;
+  right: -6%;
+  top: 8%;
+  bottom: 4%;
+  background: var(--color-marker-yellow);
+  transform: rotate(-1.2deg) skewX(-6deg);
+  z-index: -1;
+}
+
+.marker-underline {
+  position: relative;
+  display: inline-block;
+}
+.marker-underline::after {
+  content: '';
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  bottom: -2px;
+  height: 36%;
+  background: var(--color-marker-yellow);
+  transform: rotate(-0.8deg) skewX(-8deg);
+  z-index: -1;
+}
+
+.marker-strike {
+  position: relative;
+  display: inline-block;
+}
+.marker-strike::after {
+  content: '';
+  position: absolute;
+  left: -3%;
+  right: -3%;
+  top: 45%;
+  height: 14%;
+  background: var(--color-marker-yellow);
+  transform: rotate(-2deg) skewX(-8deg);
+  z-index: -1;
+}
+
+/* ===== CLUB LIGHT THEME ===== */
+.club-light {
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+
+.club-light-alt {
+  background: #FAFAF7;
+  color: #0A0A0A;
+}
+
+/* Subtle architectural blueprint pattern */
+.blueprint-bg {
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
