@@ -6,7 +6,7 @@ const tiers = [
     tagline: "Empieza tu camino en el Club",
     features: [
       "Acceso prioritario a todos los eventos",
-      "Listado de los proyectos de inversión más representativos de todos los países del portal",
+      "Listado y Magazine de los proyectos de inversión más representativos de todos los países del portal",
       "Acceso a la app web con todos los proyectos publicados",
     ],
     featured: false,
