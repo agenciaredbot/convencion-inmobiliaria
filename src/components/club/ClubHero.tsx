@@ -62,7 +62,7 @@ export default function ClubHero() {
         >
           Únete al{" "}
           <span className="marker-underline font-bold text-black">grupo exclusivo</span>{" "}
-          de inversionistas, realtors y actores del Real Estate que toman las mejores decisiones.
+          de inversionistas y realtors del Real Estate que toman las mejores decisiones.
         </p>
 
         {/* Próximamente badge */}
