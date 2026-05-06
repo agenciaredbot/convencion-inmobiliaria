@@ -23,13 +23,16 @@ export default function ClubHero() {
           Convención Inmobiliaria
         </a>
 
-        {/* Logo placeholder */}
+        {/* Logo */}
         <div className="mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <div className="inline-flex items-center justify-center w-48 h-24 sm:w-56 sm:h-28 border-2 border-dashed border-black/30 rounded-xl bg-white/60 backdrop-blur-sm">
-            <span className="text-black/40 text-xs uppercase tracking-[0.2em] font-bold">
-              Logo aquí
-            </span>
-          </div>
+          <img
+            src="/images/logo-conexion.jpg"
+            alt="Conexión Inmobiliaria"
+            width={520}
+            height={195}
+            fetchPriority="high"
+            className="h-20 sm:h-28 lg:h-32 mx-auto object-contain"
+          />
         </div>
 
         {/* CLUB title */}

@@ -149,11 +149,13 @@ export default function ClubRegistration() {
 
             {/* Backed by badge */}
             <div className="mt-8 flex items-center gap-3 pt-6 border-t-2 border-black/10">
-              <div className="w-12 h-12 border-2 border-dashed border-black/30 flex items-center justify-center bg-white">
-                <span className="text-black/40 text-[8px] uppercase tracking-wider font-bold">Logo</span>
-              </div>
+              <img
+                src="/images/logo-conexion.jpg"
+                alt="Conexión Inmobiliaria"
+                className="h-10 w-auto object-contain"
+              />
               <span className="text-black/60 text-xs font-medium">
-                Respaldado por Convención Inmobiliaria
+                Respaldado por Conexión Inmobiliaria
               </span>
             </div>
           </div>
