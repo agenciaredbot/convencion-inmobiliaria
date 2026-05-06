@@ -1,7 +1,7 @@
 "use client";
 
 const highlights = [
-  "Tours inmobiliarios a Miami, Nueva York, Dubái y Cancún",
+  "Tours inmobiliarios a Miami, Nueva York, Dubái, Cancún, Punta Cana (RD) y Medellín",
   "Descuentos exclusivos en proyectos de preconstrucción",
   "Oportunidades de inversión antes que nadie",
   "Acceso a tecnología A.I para tu negocio",
