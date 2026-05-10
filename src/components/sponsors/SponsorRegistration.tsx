@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { fbqTrack } from "@/lib/fbpixel";
 
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
@@ -53,6 +54,13 @@ export default function SponsorRegistration() {
       ]);
       if (kommoRes.status === "rejected") console.error("Kommo error:", kommoRes.reason);
       if (sheetsRes.status === "rejected") console.error("Sheets error:", sheetsRes.reason);
+      fbqTrack("Lead", {
+        content_name: "Sponsor Application — Convención Inmobiliaria 2026",
+        content_category: "Sponsor",
+        package: paquete,
+        country: pais,
+        event_destination: evento,
+      });
       setSent(true);
       form.reset();
     } catch (err) {

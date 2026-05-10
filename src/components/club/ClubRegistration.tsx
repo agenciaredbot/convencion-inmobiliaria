@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { fbqTrack } from "@/lib/fbpixel";
 
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz1YNFEICfRFTVK-PyhoAl9aw8IRFxjqM-nCHz-jAkike-ksLzPJ7AGjE6CpzG2Ueza8Q/exec";
 
@@ -76,6 +77,12 @@ export default function ClubRegistration() {
         }).catch(() => null),
       ]);
 
+      fbqTrack("Lead", {
+        content_name: "Pre-Registro Club Inmobiliario",
+        content_category: "Club",
+        plan: planValue || "no-especificado",
+        country: pais,
+      });
       setSent(true);
       form.reset();
     } catch {
