@@ -19,9 +19,10 @@ export default function SectionHero() {
           </h1>
 
           <p className="hero-subhead">
-            Te llevamos —<strong>legal, contable y físicamente</strong>— a los 5
-            mercados inmobiliarios más rentables del mundo hispano. Sin
-            licencia local. Sin volar a ciegas. Sin abogados costosos.
+            Te llevamos a los 5 mercados inmobiliarios más rentables del mundo
+            hispano. Sin licencia local. Sin volar a ciegas. Sin abogados
+            costosos. Además te incluimos{" "}
+            <strong>asesoría legal y contable</strong>.
           </p>
 
           <div className="hero-social-proof">
