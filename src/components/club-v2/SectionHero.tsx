@@ -32,7 +32,7 @@ export default function SectionHero() {
             <span className="dot-separator">·</span>
             <span className="micro">5 MERCADOS</span>
             <span className="dot-separator">·</span>
-            <span className="micro">15 AÑOS</span>
+            <span className="micro">+10 AÑOS</span>
           </div>
 
           <div className="hero-ctas">

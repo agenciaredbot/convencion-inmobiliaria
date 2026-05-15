@@ -3,7 +3,7 @@
 const faqs = [
   {
     q: "¿Necesito licencia inmobiliaria local para operar en otros países?",
-    a: "No. Una de las cosas que hace único al Club es que te damos el know-how legal exacto para que puedas operar como intermediario, inversionista o promotor en cada país sin necesidad de licencia local. Hemos resuelto este punto durante 15 años de experiencia.",
+    a: "No. Una de las cosas que hace único al Club es que te damos el know-how legal exacto para que puedas operar como intermediario, inversionista o promotor en cada país sin necesidad de licencia local. Hemos resuelto este punto durante más de 10 años de experiencia.",
   },
   {
     q: "¿Cómo cobro mi comisión si vendo una propiedad en otro país?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "¿Quién está detrás del Club Inmobiliario?",
-    a: "Claudia Rivera, con 15 años de experiencia en el real estate de Colombia, USA, México y RD. Respaldada por Conexión Inmobiliaria, organizador de la Convención Inmobiliaria USA y una red activa de +10,000 operadores en LATAM y EU.",
+    a: "Claudia Rivera, con más de 10 años de experiencia en el real estate de Colombia, USA, México y RD. Respaldada por Conexión Inmobiliaria, organizador de la Convención Inmobiliaria USA y una red activa de +10,000 operadores en LATAM y EU.",
   },
 ];
 

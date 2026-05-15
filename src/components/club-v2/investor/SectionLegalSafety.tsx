@@ -63,7 +63,7 @@ export default function SectionLegalSafety() {
 
         <div className="trust-box reveal">
           <h4 className="trust-title">
-            15 años. Cientos de operaciones. <em>Cero estafas.</em>
+            +10 años. Cientos de operaciones. <em>Clientes e inversionistas cerrando negocios.</em>
           </h4>
           <p>
             El know-how legal y contable internacional es{" "}
