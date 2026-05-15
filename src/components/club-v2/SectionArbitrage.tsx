@@ -25,7 +25,8 @@ export default function SectionArbitrage() {
                 15-25% al año y generan renta en dólares vía Airbnb.
               </p>
               <p className="editorial-emphasis">
-                Esto no es marketing. Es matemática.
+                Los inversionistas más rentables lo saben y llevan tiempo
+                aplicando esta estrategia.
               </p>
             </div>
 

@@ -60,7 +60,7 @@ export default function SectionTours() {
             <br />
             ya están abiertos.
             <br />
-            <em className="emphasis-gold">Y los cupos son reales.</em>
+            <em className="emphasis-gold">Y los cupos son limitados.</em>
           </h2>
           <p className="body-text tours-intro">
             Cada tour incluye vuelos, alojamiento premium, transporte local,

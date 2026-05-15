@@ -28,9 +28,9 @@ export default function SectionHeroRealtor() {
 
           <p className="hero-r-subhead">
             Vende propiedades en{" "}
-            <strong>Colombia, México, RD y Dubai</strong> desde tu oficina en
-            Miami. Sin licencia local. Con know-how legal. Con +40 proyectos
-            curados listos para mostrar.
+            <strong>Colombia, México, Panamá, RD y Dubai</strong> desde tu
+            oficina en Miami. Sin licencia local. Con know-how legal. Con +40
+            proyectos curados listos para mostrar.
           </p>
 
           <div className="hero-r-data">

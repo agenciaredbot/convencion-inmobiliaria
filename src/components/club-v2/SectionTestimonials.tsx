@@ -4,7 +4,7 @@ const stats = [
   { value: "+900", label: "Miembros activos" },
   { value: "+10,000", label: "Operadores en red" },
   { value: "5", label: "Países activos" },
-  { value: "15", label: "Años de trayectoria" },
+  { value: "+10", label: "Años de trayectoria" },
 ];
 
 const testimonials = [

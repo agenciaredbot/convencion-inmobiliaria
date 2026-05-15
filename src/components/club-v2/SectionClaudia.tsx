@@ -28,7 +28,7 @@ export default function SectionClaudia() {
             <span className="section-marker">— Capítulo 05 / La autora</span>
 
             <h2 className="h-section claudia-title">
-              Detrás del Club hay <em className="emphasis-gold">15 años</em>
+              Detrás del Club hay <em className="emphasis-gold">+10 años</em>
               <br />
               abriendo puertas que nadie
               <br />
@@ -41,7 +41,8 @@ export default function SectionClaudia() {
                 Inmobiliario y de Conexión Inmobiliaria USA.
               </p>
               <p>
-                Llevo 15 años moviéndome entre los mercados inmobiliarios de{" "}
+                Llevo más de 10 años moviéndome entre los mercados inmobiliarios
+                de{" "}
                 <strong>Colombia, Miami, República Dominicana y México</strong>.
                 He organizado convenciones con las voces más importantes del real
                 estate del mundo hispano. He acompañado a cientos de
@@ -51,13 +52,11 @@ export default function SectionClaudia() {
               <p className="editorial-pull">
                 El Club Inmobiliario es la suma de todo ese networking, ese
                 know-how y esa experiencia, condensados en una membresía que te
-                abre las puertas que yo tardé 15 años en abrir.
-              </p>
-              <p className="claudia-signature">
-                <strong>No es una promesa. Es un atajo.</strong>
+                abre las puertas que yo tardé +10 años en abrir.
               </p>
             </div>
 
+            {/* Instagram CTA temporalmente oculto — restaurar cuando esté listo el perfil
             <div className="claudia-cta">
               <a
                 href="https://instagram.com/claudiariverarealestate"
@@ -68,6 +67,7 @@ export default function SectionClaudia() {
                 Ver su trabajo en Instagram <span className="btn-icon">→</span>
               </a>
             </div>
+            */}
 
             <div className="claudia-credentials-row">
               <span className="micro">Apariciones y alianzas</span>
