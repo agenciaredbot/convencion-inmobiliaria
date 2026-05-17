@@ -6,7 +6,7 @@ const infoItems = [
       </svg>
     ),
     question: "¿Cuándo?",
-    answer: "25 - 29 Mayo 2026",
+    answer: "Próximamente",
   },
   {
     icon: (

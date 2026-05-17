@@ -40,22 +40,12 @@ export default function Organizer() {
             <span className="text-gold-500 text-xs uppercase tracking-[0.3em] font-semibold">
               Organizadora
             </span>
-            <div className="flex items-center gap-4 mt-3 mb-2">
-              <h2
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[0.95]"
-                style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-              >
-                CLAUDIA <span className="text-gold-500">RIVERA</span>
-              </h2>
-              <img
-                src="/images/logo-claudia.jpg"
-                alt="Claudia Rivera Real Estate"
-                width={200}
-                height={60}
-                loading="lazy"
-                className="h-16 w-auto"
-              />
-            </div>
+            <h2
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[0.95] mt-3 mb-2"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+              CLAUDIA <span className="text-gold-500">RIVERA</span>
+            </h2>
             <p className="text-white/95 text-sm mb-5" style={{ fontStyle: "italic" }}>
               De Convención Inmobiliaria 2026
             </p>
