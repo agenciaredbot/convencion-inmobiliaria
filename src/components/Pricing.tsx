@@ -160,7 +160,7 @@ export default function Pricing() {
               rel="noopener noreferrer"
               className="block text-center w-full py-4 bg-white text-navy-950 font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-400 transition-all duration-300 hover:scale-[1.01] active:scale-[0.99]"
             >
-              Hablar con Claudia
+              Hablar con un Asesor
             </a>
           </div>
         </div>
