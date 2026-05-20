@@ -3,16 +3,17 @@ const destinations = [
     country: "Rep. Dominicana",
     flag: "🇩🇴",
     city: "Punta Cana",
+    venue: "Plaza Ross, local 23 (segundo nivel) — Verón, Punta Cana",
     days: [
       {
-        date: "Lunes 25 de Mayo",
+        date: "Lunes 15 de Junio",
         type: "Visita de Proyectos",
         typeIcon: "🏗️",
         hours: ["9:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],
         desc: "Recorridos guiados por proyectos internacionales en cuatro turnos. Conoce en persona las oportunidades de inversión disponibles en Punta Cana.",
       },
       {
-        date: "Martes 26 de Mayo",
+        date: "Martes 16 de Junio",
         type: "Evento Presencial",
         typeIcon: "🎯",
         hours: ["9:00 AM — 12:00 PM"],
@@ -26,14 +27,14 @@ const destinations = [
     city: "Cancún",
     days: [
       {
-        date: "Jueves 28 de Mayo",
+        date: "Jueves 18 de Junio",
         type: "Evento Presencial",
         typeIcon: "🎯",
         hours: ["9:00 AM — 12:00 PM"],
         desc: "Jornada completa de presentaciones, oportunidades de inversión y conexión directa con desarrolladores y compradores internacionales.",
       },
       {
-        date: "Viernes 29 de Mayo",
+        date: "Viernes 19 de Junio",
         type: "Visita de Proyectos",
         typeIcon: "🏗️",
         hours: ["9:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],
@@ -85,20 +86,34 @@ export default function Agenda() {
           {destinations.map((dest, di) => (
             <div key={di} className="animate-fade-in">
               {/* Destination header */}
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-5xl">{dest.flag}</span>
-                <div>
-                  <p className="text-gold-500 text-xs uppercase tracking-[0.25em] font-semibold mb-1">
-                    {dest.country}
-                  </p>
-                  <h3
-                    className="text-3xl sm:text-4xl font-bold text-white leading-none"
-                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                  >
-                    {dest.city}
-                  </h3>
+              <div className="mb-8">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl">{dest.flag}</span>
+                  <div>
+                    <p className="text-gold-500 text-xs uppercase tracking-[0.25em] font-semibold mb-1">
+                      {dest.country}
+                    </p>
+                    <h3
+                      className="text-3xl sm:text-4xl font-bold text-white leading-none"
+                      style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                    >
+                      {dest.city}
+                    </h3>
+                  </div>
+                  <div className="flex-1 h-px bg-gold-500/20 ml-4" />
                 </div>
-                <div className="flex-1 h-px bg-gold-500/20 ml-4" />
+                {dest.venue && (
+                  <div className="mt-4 ml-[68px] flex items-start gap-2 text-white/80">
+                    <svg className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <p className="text-sm leading-relaxed">
+                      <span className="text-gold-500 uppercase tracking-wider text-xs font-bold mr-2">Sede:</span>
+                      {dest.venue}
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* Days timeline */}

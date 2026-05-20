@@ -9,6 +9,7 @@ const EventCarousel = dynamic(() => import("@/components/EventCarousel"));
 const Countries = dynamic(() => import("@/components/Countries"));
 const ForWho = dynamic(() => import("@/components/ForWho"));
 const Pricing = dynamic(() => import("@/components/Pricing"));
+const Agenda = dynamic(() => import("@/components/Agenda"));
 const Organizer = dynamic(() => import("@/components/Organizer"));
 const Registration = dynamic(() => import("@/components/Registration"));
 const Sponsors = dynamic(() => import("@/components/Sponsors"));
@@ -28,7 +29,7 @@ export default function Home() {
       <EventCarousel />
       <Countries />
       <ForWho />
-      {/* <Agenda /> — oculto temporalmente, restaurar cuando se confirmen las fechas */}
+      <Agenda />
       <Organizer />
       <Registration />
       <Sponsors />

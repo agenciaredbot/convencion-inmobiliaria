@@ -1,7 +1,6 @@
 const packages = [
   {
     tier: "Silver",
-    price: "Consultar",
     featured: false,
     benefits: [
       "Logo en materiales del evento",
@@ -13,7 +12,6 @@ const packages = [
   },
   {
     tier: "Gold",
-    price: "Consultar",
     featured: true,
     benefits: [
       "Logo destacado en escenario principal",
@@ -27,7 +25,6 @@ const packages = [
   },
   {
     tier: "Platinum",
-    price: "Consultar",
     featured: false,
     benefits: [
       "Naming del evento (co-branding)",
@@ -98,12 +95,11 @@ export default function SponsorPackages() {
 
               <div className="text-center mb-8">
                 <h3
-                  className={`text-3xl font-bold mb-2 ${pkg.featured ? "text-gold-500" : "text-white"}`}
+                  className={`text-4xl font-bold ${pkg.featured ? "text-gold-500" : "text-white"}`}
                   style={{ fontFamily: "'Bebas Neue', sans-serif" }}
                 >
                   {pkg.tier}
                 </h3>
-                <p className="text-white/95 text-sm">{pkg.price}</p>
               </div>
 
               <div className="space-y-3 mb-8">
@@ -140,7 +136,7 @@ export default function SponsorPackages() {
         <p
           className="text-center text-white/95 text-sm mt-10 animate-fade-in"
         >
-          * Los precios y beneficios son personalizables. Contáctanos para crear un paquete a tu medida.
+          * Los beneficios son personalizables. Contáctanos para conocer la inversión de cada paquete y crear el plan a tu medida.
         </p>
       </div>
     </section>
