@@ -13,7 +13,6 @@ const Agenda = dynamic(() => import("@/components/Agenda"));
 const Organizer = dynamic(() => import("@/components/Organizer"));
 const Registration = dynamic(() => import("@/components/Registration"));
 const Sponsors = dynamic(() => import("@/components/Sponsors"));
-const ProximosEventos = dynamic(() => import("@/components/ProximosEventos"));
 const Footer = dynamic(() => import("@/components/Footer"));
 const SofiaChat = dynamic(() => import("@/components/SofiaChat"));
 const SponsorFloat = dynamic(() => import("@/components/SponsorFloat"));
@@ -33,7 +32,7 @@ export default function Home() {
       <Organizer />
       <Registration />
       <Sponsors />
-      <ProximosEventos />
+      {/* <ProximosEventos /> — oculto temporalmente */}
       <Footer />
       <SofiaChat pageSource="asistentes" />
       <SponsorFloat />
