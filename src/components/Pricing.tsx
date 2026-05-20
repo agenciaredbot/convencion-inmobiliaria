@@ -106,7 +106,7 @@ export default function Pricing() {
           >
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <span className="px-6 py-2 bg-white text-navy-950 text-sm font-bold uppercase tracking-wider rounded-full shadow-lg whitespace-nowrap">
-                💼 Para Realtors & Agentes
+                💼 Brokers y Agentes Inmobiliarios
               </span>
             </div>
 
