@@ -14,7 +14,7 @@ export const metadata = {
   title:
     "Desarrolladores — Club Inmobiliario | Pon tu proyecto frente a +10,000 ojos con dólares",
   description:
-    "Canal B2B de distribución para desarrolladores inmobiliarios. Conecta tu proyecto con +900 realtors latinos en USA y +10,000 operadores en LATAM. Membresías anuales desde $3K USD. ROI 4-7x.",
+    "Canal B2B de distribución para desarrolladores inmobiliarios. Conecta tu proyecto con +900 agentes inmobiliarios latinos en USA y +10,000 operadores en LATAM. Membresías anuales desde $3K USD. ROI 4-7x.",
 };
 
 export default function DesarrolladoresPage() {

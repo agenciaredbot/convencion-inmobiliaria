@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="v2-footer-cols">
           <div className="v2-footer-col">
             <h4>Para ti</h4>
-            <a href="/club-inmobiliario/v2/realtors">Soy Realtor</a>
+            <a href="/club-inmobiliario/v2/realtors">Soy Agente Inmobiliario</a>
             <a href="/club-inmobiliario/v2/inversionistas">Soy Inversionista</a>
             <a href="/club-inmobiliario/v2/desarrolladores">Tengo un Proyecto</a>
           </div>

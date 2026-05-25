@@ -23,7 +23,7 @@ const faqs: { q: string; a: string; list?: { type: "ol" | "ul"; items: string[] 
   },
   {
     q: "¿Qué pasa si trabajo con un broker en USA? ¿Hay conflicto?",
-    a: "Depende de tu acuerdo con tu broker. Muchos realtors operan independientemente para operaciones internacionales, porque están **fuera del scope** de la licencia de USA. Lo importante: ser transparente con tu broker y revisar tu contrato. La mayoría no tiene problema porque amplía tu valor para clientes hispanos.",
+    a: "Depende de tu acuerdo con tu broker. Muchos agentes inmobiliarios operan independientemente para operaciones internacionales, porque están **fuera del scope** de la licencia de USA. Lo importante: ser transparente con tu broker y revisar tu contrato. La mayoría no tiene problema porque amplía tu valor para clientes hispanos.",
   },
   {
     q: "¿Realmente la comisión es del 3-6%? Suena alto.",
@@ -59,7 +59,7 @@ export default function SectionFAQRealtor() {
     <section className="faq-r" id="faq">
       <div className="v2-container-narrow">
         <header className="faqr-header reveal">
-          <span className="section-marker">— Preguntas de realtors</span>
+          <span className="section-marker">— Preguntas de agentes inmobiliarios</span>
           <h2 className="h-section">
             Las dudas que tienen
             <br />

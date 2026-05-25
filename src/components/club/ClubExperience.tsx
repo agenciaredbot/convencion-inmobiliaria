@@ -83,7 +83,7 @@ export default function ClubExperience() {
 
             {/* Target audience pills */}
             <div className="flex flex-wrap gap-2">
-              {["Realtors", "Inversionistas", "Desarrolladores", "Brokers", "Agentes"].map((role) => (
+              {["Agentes Inmobiliarios", "Inversionistas", "Desarrolladores", "Brokers"].map((role) => (
                 <span
                   key={role}
                   className="px-4 py-1.5 text-xs font-bold uppercase tracking-wider bg-black text-white rounded-none"

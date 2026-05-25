@@ -29,7 +29,7 @@ const cards = [
   {
     icon: "🤝",
     title: "Red de +900 colegas",
-    text: "Comunidad activa de realtors latinos operando entre USA y LATAM. Networking, referidos, conocimiento compartido.",
+    text: "Comunidad activa de agentes inmobiliarios latinos operando entre USA y LATAM. Networking, referidos, conocimiento compartido.",
   },
 ];
 

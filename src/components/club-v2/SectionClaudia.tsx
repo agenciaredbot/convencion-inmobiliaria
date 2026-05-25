@@ -46,7 +46,7 @@ export default function SectionClaudia() {
                 <strong>Colombia, Miami, República Dominicana y México</strong>.
                 He organizado convenciones con las voces más importantes del real
                 estate del mundo hispano. He acompañado a cientos de
-                inversionistas y realtors a cruzar fronteras, aprovechar
+                inversionistas y agentes inmobiliarios a cruzar fronteras, aprovechar
                 oportunidades y construir patrimonio internacional.
               </p>
               <p className="editorial-pull">

@@ -53,7 +53,7 @@ const benefits = [
       </svg>
     ),
     title: "Networking Global",
-    desc: "Conexión directa con inversionistas, desarrolladores y realtors de USA, Latinoamérica, Dubái y mercados emergentes.",
+    desc: "Conexión directa con inversionistas, desarrolladores y agentes inmobiliarios de USA, Latinoamérica, Dubái y mercados emergentes.",
   },
 ];
 

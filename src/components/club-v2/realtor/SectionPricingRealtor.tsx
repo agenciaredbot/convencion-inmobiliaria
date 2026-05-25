@@ -36,7 +36,7 @@ const tiers: Tier[] = [
   {
     id: "elite",
     name: "Elite",
-    tagline: "El plan que eligen 7 de cada 10 realtors",
+    tagline: "El plan que eligen 7 de cada 10 agentes inmobiliarios",
     oldPrice: 47,
     newPrice: 35,
     features: [
@@ -56,7 +56,7 @@ const tiers: Tier[] = [
   {
     id: "premium",
     name: "Premium",
-    tagline: "Para realtors que quieren cerrar más operaciones",
+    tagline: "Para agentes inmobiliarios que quieren cerrar más operaciones",
     oldPrice: 87,
     newPrice: 65,
     features: [
@@ -81,7 +81,7 @@ export default function SectionPricingRealtor() {
       <div className="v2-container">
         <header className="pricing-header reveal">
           <span className="section-number pricing-number" aria-hidden="true">03</span>
-          <span className="section-marker">— Planes Realtor</span>
+          <span className="section-marker">— Planes Agente Inmobiliario</span>
           <h2 className="h-section">
             Elige tu plan.
             <br />

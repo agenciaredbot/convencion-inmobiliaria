@@ -14,7 +14,7 @@ const faqs = [
     a: "Una agencia te genera leads fríos pagando por anuncios. Nosotros te conectamos con una **red ya consolidada** de compradores y vendedores activos. La agencia te factura sin importar resultados. Nosotros tenemos **skin in the game**: nuestra reputación depende de que tu proyecto se venda bien. Adicionalmente, ofrecemos canal de distribución, tours físicos, asesoría legal y co-branding — un agente digital no.",
   },
   {
-    q: "¿Quién paga la comisión del realtor en una venta?",
+    q: "¿Quién paga la comisión del agente inmobiliario en una venta?",
     a: "El desarrollador (es decir, tú). Las comisiones estándar de la red del Club: **3-6% sobre el valor de venta** según proyecto y modelo. Estas comisiones se acuerdan en la fase de partnership inicial. Son comisiones competitivas y alineadas con el estándar de mercado en preventa.",
   },
   {
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "¿Cómo miden el performance? ¿Qué reportes recibo?",
-    a: "Reportes mensuales (Nivel 2 y 3) o trimestrales (Nivel 1) con: visualizaciones en portal, leads enviados, conversaciones generadas, tours coordinados, unidades vendidas, NPS de realtors sobre tu proyecto. Dashboard online actualizado en tiempo real. **Transparencia total.**",
+    a: "Reportes mensuales (Nivel 2 y 3) o trimestrales (Nivel 1) con: visualizaciones en portal, leads enviados, conversaciones generadas, tours coordinados, unidades vendidas, NPS de agentes inmobiliarios sobre tu proyecto. Dashboard online actualizado en tiempo real. **Transparencia total.**",
   },
 ];
 

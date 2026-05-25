@@ -9,7 +9,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 export const metadata = {
   title: "Club Inmobiliario — Convención Inmobiliaria 2026",
   description:
-    "Únete al grupo exclusivo de inversionistas, realtors y actores del ecosistema de Real Estate que toman las mejores decisiones. Pre-inscríbete y obtén un 30% de descuento.",
+    "Únete al grupo exclusivo de inversionistas, agentes inmobiliarios y actores del ecosistema de Real Estate que toman las mejores decisiones. Pre-inscríbete y obtén un 30% de descuento.",
 };
 
 export default function ClubPage() {

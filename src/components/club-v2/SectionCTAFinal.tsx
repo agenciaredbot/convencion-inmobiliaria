@@ -183,7 +183,7 @@ export default function SectionCTAFinal() {
                         <option value="" disabled>
                           Selecciona tu perfil
                         </option>
-                        <option value="realtor">Realtor / Agente Inmobiliario</option>
+                        <option value="realtor">Agente Inmobiliario</option>
                         <option value="inversionista">Inversionista (quiero comprar)</option>
                         <option value="desarrollador">Desarrollador (tengo un proyecto)</option>
                         <option value="explorando">Estoy explorando</option>

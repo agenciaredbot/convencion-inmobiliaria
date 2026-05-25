@@ -12,7 +12,7 @@ import SectionCTAFinalRealtor from "@/components/club-v2/realtor/SectionCTAFinal
 
 export const metadata = {
   title:
-    "Realtors — Club Inmobiliario | Vende en 4 mercados con comisiones 3x más altas",
+    "Agentes Inmobiliarios — Club Inmobiliario | Vende en 4 mercados con comisiones 3x más altas",
   description:
     "Suscripción mensual desde $20 USD/mes (25% OFF fundador). +40 proyectos exclusivos en LATAM y Dubai, agente IA personalizado, know-how legal y red de +900 colegas latinos en USA.",
 };

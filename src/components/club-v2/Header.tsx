@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { href: "/club-inmobiliario/v2/realtors", label: "Realtors" },
+  { href: "/club-inmobiliario/v2/realtors", label: "Agentes" },
   { href: "/club-inmobiliario/v2/inversionistas", label: "Inversionistas" },
   { href: "/club-inmobiliario/v2/desarrolladores", label: "Desarrolladores" },
   { href: "/club-inmobiliario/v2#tours", label: "Tours" },

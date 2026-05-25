@@ -5,11 +5,12 @@ export default function SectionHeroRealtor() {
     <section className="hero-r grain-overlay">
       <div className="v2-container hero-r-container">
         <div className="hero-r-content">
-          <span className="section-marker hero-r-marker">— Para realtors latinos en USA</span>
+          <span className="section-marker hero-r-marker">— Para agentes inmobiliarios latinos en USA</span>
 
           <h1 className="h-hero hero-r-title">
             <span className="hero-word">Mientras</span>{" "}
-            <span className="hero-word">el realtor</span>{" "}
+            <span className="hero-word">el agente</span>{" "}
+            <span className="hero-word">inmobiliario</span>{" "}
             <span className="hero-word">promedio</span>{" "}
             <span className="hero-word">pelea por</span>{" "}
             <span className="hero-word">listings</span>{" "}
@@ -74,7 +75,7 @@ export default function SectionHeroRealtor() {
           <div className="hero-r-image-wrap">
             <img
               src="/images/club-v2/path-realtor.jpg"
-              alt="Realtor latina trabajando"
+              alt="Agente inmobiliaria latina trabajando"
               fetchPriority="high"
               className="hero-r-image"
             />

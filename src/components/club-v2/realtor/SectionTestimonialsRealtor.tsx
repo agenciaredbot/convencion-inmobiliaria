@@ -5,21 +5,21 @@ const testimonials = [
     quote:
       "En mi primer tour a Medellín cerré una operación de $180K USD. La comisión cubrió 4 años de membresía Premium. El ROI de ese tour solo fue de 28x.",
     name: "Carlos M.",
-    role: "Realtor · Miami, FL · 8 años",
+    role: "Agente Inmobiliario · Miami, FL · 8 años",
     metric: "ROI tour: 28x",
   },
   {
     quote:
       "El agente IA me cambió el negocio. Antes respondía mensajes a las 2am desesperado. Hoy mi IA califica todo y me llegan solo leads serios. Cerré 5 operaciones en 3 meses.",
     name: "Ana P.",
-    role: "Realtor · Doral, FL · 4 años",
+    role: "Agente Inmobiliario · Doral, FL · 4 años",
     metric: "5 cierres en 90 días",
   },
   {
     quote:
       "Llevaba 6 meses sin cerrar nada en Miami. Entré al Club, asistí al tour de Punta Cana y vendí dos villas en 90 días. La comisión: $32K USD.",
     name: "Diego R.",
-    role: "Realtor · Aventura, FL · 6 años",
+    role: "Agente Inmobiliario · Aventura, FL · 6 años",
     metric: "Comisión: $32K USD",
   },
 ];
@@ -29,9 +29,9 @@ export default function SectionTestimonialsRealtor() {
     <section className="t-real">
       <div className="v2-container">
         <header className="tr-header reveal">
-          <span className="section-marker">— Realtors que ya operan internacionalmente</span>
+          <span className="section-marker">— Agentes inmobiliarios que ya operan internacionalmente</span>
           <h2 className="h-section">
-            +900 realtors latinos
+            +900 agentes inmobiliarios latinos
             <br />
             <em className="emphasis-gold">ya están cerrando.</em>
           </h2>

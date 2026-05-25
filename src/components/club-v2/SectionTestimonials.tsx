@@ -12,7 +12,7 @@ const testimonials = [
     quote:
       "En mi primer tour a Medellín cerré una operación de $180K USD. La comisión cubrió 4 años de membresía Premium. Ahora voy a todos los tours.",
     name: "Carlos M.",
-    role: "Realtor · Miami, FL",
+    role: "Agente Inmobiliario · Miami, FL",
   },
   {
     quote:

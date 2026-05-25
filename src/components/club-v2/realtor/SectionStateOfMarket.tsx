@@ -35,7 +35,7 @@ export default function SectionStateOfMarket() {
             <header className="comp-head">
               <span className="comp-flag" aria-hidden="true">🇺🇸</span>
               <h3>Miami 2026</h3>
-              <span className="comp-sub">Lo que enfrenta el realtor promedio</span>
+              <span className="comp-sub">Lo que enfrenta el agente inmobiliario promedio</span>
             </header>
             {miamiStats.map((s, i) => (
               <div className="comp-row" key={i}>
@@ -51,7 +51,7 @@ export default function SectionStateOfMarket() {
             <header className="comp-head">
               <span className="comp-flag" aria-hidden="true">🌎</span>
               <h3>LATAM 2026</h3>
-              <span className="comp-sub">Lo que ven los realtors del Club</span>
+              <span className="comp-sub">Lo que ven los agentes inmobiliarios del Club</span>
             </header>
             {latamStats.map((s, i) => (
               <div className="comp-row" key={i}>

@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     q: "¿Cómo cobro mi comisión si vendo una propiedad en otro país?",
-    a: "Te explicamos los 3 modelos legales más usados: facturación cruzada, comisión vía estructura legal local, y modelos de partnership con realtors residentes. Cada uno con sus ventajas tributarias específicas. Todo declarado, todo limpio, todo optimizado.",
+    a: "Te explicamos los 3 modelos legales más usados: facturación cruzada, comisión vía estructura legal local, y modelos de partnership con agentes inmobiliarios residentes. Cada uno con sus ventajas tributarias específicas. Todo declarado, todo limpio, todo optimizado.",
   },
   {
     q: "¿Los tours realmente incluyen todo?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "¿Puedo cancelar mi suscripción cuando quiera?",
-    a: "Para los planes Realtor (Starter, Elite, Premium): **sí, cancelas cuando quieras, sin permanencia**. Para los planes Desarrollador, son membresías anuales con beneficios distribuidos durante todo el año (no son cancelables a mitad de período por la naturaleza B2B del servicio).",
+    a: "Para los planes Agente Inmobiliario (Starter, Elite, Premium): **sí, cancelas cuando quieras, sin permanencia**. Para los planes Desarrollador, son membresías anuales con beneficios distribuidos durante todo el año (no son cancelables a mitad de período por la naturaleza B2B del servicio).",
   },
   {
     q: "¿Cuántos proyectos hay disponibles hoy?",

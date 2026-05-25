@@ -4,7 +4,7 @@ const steps = [
   {
     n: "01",
     title: "Suscríbete o agenda",
-    text: "Elige tu camino: realtor, inversionista o desarrollador. Te asignamos un asesor del Club que te guía desde el día uno.",
+    text: "Elige tu camino: agente inmobiliario, inversionista o desarrollador. Te asignamos un asesor del Club que te guía desde el día uno.",
   },
   {
     n: "02",

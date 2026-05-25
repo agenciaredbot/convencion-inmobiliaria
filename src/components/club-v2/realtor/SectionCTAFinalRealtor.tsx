@@ -17,7 +17,7 @@ const VALID_PLANS = ["starter", "elite", "premium"];
 const WHATSAPP_LINK =
   "https://wa.me/17542804030?text=" +
   encodeURIComponent(
-    "Hola, vi la página del Club Inmobiliario y quiero info sobre el plan Realtor."
+    "Hola, vi la página del Club Inmobiliario y quiero info sobre el plan Agente Inmobiliario."
   );
 
 export default function SectionCTAFinalRealtor() {
@@ -111,7 +111,7 @@ export default function SectionCTAFinalRealtor() {
           <div className="cta-r-content reveal">
             <span className="section-marker">— Acceso fundadores</span>
             <h2 className="h-section">
-              Los primeros 200 realtors
+              Los primeros 200 agentes inmobiliarios
               <br />
               que se suscriban tienen
               <br />
@@ -125,7 +125,7 @@ export default function SectionCTAFinalRealtor() {
 
             <div className="founders-counter">
               <span className="counter-label">
-                Cupos de fundador realtor disponibles
+                Cupos de fundador agente inmobiliario disponibles
               </span>
               <div className="counter-bar">
                 <div className="counter-filled" style={{ width: "42%" }} />
@@ -174,7 +174,7 @@ export default function SectionCTAFinalRealtor() {
                     onClick={() => setSent(false)}
                     className="success-reset"
                   >
-                    Registrar a otro realtor
+                    Registrar a otro agente inmobiliario
                   </button>
                 </div>
               ) : (
@@ -248,7 +248,7 @@ export default function SectionCTAFinalRealtor() {
                       />
                     </div>
                     <div className="field">
-                      <label htmlFor="r-exp">Años como realtor</label>
+                      <label htmlFor="r-exp">Años como agente inmobiliario</label>
                       <select
                         id="r-exp"
                         name="experiencia"

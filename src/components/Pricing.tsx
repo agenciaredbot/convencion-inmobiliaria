@@ -44,8 +44,8 @@ export default function Pricing() {
           </h2>
           <div className="w-16 h-1 bg-gold-500 rounded-full mx-auto mb-6" />
           <p className="text-white/95 max-w-2xl mx-auto leading-relaxed text-lg">
-            Asiste gratis al evento o elige el acceso premium pensado para realtors
-            y agentes que quieren maximizar cada conexión.
+            Asiste gratis al evento o elige el acceso premium pensado para
+            agentes inmobiliarios que quieren maximizar cada conexión.
           </p>
         </div>
 

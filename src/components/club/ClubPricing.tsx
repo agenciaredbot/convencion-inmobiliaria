@@ -20,7 +20,7 @@ const tiers = [
     features: [
       "Todo lo del plan Esencial",
       "Networking VIP en todos los eventos",
-      "Acceso exclusivo a herramientas de A.I. para Realtors",
+      "Acceso exclusivo a herramientas de A.I. para Agentes Inmobiliarios",
       "10% de descuento en viajes y tours del Club Inmobiliario",
     ],
     featured: true,
@@ -36,7 +36,7 @@ const tiers = [
       "25% de descuento en los tours inmobiliarios",
       "Acceso completo a nuestra plataforma de A.I. para vender propiedades",
       "Generación de contenidos con A.I. incluida",
-      "Acceso exclusivo a oportunidades de inversión con realtors e inversionistas de alto nivel",
+      "Acceso exclusivo a oportunidades de inversión con agentes inmobiliarios e inversionistas de alto nivel",
       "Push y promo dedicada para tu proyecto",
       "Reuniones con inversionistas y agentes para ventas y alianzas",
       "Webinar y activación de pauta para promover tu proyecto",

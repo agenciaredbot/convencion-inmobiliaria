@@ -29,7 +29,7 @@ export default function SectionHeroDeveloper() {
           <p className="hero-d-subhead">
             Conectamos tu desarrollo inmobiliario con una red activa de{" "}
             <strong>
-              +900 realtors latinos en USA, +10,000 operadores en LATAM
+              +900 agentes inmobiliarios latinos en USA, +10,000 operadores en LATAM
             </strong>{" "}
             y miles de inversionistas calificados con capacidad de compra en
             USD.

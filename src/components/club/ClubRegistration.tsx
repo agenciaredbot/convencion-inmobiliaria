@@ -253,7 +253,7 @@ export default function ClubRegistration() {
                     className={inputClass + " appearance-none"}
                   >
                     <option value="">¿Cuál es tu rol?</option>
-                    <option value="realtor">Realtor / Agente Inmobiliario</option>
+                    <option value="realtor">Agente Inmobiliario</option>
                     <option value="inversionista">Inversionista</option>
                     <option value="desarrollador">Desarrollador / Pre-constructora</option>
                     <option value="broker">Broker</option>

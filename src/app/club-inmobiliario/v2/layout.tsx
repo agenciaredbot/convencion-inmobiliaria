@@ -25,7 +25,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Club Inmobiliario — Invierte, Acciona, Crece",
   description:
-    "Mientras Estados Unidos se enfría, Latinoamérica se calienta. Membresía premium para realtors, inversionistas y desarrolladores con tours físicos a 5 mercados internacionales.",
+    "Mientras Estados Unidos se enfría, Latinoamérica se calienta. Membresía premium para agentes inmobiliarios, inversionistas y desarrolladores con tours físicos a 5 mercados internacionales.",
 };
 
 export default function ClubV2Layout({

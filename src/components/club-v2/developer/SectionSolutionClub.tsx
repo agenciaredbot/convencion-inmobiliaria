@@ -12,19 +12,19 @@ const solutions: Solution[] = [
   {
     letter: "A",
     title: "Vitrina en portal del Club",
-    text: "Tu proyecto aparece en el portal accedido por +900 realtors activos y +10,000 operadores en red. Con ficha técnica completa, fotos profesionales, datos de rentabilidad, planos y video tour. Los realtors lo presentan a sus clientes directamente.",
+    text: "Tu proyecto aparece en el portal accedido por +900 agentes inmobiliarios activos y +10,000 operadores en red. Con ficha técnica completa, fotos profesionales, datos de rentabilidad, planos y video tour. Los agentes inmobiliarios lo presentan a sus clientes directamente.",
     size: "large",
     features: [
       "Ficha técnica editorial profesional",
       "Galería de fotos + video tour",
       "Datos de rentabilidad auditados",
-      "Materiales descargables para realtors",
+      "Materiales descargables para agentes inmobiliarios",
     ],
   },
   {
     letter: "B",
     title: "Tours grupales a tu proyecto",
-    text: "Coordinamos tours mensuales con 10-12 inversionistas y realtors viajando a tu ciudad. Llegan con capital, ya pre-calificados, listos para ver tu proyecto en sitio.",
+    text: "Coordinamos tours mensuales con 10-12 inversionistas y agentes inmobiliarios viajando a tu ciudad. Llegan con capital, ya pre-calificados, listos para ver tu proyecto en sitio.",
     size: "large",
     features: [
       "Logística completa de los tours",
@@ -36,7 +36,7 @@ const solutions: Solution[] = [
   {
     letter: "C",
     title: "Campañas a la red activa",
-    text: "Email blasts, newsletters segmentadas, posts en grupos privados de Telegram y WhatsApp. Tu proyecto llega directamente a +2,000 realtors activos en LATAM y USA.",
+    text: "Email blasts, newsletters segmentadas, posts en grupos privados de Telegram y WhatsApp. Tu proyecto llega directamente a +2,000 agentes inmobiliarios activos en LATAM y USA.",
     size: "medium",
   },
   {

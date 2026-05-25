@@ -16,13 +16,13 @@ const steps = [
   {
     n: "03",
     title: "Producción de materiales",
-    text: "Producimos ficha técnica editorial, sesión de fotos profesionales, video tour, materiales para realtors.",
+    text: "Producimos ficha técnica editorial, sesión de fotos profesionales, video tour, materiales para agentes inmobiliarios.",
     when: "Días 15-30",
   },
   {
     n: "04",
     title: "Lanzamiento + activación",
-    text: "Publicamos en portal. Email blast a la red. Capacitación a realtors. Primer tour grupal coordinado.",
+    text: "Publicamos en portal. Email blast a la red. Capacitación a agentes inmobiliarios. Primer tour grupal coordinado.",
     when: "Días 30-60",
   },
 ];

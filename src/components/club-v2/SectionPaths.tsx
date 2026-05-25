@@ -21,7 +21,7 @@ const paths: Path[] = [
     href: "/club-inmobiliario/v2/realtors",
     tag: "Para agentes",
     tagVariant: "yellow",
-    title: "Soy Realtor",
+    title: "Soy Agente Inmobiliario",
     tagline: "Diversifica tus comisiones. Sin licencia local. Con respaldo legal.",
     benefits: [
       "+40 proyectos exclusivos en 4 países",
@@ -31,9 +31,9 @@ const paths: Path[] = [
     ],
     price: "$27 USD/mes",
     priceFrom: "Desde",
-    cta: "Ver planes Realtor",
+    cta: "Ver planes Agente Inmobiliario",
     image: "/images/club-v2/path-realtor.jpg",
-    alt: "Realtor profesional",
+    alt: "Agente inmobiliario profesional",
     border: "var(--yellow-brand)",
   },
   {
@@ -62,11 +62,11 @@ const paths: Path[] = [
     tagVariant: "dark",
     title: "Tengo un Proyecto",
     tagline:
-      "Conecta tu desarrollo con +900 realtors y +10,000 operadores en USA y LATAM.",
+      "Conecta tu desarrollo con +900 agentes inmobiliarios y +10,000 operadores en USA y LATAM.",
     benefits: [
       "Vitrina en portal del Club",
       "Presencia en eventos exclusivos",
-      "Campañas a +2,000 realtors activos",
+      "Campañas a +2,000 agentes inmobiliarios activos",
       "Tours grupales a tu proyecto",
     ],
     price: "$3,000 USD/año",
