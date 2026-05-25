@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="v2-container v2-footer-inner">
         <div className="v2-footer-brand">
           <img
-            src="/images/LOGO-CONEXION-INMOBILIARIA-LUXURY.png"
+            src="/images/logo-conexion-luxury-nobg.png"
             alt="Club Inmobiliario · Conexión Inmobiliaria Luxury"
             className="v2-footer-logo-img"
           />

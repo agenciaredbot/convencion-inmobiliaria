@@ -37,7 +37,7 @@ export default function Header() {
         <div className="v2-header-inner">
           <a href="/club-inmobiliario/v2" className="v2-logo" aria-label="Club Inmobiliario — Conexión Inmobiliaria Luxury">
             <img
-              src="/images/LOGO-CONEXION-INMOBILIARIA-LUXURY.png"
+              src="/images/logo-conexion-luxury-nobg.png"
               alt="Club Inmobiliario · Conexión Inmobiliaria Luxury"
               className="v2-logo-img"
             />
