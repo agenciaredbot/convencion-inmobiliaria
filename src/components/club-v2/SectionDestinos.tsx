@@ -37,7 +37,7 @@ const destinos: Destino[] = [
     tagline: "Valorización + Rentabilidad en una sola plaza",
     image: "/images/club-v2/destino-puntacana.jpg",
     size: "large",
-    badge: "Tour 30 Mayo",
+    badge: "Próximamente",
     stats: [
       { big: "+10-15%", text: "valorización anual sostenida" },
       { big: "0.7%", text: "rentabilidad mensual bruta" },
@@ -55,7 +55,7 @@ const destinos: Destino[] = [
     tagline: "Renta turística en dólares todo el año",
     image: "/images/club-v2/destino-cancun.jpg",
     size: "medium",
-    badge: "Tour 15 Junio",
+    badge: "Próximamente",
     highlights: [
       "Demanda turística récord histórico",
       "ROI superior al promedio de Miami",

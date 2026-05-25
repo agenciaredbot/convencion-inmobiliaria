@@ -5,9 +5,11 @@ export default function Footer() {
     <footer className="v2-footer">
       <div className="v2-container v2-footer-inner">
         <div className="v2-footer-brand">
-          <p className="v2-footer-logo">
-            Club <em>Inmobiliario</em>
-          </p>
+          <img
+            src="/images/LOGO-CONEXION-INMOBILIARIA-LUXURY.png"
+            alt="Club Inmobiliario · Conexión Inmobiliaria Luxury"
+            className="v2-footer-logo-img"
+          />
           <p className="v2-footer-tagline">
             <span>Invierte</span>
             <span className="v2-footer-dot">·</span>
@@ -20,6 +22,23 @@ export default function Footer() {
             <br />
             &amp; Conexión Inmobiliaria USA
           </p>
+
+          <div className="v2-footer-partners" aria-label="Aliados">
+            <span className="v2-footer-partners-label">En alianza con</span>
+            <div className="v2-footer-partners-row">
+              <img
+                src="/images/logo-convencion-inmobiliaria.png"
+                alt="Convención Inmobiliaria USA"
+                className="v2-footer-partner v2-footer-partner--convencion"
+              />
+              <span className="v2-footer-partners-sep" aria-hidden="true" />
+              <img
+                src="/images/logo-claudia-rivera.png"
+                alt="Claudia Rivera Real Estate"
+                className="v2-footer-partner v2-footer-partner--claudia"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="v2-footer-cols">
@@ -73,19 +92,48 @@ export default function Footer() {
           gap: var(--v2-space-7);
           padding-bottom: var(--v2-space-6);
         }
-        .v2-footer-logo {
-          font-family: var(--font-fraunces, 'Fraunces', serif);
-          font-size: 1.6rem;
-          font-weight: 600;
-          color: var(--off-white);
-          margin: 0 0 0.75rem;
-          letter-spacing: -0.02em;
+        .v2-footer-logo-img {
+          height: 64px;
+          width: auto;
+          display: block;
+          margin: 0 0 1rem;
+          object-fit: contain;
         }
-        .v2-footer-logo em {
-          font-style: italic;
+        .v2-footer-partners {
+          margin-top: 1.5rem;
+          padding-top: 1.25rem;
+          border-top: 1px solid rgba(201, 169, 97, 0.18);
+        }
+        .v2-footer-partners-label {
+          display: block;
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 0.6875rem;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
           color: var(--gold-luxury);
-          font-weight: 400;
-          margin-left: 0.25rem;
+          margin-bottom: 0.85rem;
+          opacity: 0.85;
+        }
+        .v2-footer-partners-row {
+          display: flex;
+          align-items: center;
+          gap: 1.1rem;
+          flex-wrap: wrap;
+        }
+        .v2-footer-partner {
+          height: 44px;
+          width: auto;
+          object-fit: contain;
+          opacity: 0.95;
+          filter: brightness(1.05);
+          transition: opacity 0.2s ease;
+        }
+        .v2-footer-partner:hover { opacity: 1; }
+        .v2-footer-partner--claudia { height: 38px; }
+        .v2-footer-partners-sep {
+          width: 1px;
+          height: 28px;
+          background: rgba(201, 169, 97, 0.28);
         }
         .v2-footer-tagline {
           font-family: var(--font-mono, 'JetBrains Mono', monospace);

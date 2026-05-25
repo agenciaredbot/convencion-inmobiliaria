@@ -35,8 +35,12 @@ export default function Header() {
         data-open={open}
       >
         <div className="v2-header-inner">
-          <a href="/club-inmobiliario/v2" className="v2-logo">
-            Club <em>Inmobiliario</em>
+          <a href="/club-inmobiliario/v2" className="v2-logo" aria-label="Club Inmobiliario — Conexión Inmobiliaria Luxury">
+            <img
+              src="/images/LOGO-CONEXION-INMOBILIARIA-LUXURY.png"
+              alt="Club Inmobiliario · Conexión Inmobiliaria Luxury"
+              className="v2-logo-img"
+            />
           </a>
 
           <nav className="v2-nav" aria-label="Navegación principal">
@@ -136,23 +140,24 @@ export default function Header() {
           gap: var(--v2-space-4);
         }
         .v2-logo {
-          font-family: var(--font-fraunces, 'Fraunces', serif);
-          font-size: 1.4rem;
-          font-weight: 600;
-          letter-spacing: -0.02em;
-          color: var(--off-white);
+          display: inline-flex;
+          align-items: center;
           text-decoration: none;
-          line-height: 1;
+          line-height: 0;
         }
-        .v2-logo em {
-          font-style: italic;
-          font-weight: 400;
-          color: var(--gold-luxury);
-          margin-left: 0.25rem;
+        .v2-logo-img {
+          height: 52px;
+          width: auto;
+          display: block;
+          object-fit: contain;
+          transition: height 0.3s ease, filter 0.3s ease;
         }
-        .v2-header:not(.is-scrolled) .v2-logo {
-          color: var(--off-white);
-          mix-blend-mode: difference;
+        .v2-header.is-scrolled .v2-logo-img {
+          height: 44px;
+        }
+        @media (max-width: 767px) {
+          .v2-logo-img { height: 40px; }
+          .v2-header.is-scrolled .v2-logo-img { height: 36px; }
         }
         .v2-nav {
           display: flex;

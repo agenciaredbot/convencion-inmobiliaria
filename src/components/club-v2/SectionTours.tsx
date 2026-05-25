@@ -14,7 +14,7 @@ type Tour = {
 const tours: Tour[] = [
   {
     urgency: "Próximo tour",
-    date: "30 de Mayo",
+    date: "Próximamente",
     destination: "Punta Cana, República Dominicana",
     details: [
       { icon: "⏱️", text: "3 días / 2 noches" },
@@ -31,7 +31,7 @@ const tours: Tour[] = [
   },
   {
     urgency: "Siguiente tour",
-    date: "15 de Junio",
+    date: "Próximamente",
     destination: "Cancún, México",
     details: [
       { icon: "⏱️", text: "3 días / 2 noches" },
