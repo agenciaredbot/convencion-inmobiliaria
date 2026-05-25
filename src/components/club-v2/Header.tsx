@@ -146,18 +146,18 @@ export default function Header() {
           line-height: 0;
         }
         .v2-logo-img {
-          height: 52px;
+          height: 65px;
           width: auto;
           display: block;
           object-fit: contain;
           transition: height 0.3s ease, filter 0.3s ease;
         }
         .v2-header.is-scrolled .v2-logo-img {
-          height: 44px;
+          height: 55px;
         }
         @media (max-width: 767px) {
-          .v2-logo-img { height: 40px; }
-          .v2-header.is-scrolled .v2-logo-img { height: 36px; }
+          .v2-logo-img { height: 50px; }
+          .v2-header.is-scrolled .v2-logo-img { height: 45px; }
         }
         .v2-nav {
           display: flex;
