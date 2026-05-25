@@ -93,7 +93,7 @@ export default function Footer() {
           padding-bottom: var(--v2-space-6);
         }
         .v2-footer-logo-img {
-          height: 80px;
+          height: 92px;
           width: auto;
           display: block;
           margin: 0 0 1rem;
