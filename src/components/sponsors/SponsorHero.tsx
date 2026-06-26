@@ -80,7 +80,7 @@ export default function SponsorHero() {
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
-              <p className="text-xs text-white/95 uppercase tracking-wider">15 & 16 de Junio</p>
+              <p className="text-xs text-white/95 uppercase tracking-wider">Próximamente</p>
               <p className="text-sm font-semibold text-white flex items-center gap-2">
                 <span className="text-2xl leading-none">🇩🇴</span>
                 Punta Cana, Rep. Dominicana
@@ -92,7 +92,7 @@ export default function SponsorHero() {
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <div className="text-left">
-              <p className="text-xs text-white/95 uppercase tracking-wider">18 & 19 de Junio</p>
+              <p className="text-xs text-white/95 uppercase tracking-wider">Próximamente</p>
               <p className="text-sm font-semibold text-white flex items-center gap-2">
                 <span className="text-2xl leading-none">🇲🇽</span>
                 Cancún, México

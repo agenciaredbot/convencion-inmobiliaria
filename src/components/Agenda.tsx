@@ -6,14 +6,14 @@ const destinations = [
     venue: "Plaza Ross, local 23 (segundo nivel) — Verón, Punta Cana",
     days: [
       {
-        date: "Lunes 15 de Junio",
+        date: "Próximamente",
         type: "Visita de Proyectos",
         typeIcon: "🏗️",
         hours: ["9:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],
         desc: "Recorridos guiados por proyectos internacionales en cuatro turnos. Conoce en persona las oportunidades de inversión disponibles en Punta Cana.",
       },
       {
-        date: "Martes 16 de Junio",
+        date: "Próximamente",
         type: "Evento Presencial",
         typeIcon: "🎯",
         hours: ["9:00 AM — 12:00 PM"],
@@ -27,14 +27,14 @@ const destinations = [
     city: "Cancún",
     days: [
       {
-        date: "Jueves 18 de Junio",
+        date: "Próximamente",
         type: "Evento Presencial",
         typeIcon: "🎯",
         hours: ["9:00 AM — 12:00 PM"],
         desc: "Jornada completa de presentaciones, oportunidades de inversión y conexión directa con desarrolladores y compradores internacionales.",
       },
       {
-        date: "Viernes 19 de Junio",
+        date: "Próximamente",
         type: "Visita de Proyectos",
         typeIcon: "🏗️",
         hours: ["9:00 AM", "11:00 AM", "2:00 PM", "4:00 PM"],

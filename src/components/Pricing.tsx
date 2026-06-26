@@ -167,7 +167,7 @@ export default function Pricing() {
 
         {/* Bottom note */}
         <p className="text-center text-gold-500 text-sm mt-10 italic animate-fade-in">
-          El acceso incluye ambos destinos: Punta Cana, RD (15 & 16 Junio) y Cancún, México (18 & 19 Junio)
+          El acceso incluye ambos destinos: Punta Cana, Rep. Dominicana y Cancún, México
         </p>
       </div>
     </section>
