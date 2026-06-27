@@ -34,7 +34,7 @@ export default function V2Page() {
       <Sponsors />
       <ProximosEventos />
       <Footer />
-      <SofiaChat pageSource="v2-asistentes" />
+      {/* <SofiaChat pageSource="v2-asistentes" /> */}
     </>
   );
 }

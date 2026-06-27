@@ -125,18 +125,7 @@ export default function HeroV2() {
           </div>
         </div>
 
-        {/* Countdown */}
-        <div className="mb-12 animate-fade-in" style={{ animationDelay: "1.05s", animationFillMode: "both" }}>
-          <p className="text-xs uppercase tracking-[0.3em] text-white/70 mb-5 font-medium">
-            El evento comienza en
-          </p>
-          <div className="flex justify-center gap-4 sm:gap-6">
-            <CountdownUnit value={countdown.days} label="Días" />
-            <CountdownUnit value={countdown.hours} label="Horas" />
-            <CountdownUnit value={countdown.minutes} label="Min" />
-            <CountdownUnit value={countdown.seconds} label="Seg" />
-          </div>
-        </div>
+        {/* Countdown hidden */}
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "1.2s", animationFillMode: "both" }}>

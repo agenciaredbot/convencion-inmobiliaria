@@ -101,34 +101,7 @@ export default function SponsorHero() {
           </div>
         </div>
 
-        {/* Countdown */}
-        <div className="mb-12 animate-fade-in">
-          <p className="text-xs uppercase tracking-[0.3em] text-white/95 mb-5 font-medium">
-            Asegura tu espacio antes de
-          </p>
-          <div className="flex justify-center gap-4 sm:gap-6">
-            {[
-              { value: countdown.days, label: "Días" },
-              { value: countdown.hours, label: "Horas" },
-              { value: countdown.minutes, label: "Min" },
-              { value: countdown.seconds, label: "Seg" },
-            ].map((unit) => (
-              <div key={unit.label} className="flex flex-col items-center">
-                <div className="glass-strong rounded-xl w-18 h-18 sm:w-22 sm:h-22 flex items-center justify-center border border-gold-500/20">
-                  <span
-                    className="text-3xl sm:text-4xl font-bold text-gold-500"
-                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                  >
-                    {String(unit.value).padStart(2, "0")}
-                  </span>
-                </div>
-                <span className="text-xs text-white/95 mt-2 uppercase tracking-widest font-medium">
-                  {unit.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Countdown hidden */}
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">

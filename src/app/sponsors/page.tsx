@@ -29,7 +29,7 @@ export default function SponsorsPage() {
       <SponsorRegistration />
       <ProximosEventos />
       <Footer />
-      <SofiaChat pageSource="sponsors" />
+      {/* <SofiaChat pageSource="sponsors" /> */}
       <SponsorWhatsApp />
     </>
   );

@@ -34,7 +34,7 @@ export default function Home() {
       <Sponsors />
       {/* <ProximosEventos /> — oculto temporalmente */}
       <Footer />
-      <SofiaChat pageSource="asistentes" />
+      {/* <SofiaChat pageSource="asistentes" /> */}
       <SponsorFloat />
     </>
   );
