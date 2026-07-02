@@ -118,7 +118,7 @@ export default function AgendaV2() {
 
         {/* Note */}
         <p className="text-center text-white/50 text-sm mt-10 italic animate-fade-in">
-          El programa aplica para ambos destinos: Punta Cana, RD (25-26 Mayo) y Cancún, México (28-29 Mayo)
+          El programa aplica para ambos destinos: Punta Cana, Rep. Dominicana y Cancún, México
         </p>
 
         {/* Ticket badge */}
